@@ -1,14 +1,85 @@
-html {
-    background: #fafafa;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+/* Main (OS Light Mode) Swatches */
+:root {
+    --main-nav-color: rgb(32, 33, 36, 1);
+    --alt-nav-color: rgba(32, 33, 36, 1);
+    --cta-color: color(srgb(-0.15 0.325 0.914));
+    --cta-color-dark: color(rgb(0% 32.5% 91.4%));
+    --cta-color-light: #0053e9;
+    }
+body {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --logo-fill: none;
+  }
+
+@supports (color: color(display-p3 1 1 1)) {
+    :root {
+        --cta-color-dark: color(display-p3 0 0.319 0.88);
+        --cta-color: color(display-p3 0 0.316 0.88);
+        --cta-color-light: color(display-p3 0 0.359 1);
+    }
+    body {
+        --text-color: #222;
+        --bkg-color: #fff;
+    }
 }
 
-:root {
-    --main-nav-color: rgb(32, 32, 32, 1);
-    --alt-nav-color: rgba(32, 32, 32, 1);
+/* Swatches for Dark Mode (OS Override)*/
+:root.dark-theme {
+    --main-nav-color: rgb(0, 0, 0, 1);
+    --alt-nav-color: rgba(0, 0, 0, 1);
+    }
+body.dark-theme {
+    --text-color: none;
+    --bkg-color: #121212;
+    --logo-fill: #fff;
+    } 
+
+@supports (color: color(display-p3 1 1 1)) {
+    :root.dark-theme {
+        --main-nav-color: rgb(0, 0, 0, 1);
+        --alt-nav-color: rgba(0, 0, 0, 1);
+    }
+    body.dark-theme {
+        --text-color: none;
+        --bkg-color: #121212;
+        --logo-fill: #fff;
+    }     
+}
+
+/* Swatches for OS Dark Mode*/
+@media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: #eee;
+      --bkg-color: #121212;
+    }
+    body {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --logo-fill: #fff;
+        } 
+    
+    /* Swatches for Light Mode (OS Override)*/
+    :root.light-theme {
+      --text-color: #222;
+      --bkg-color: #fff;
+    }
+    body.light-theme {
+        --text-color: #222;
+        --bkg-color: #fff;
+        --logo-fill: none;
+        } 
+    
   }
-  
+
+/* Swatches Ende */
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 body {
+    background: var(--bkg-color);
     margin: 0;
 }
 
@@ -30,6 +101,7 @@ nav {
 .nav-content a {
     display: block;
     font-size: 14px;
+    font-weight: 300;
     line-height: 44px;
     text-decoration: none;
     transition: all 0.15s;
@@ -76,7 +148,9 @@ nav {
     .show {
         background-color: var(--main-nav-color);
     }
-
+    .nav-content a {
+    font-weight: 300;
+    }    
     .nav-links {
         position: fixed;
         top: 44px;
@@ -136,12 +210,12 @@ nav {
     .content {
         margin: 0;
         text-align: center;
+        color: var(--text-color);
     }
     
     .content h1 {
         font-size: 64px;
         margin-bottom: 0;
-        color: #111111;
         font-weight: 500;
     }
     .content h3 {
@@ -153,3 +227,78 @@ nav {
             font-weight: normal;
         }
     }
+
+    /* Buttons */
+
+    .button-dark {
+
+        align-items: center;
+        padding: 6px 14px;
+        cursor: pointer;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        border-radius: 6px;
+        border: none;
+      
+        background: #6E6D70;
+        box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+        color: #DFDEDF;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+      
+    .button-dark:focus {
+        box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+        outline: 0;
+    }
+    
+      
+    .button-light {
+        align-items: center;
+        padding: 6px 14px;
+        cursor: pointer;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        border-radius: 6px;
+        color: #3D3D3D;
+        background: #fff;
+        border: none;
+        box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+      
+    .button-light:focus {
+        box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+        outline: 0;
+    }
+      
+    .button-blue {
+        align-items: center;
+        padding: 10px 17px;
+        cursor: pointer;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        border-radius: 6px;
+        border: none;
+        color: #fff;
+        background: var(--cta-color);
+        background-origin: border-box;
+        box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    
+    .button-blue:hover {
+        background: var(--cta-color-light); 
+    }
+
+    .button-blue:focus {
+        box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+        border: none;
+      }
+
+    .button-blue:active {
+        background: var(--cta-color-dark);
+        outline: none;
+      }
