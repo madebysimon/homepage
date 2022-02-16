@@ -9,14 +9,20 @@
     --borderradius-small: 6px;
     --borderradius-mid: 10px;
     --universal-shadow:
-    1.3px 1.3px 2.2px rgba(0, 0, 0, 0.02),
-    3.2px 3.2px 5.3px rgba(0, 0, 0, 0.028),
-    6px 6px 10px rgba(0, 0, 0, 0.035),
-    10.7px 10.7px 17.9px rgba(0, 0, 0, 0.042),
-    20.1px 20.1px 33.4px rgba(0, 0, 0, 0.05),
-    48px 48px 80px rgba(0, 0, 0, 0.07);
+    1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056),
+    3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081),
+    6px 6px 10px -24px rgba(0, 0, 0, 0.1),
+    10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119),
+    20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144),
+    48px 48px 80px -24px rgba(0, 0, 0, 0.2);  
+    --universal-shadow-lite:
+    1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.028),
+    3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.04),
+    6px 6px 10px -24px rgba(0, 0, 0, 0.05),
+    10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.06),
+    20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.072),
+    48px 48px 80px -24px rgba(0, 0, 0, 0.1);
     }
-
 body {
     --H1-color: #222;
     --H2-color: #222;
@@ -377,6 +383,10 @@ nav {
     .hasshadow {
         box-shadow: var(--universal-shadow);
     }
+    .hasshadowlight {
+        box-shadow: var(--universal-shadow-light);
+    }
+
 
     .hasbackground {
         background: var(--bkg-color);
@@ -406,7 +416,6 @@ nav {
       }
 
 
-
     .fullpadding {
         padding: 30px;
     }
@@ -417,6 +426,11 @@ nav {
         margin: 10px;
     }
 
+    .hovershadow:hover {
+        border: 0px solid var(--cta-color-light);
+        box-shadow: var(--universal-shadow);
+        transition: box-shadow .3s;
+    }
 /*-- Pancake Layout --*/
     .pancakeparent {
         display: flex;
@@ -426,10 +440,4 @@ nav {
     .pancakechild {
         flex: 1 1 300px;
         justify-content: space-around;
-    }
-
-    .hovershadow:hover {
-        border: 0px solid var(--cta-color-light);
-        box-shadow: var(--universal-shadow);
-        transition: box-shadow .3s;
     }
