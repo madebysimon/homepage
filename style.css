@@ -1,7 +1,7 @@
 
 /* Main (OS Light Mode) Swatches */
 :root {
-    --main-nav-color: rgb(32, 33, 36, 1);
+    --main-nav-color: rgb(32, 33, 36, .9);
     --alt-nav-color: rgba(32, 33, 36, 1);
     --cta-color: color(srgb(-0.15 0.325 0.914));
     --cta-color-dark: color(rgb(0% 32.5% 91.4%));
@@ -9,13 +9,14 @@
     --borderradius-small: 6px;
     --borderradius-mid: 10px;
     --universal-shadow: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
-    --universal-shadow-lite: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
+    --universal-shadow-light: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
 }
 body {
     --H1-color: #222;
     --H2-color: #222;
     --H3-color: #222;
     --text-color: #222;
+    --text-color-inverted: #fff;
     --bkg-color: #fff;
     --bkg-color-highlight: rgb(245, 245, 245);
     --logo-fill: none;
@@ -142,6 +143,21 @@ nav {
     overscroll-behavior-y: none;
 }
 
+.backdrop-blur {
+    background-color: var(--main-nav-color);
+  }
+  /* if backdrop support: very transparent and blurred */
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .backdrop-blur {
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  nav.show.backdrop-blur {
+    background-color: var(--alt-nav-color);
+  }
+
 .nav-content {
     max-width: 1024px;
     margin: 0 auto;
@@ -194,6 +210,11 @@ nav {
     cursor: pointer;
 }
 
+.icon-small {
+    width: 24px;
+    height: 24px;
+}
+
 .mail-icon {
     cursor: pointer;
     transition: all 0.3s;
@@ -202,8 +223,9 @@ nav {
 
 @media (max-width: 768px) {
     .show {
-        background-color: var(--main-nav-color);
+        background-color: var(--main-nav-color);   
     }
+
     .nav-content a {
     font-weight: 300;
     }    
@@ -223,6 +245,7 @@ nav {
     .show .nav-links {
         height: 100%;
         background-color: var(--alt-nav-color);
+    
     }
 
     .nav-links a {
@@ -280,7 +303,6 @@ nav {
             font-size: 48px;
         }
     }
-    
 
 .content h2 {
     font-size: 24px;
@@ -295,97 +317,112 @@ nav {
     color: var(--H3-color);
 }
 
+hr {
+    border: 0;
+    height: 0;
+    width: 80%;
+    border-top: 1px solid var(--bkg-color-highlight);
+}
     /* Buttons */
 
-    .button-dark {
-        align-items: center;
-        padding: 6px 14px;
-        cursor: pointer;
-        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-        border-radius: var(--borderradius-small);
-        border: none;
-        background: #6E6D70;
-        color: #DFDEDF;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-      }
-      
+.button-dark {
+    align-items: center;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: var(--borderradius-small);
+    border: none;
+    background: #6E6D70;
+    color: #DFDEDF;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
     .button-dark:focus {
         box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
         outline: 0;
     }
-    
+
       
-    .button-light {
-        align-items: center;
-        padding: 10px 17px;
-        cursor: pointer;
-        border-radius: var(--borderradius-small);
-        color: var(--text-color);
-        background:  var(--bkg-color-highlight);
-        border: none;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
+.button-light {
+    align-items: center;
+    padding: 10px 17px;
+    cursor: pointer;
+    border-radius: var(--borderradius-small);
+    color: var(--text-color);
+    background:  var(--bkg-color-highlight);
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     }
-    
+    .button-light:hover {
+        background: var(--cta-color-light); 
+    }
+    .button-light:active {
+        background: var(--cta-color-dark);
+        outline: none;
+    }
     .button-light:focus {
         box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
         outline: 0;
     }
-      
-    .button-blue {
-        align-items: center;
-        padding: 10px 17px;
-        cursor: pointer;
-        border-radius: var(--borderradius-small);
-        border: none;
-        color: #fff;
-        background: var(--cta-color);
-        background-origin: border-box;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
+
+.button-blue {
+    align-items: center;
+    padding: 10px 17px;
+    cursor: pointer;
+    border-radius: var(--borderradius-small);
+    border: none;
+    color: #fff;
+    background: var(--cta-color);
+    background-origin: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     }
-    
     .button-blue:hover {
         background: var(--cta-color-light); 
     }
-
     .button-blue:focus {
         box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
         border: none;
       }
-
     .button-blue:active {
         background: var(--cta-color-dark);
         outline: none;
-      }
+    }
 
-    .hasshadow {
-        box-shadow: var(--universal-shadow);
-    }
-    .hasshadowlight {
-        box-shadow: var(--universal-shadow-light);
-    }
+    /* Custom Modifiers */
+    /* -- Shadows */
+.permashadow {
+    box-shadow: var(--universal-shadow);
+}
+.permashadow-light:after {
+    box-shadow: var(--universal-shadow-light);
+    overflow:visible;
+}
+.hovershadow:hover {
+    border: 0px solid var(--cta-color-light);
+    box-shadow: var(--universal-shadow);
+    transition: box-shadow .3s;
+}
+    /* -- Colors & Shapes*/
 
     .hasbackground {
         background: var(--bkg-color);
     }
 
-    .backhighlight {
+    .hasbackground-light {
         background: var(--bkg-color-highlight);
     }
-
-
     .isrounded {
         border-top-left-radius: var(--borderradius-mid);
         border-top-right-radius: var(--borderradius-mid);
         border-bottom-right-radius: var(--borderradius-mid);
         border-bottom-left-radius: var(--borderradius-mid);
     }
-
+    /* -- Positioning */
     .center {
         display: flex;
         flex-direction: column;
@@ -397,6 +434,10 @@ nav {
         bottom: 0;
       }
 
+    .alignmiddle {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .fullpadding {
         padding: 30px;
@@ -407,12 +448,10 @@ nav {
     .hasmargin {
         margin: 10px;
     }
-
-    .hovershadow:hover {
-        border: 0px solid var(--cta-color-light);
-        box-shadow: var(--universal-shadow);
-        transition: box-shadow .3s;
+    .hasmaxwidth {
+        max-width: 1024px;
     }
+
 /*-- Pancake Layout --*/
     .pancakeparent {
         display: flex;
