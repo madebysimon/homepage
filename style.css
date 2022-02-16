@@ -1,126 +1,152 @@
 
-/* Main (OS Light Mode) Swatches */
+    /* Main Swatches */
+
+/* @supports (color: color(display-p3 1 1 1)) {
+    :root {
+        --cta-color-dark-lm: color(display-p3 0 0.316 0.88);
+        --cta-color-lm: color(display-p3 0 0.359 1);
+        --cta-color-light-lm: color(display-p3 0.22 0.501 1);
+        --cta-color-dark-dm: color(display-p3 0 0.316 0.88);
+        --cta-color-dm: color(display-p3 0 0.359 1);
+        --cta-color-light-dm: color(display-p3 0.22 0.501 1);
+    }
+} */
+
 :root {
-    --main-nav-color: rgb(32, 33, 36, .9);
-    --alt-nav-color: rgba(32, 33, 36, 1);
-    --cta-color: color(srgb(-0.15 0.325 0.914));
-    --cta-color-dark: color(rgb(0% 32.5% 91.4%));
-    --cta-color-light: #0053e9;
+    --main-nav-color-lm: rgb(32, 33, 36, .9);
+    --main-nav-color-dm: rgb(32, 33, 36, .9);
+    --alt-nav-color-lm: rgba(32, 33, 36, 1);
+    --alt-nav-color-dm: rgba(32, 33, 36, 1);
+
+    --cta-color-lm: color(srgb(-0.15 0.325 0.914));
+    --cta-color-dm: rgb(0, 68, 194);
+    --cta-color-light-lm: #0053e9;
+    --cta-color-light-dm: #0041b9;
+    --cta-color-dark-lm: color(rgb(0% 32.5% 91.4%));
+    --cta-color-dark-dm: rgb(0, 75, 214);
+
+    --text-color-lm: #222;
+    --text-color-dm: #ddd;
+    --H1-color-lm: var(--text-color-lm);
+    --H2-color-lm: var(--text-color-lm);
+    --H3-color-lm: var(--text-color-lm);
+    --H1-color-dm: #fff;
+    --H2-color-dm: #eee;
+    --H3-color-dm: #ddd;
+
+    --bkg-color-lm: #fff;
+    --bkg-color-highlight-lm: rgb(245, 245, 245);
+    --bkg-color-dm: #121212;
+    --bkg-color-highlight-dm: #242424;
+
+    --logo-fill-lm: #fff;
+    --logo-fill-dm: #fff;
+    
+    --H1-weight-lm: 500;
+    --H2-weight-lm: 400;
+    --H3-weight-lm: 400;
+    --text-weight-lm: 400;
+
+    --H1-weight-dm: 300;
+    --H2-weight-dm: 250;
+    --H3-weight-dm: 250;
+    --text-weight-dm: 200;
+
     --borderradius-small: 6px;
     --borderradius-mid: 10px;
     --universal-shadow: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
     --universal-shadow-light: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
-}
-body {
-    --H1-color: #222;
-    --H2-color: #222;
-    --H3-color: #222;
-    --text-color: #222;
-    --text-color-inverted: #fff;
-    --bkg-color: #fff;
-    --bkg-color-highlight: rgb(245, 245, 245);
-    --logo-fill: none;
-    --H1-weight: 500;
-    --H2-weight: 400;
-    --H3-weight: 400;
-    --text-weight: 400;
-  }
+    }
 
-@supports (color: color(display-p3 1 1 1)) {
-    :root {
-        --cta-color-dark: color(display-p3 0 0.316 0.88);
-        --cta-color: color(display-p3 0 0.359 1);
-        --cta-color-light: color(display-p3 0.22 0.501 1);
-    }
-    body {
-        --text-color: #222;
-        --bkg-color: #fff;
-    }
-}
-
-/* Swatches for Dark Mode (OS Override)*/
-:root.dark-theme {
-    --main-nav-color: rgb(0, 0, 0, 1);
-    --alt-nav-color: rgba(0, 0, 0, 1);
-    --cta-color: rgb(0, 68, 194);
-    --cta-color-dark: rgb(0, 75, 214);
-    --cta-color-light: #0041b9;
-    }
-body.dark-theme {
-    --H1-color: #fff;
-    --H2-color: #eee;
-    --H3-color: #ddd;
-    --text-color: #ddd;
-    --bkg-color: #121212;
-    --bkg-color-highlight: #242424;
-    --logo-fill: #fff;
-    --H1-weight: 300;
-    --H2-weight: 250;
-    --H3-weight: 250;
-    --text-weight: 200;
-    } 
-
-@supports (color: color(display-p3 1 1 1)) {
-    :root.dark-theme {
-        --main-nav-color: rgb(0, 0, 0, 1);
-        --alt-nav-color: rgba(0, 0, 0, 1);
-    }
-    body.dark-theme {
-        --H1-color: #fff;
-        --H2-color: #eee;
-        --H3-color: #ddd;
-        --text-color: #ddd;
-        --bkg-color: #121212;
-        --bkg-color-highlight: #242424;
-        --logo-fill: #fff;
-    }     
-}
-
-/* Swatches for OS Dark Mode*/
-@media (prefers-color-scheme: dark) {
-    :root {
-      --text-color: #eee;
-      --bkg-color: #121212;
-      --cta-color: rgb(0, 68, 194);
-      --cta-color-dark: rgb(0, 75, 214);
-      --cta-color-light: #0041b9;
-    }
-    body {
-        --H1-color: #fff;
-        --H2-color: #eee;
-        --H3-color: #ddd;
-        --text-color: #ddd;
-        --bkg-color: #121212;
-        --bkg-color-highlight: #242424;
-        --logo-fill: #fff;
-        --H1-weight: 300;
-        --H2-weight: 250;
-        --H3-weight: 250;
-        --text-weight: 200;
+    @media (prefers-color-scheme: dark) {
+        body {
+            --text-color: var(--text-color-dm);
+            --bkg-color: var(--bkg-color-dm);
+            --cta-color: var(--cta-color-dm);
+            --cta-color-dark: var(--cta-color-dark-dm);
+            --cta-color-light: var(--cta-color-light-dm);
+            --bkg-color-highlight: var(--bkg-color-highlight-dm);
+            --logo-fill: var(--logo-fill-dm);
+            --text-weight: var(--text-weight-dm);
+            --H1-color: var(--H1-color-dm);
+            --H1-weight: var(--H1-weight-dm);
+            --H2-color: var(--H2-color-dm);
+            --H2-weight: var(--H2-weight-dm);
+            --H3-color: var(--H3-color-dm);
+            --H3-weight: var(--H3-weight-dm);
+            --bkg-color: var(--bkg-color-dm);
+            --bkg-color-highlight: var(--bkg-color-highlight-dm);
         }
-    
-    /* Swatches for Light Mode (OS Override)*/
-    :root.light-theme {
-        --text-color: #222;
-        --bkg-color: #fff;
-        --cta-color: srgb(-0.15 0.325 0.914);
-        --cta-color-dark: rgb(0% 32.5% 91.4%);
-        --cta-color-light: #0053e9;
     }
-    body.light-theme {
-        --H1-color: #222;
-        --H2-color: #222;
-        --H3-color: #222;
-        --text-color: #222;
-        --bkg-color: #fff;
-        --bkg-color-highlight: rgb(240, 240, 240);
-        --logo-fill: none;
-        --H1-weight: 500;
-        --H2-weight: 400;
-        --H3-weight: 400;
-        --text-weight: 400;
-        }
-  }
+
+.body {
+    --main-nav-color: var(--main-nav-color-lm);
+    --alt-nav-color: var(--alt-nav-color-lm);
+    --logo-fill: var(--logo-fill-lm);
+    --cta-color: var(--cta-color-lm);
+    --cta-color-dark: var(--cta-color-dark-lm);
+    --cta-color-light: var(--cta-color-light-lm);
+    --bkg-color: var(--bkg-color-lm);
+    --bkg-color-highlight: var(--bkg-color-highlight-lm);
+    --logo-fill: var(--logo-fill-lm);
+    --text-color: var(--text-color-lm);
+    --text-weight: var(--text-weight-lm);
+    --H1-color: var(--H1-color-lm);
+    --H1-weight: var(--H1-weight-lm);
+    --H2-color: var(--H2-color-lm);
+    --H2-weight: var(--H2-weight-lm);
+    --H3-color: var(--H3-color-lm);
+    --H3-weight: var(--H3-weight-lm);
+    --bkg-color: var(--bkg-color-lm);
+    --bkg-color-highlight: var(--bkg-color-highlight-lm);
+}
+
+/* OS-Dark/Light Mode Override*/
+.body.dark-theme {
+    --main-nav-color: var(--main-nav-color-dm);
+    --alt-nav-color: var(--alt-nav-color-dm);
+    --cta-color: var(--cta-color-dm);
+    --cta-color-dark: var(--cta-color-dark-dm);
+    --cta-color-light: var(--cta-color-light-dm);
+    --bkg-color: var(--bkg-color-dm);
+    --bkg-color-highlight: var(--bkg-color-highlight-dm);
+    --logo-fill: var(--logo-fill-dm);
+    --cta-color: var(--cta-color-dm);
+    --cta-color-dark: var(--cta-color-dark-dm);
+    --cta-color-light: var(--cta-color-light-dm);
+    --text-color: var(--text-color-dm);
+    --text-weight: var(--text-weight-dm);
+    --H1-color: var(--H1-color-dm);
+    --H1-weight: var(--H1-weight-dm);
+    --H2-color: var(--H2-color-dm);
+    --H2-weight: var(--H2-weight-dm);
+    --H3-color: var(--H3-color-dm);
+    --H3-weight: var(--H3-weight-dm);
+    --bkg-color: var(--bkg-color-dm);
+    --bkg-color-highlight: var(--bkg-color-highlight-dm);
+    }
+
+.body.light-theme {
+    --main-nav-color: var(--main-nav-color-lm);
+    --alt-nav-color: var(--alt-nav-color-lm);
+    --logo-fill: var(--logo-fill-lm);
+    --cta-color: var(--cta-color-lm);
+    --cta-color-dark: var(--cta-color-dark-lm);
+    --cta-color-light: var(--cta-color-light-lm);
+    --bkg-color: var(--bkg-color-lm);
+    --bkg-color-highlight: var(--bkg-color-highlight-lm);
+    --logo-fill: var(--logo-fill-lm);
+    --text-color: var(--text-color-lm);
+    --text-weight: var(--text-weight-lm);
+    --H1-color: var(--H1-color-lm);
+    --H1-weight: var(--H1-weight-lm);
+    --H2-color: var(--H2-color-lm);
+    --H2-weight: var(--H2-weight-lm);
+    --H3-color: var(--H3-color-lm);
+    --H3-weight: var(--H3-weight-lm);
+    --bkg-color: var(--bkg-color-lm);
+    --bkg-color-highlight: var(--bkg-color-highlight-lm);
+}
 
 /* Swatches Ende */
 
@@ -147,12 +173,12 @@ nav {
     background-color: var(--main-nav-color);
   }
   /* if backdrop support: very transparent and blurred */
-  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    .backdrop-blur {
-      -webkit-backdrop-filter: blur(4px);
-      backdrop-filter: blur(4px);
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        .backdrop-blur {
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        }
     }
-  }
 
   nav.show.backdrop-blur {
     background-color: var(--alt-nav-color);
@@ -221,62 +247,62 @@ nav {
     padding-top: 11px;
 }
 
-@media (max-width: 768px) {
-    .show {
-        background-color: var(--main-nav-color);   
-    }
+    @media (max-width: 768px) {
+        .show {
+            background-color: var(--main-nav-color);   
+        }
 
-    .nav-content a {
-    font-weight: 300;
-    }    
-    .nav-links {
-        position: fixed;
-        top: 44px;
-        right: 0;
-        height: 0;
-        width: 100%;
-        background: var(--main-nav-color);
-        flex-direction: column;
-        justify-content: flex-start;
-        transition: height 1s cubic-bezier(0.19, 1, 0.22, 1),
-            background-color 0.3s;
-    }
+        .nav-content a {
+        font-weight: 300;
+        }    
+        .nav-links {
+            position: fixed;
+            top: 44px;
+            right: 0;
+            height: 0;
+            width: 100%;
+            background: var(--main-nav-color);
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: height 1s cubic-bezier(0.19, 1, 0.22, 1),
+                background-color 0.3s;
+        }
 
-    .show .nav-links {
-        height: 100%;
-        background-color: var(--alt-nav-color);
-    
-    }
+        .show .nav-links {
+            height: 100%;
+            background-color: var(--alt-nav-color);
+        
+        }
 
-    .nav-links a {
-        height: 0;
-        width: 0;
-        opacity: 0;
-        overflow: hidden;
-        margin-right: 50px;
-        margin-left: 50px;
-        transition: opacity 1.5s, height 2s;
-    }
+        .nav-links a {
+            height: 0;
+            width: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-right: 50px;
+            margin-left: 50px;
+            transition: opacity 1.5s, height 2s;
+        }
 
-    .show .nav-links a {
-        opacity: 1;
-        width: auto;
-        height: auto;
-    }
+        .show .nav-links a {
+            opacity: 1;
+            width: auto;
+            height: auto;
+        }
 
-    .nav-icon {
-        order: 1;
-        display: grid;
-    }
+        .nav-icon {
+            order: 1;
+            display: grid;
+        }
 
-    .logo {
-        order: 2;
-    }
+        .logo {
+            order: 2;
+        }
 
-    .mail-icon {
-        order: 3;
+        .mail-icon {
+            order: 3;
+        }
     }
-}
 
 .show .one {
     transform: rotate(45deg) translateY(5.5px);
@@ -325,25 +351,6 @@ hr {
 }
     /* Buttons */
 
-.button-dark {
-    align-items: center;
-    padding: 6px 14px;
-    cursor: pointer;
-    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-    border-radius: var(--borderradius-small);
-    border: none;
-    background: #6E6D70;
-    color: #DFDEDF;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    }
-    .button-dark:focus {
-        box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-        outline: 0;
-    }
-
-      
 .button-light {
     align-items: center;
     padding: 10px 17px;
@@ -395,6 +402,7 @@ hr {
 
     /* Custom Modifiers */
     /* -- Shadows */
+
 .permashadow {
     box-shadow: var(--universal-shadow);
 }
@@ -409,56 +417,57 @@ hr {
 }
     /* -- Colors & Shapes*/
 
-    .hasbackground {
-        background: var(--bkg-color);
-    }
+.hasbackground {
+    background: var(--bkg-color);
+}
 
-    .hasbackground-light {
-        background: var(--bkg-color-highlight);
-    }
-    .isrounded {
-        border-top-left-radius: var(--borderradius-mid);
-        border-top-right-radius: var(--borderradius-mid);
-        border-bottom-right-radius: var(--borderradius-mid);
-        border-bottom-left-radius: var(--borderradius-mid);
-    }
+.hasbackground-light {
+    background: var(--bkg-color-highlight);
+}
+.isrounded {
+    border-top-left-radius: var(--borderradius-mid);
+    border-top-right-radius: var(--borderradius-mid);
+    border-bottom-right-radius: var(--borderradius-mid);
+    border-bottom-left-radius: var(--borderradius-mid);
+}
     /* -- Positioning */
-    .center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1ch;
-      }
-      .alignbottom {
-        bottom: 0;
-      }
 
-    .alignmiddle {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1ch;
+}
+.alignbottom {
+    bottom: 0;
+}
 
-    .fullpadding {
-        padding: 30px;
-    }
-    .thirdpadding {
-        padding: 10px;
-    }
-    .hasmargin {
-        margin: 10px;
-    }
-    .hasmaxwidth {
-        max-width: 1024px;
-    }
+.alignmiddle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fullpadding {
+    padding: 30px;
+}
+.thirdpadding {
+    padding: 10px;
+}
+.hasmargin {
+    margin: 10px;
+}
+.hasmaxwidth {
+    max-width: 1024px;
+}
 
 /*-- Pancake Layout --*/
-    .pancakeparent {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .pancakechild {
-        flex: 1 1 300px;
-        justify-content: space-around;
-    }
+.pancakeparent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pancakechild {
+    flex: 1 1 300px;
+    justify-content: space-around;
+}
