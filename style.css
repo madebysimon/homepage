@@ -10,6 +10,19 @@
     --borderradius-mid: 10px;
     --universal-shadow: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
     --universal-shadow-light: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
+
+    --breakpoint-wide: 1280px;
+    --breakpoint-normal: 1024px;
+    --breakpoint-thin: 960px;
+    --breakpoint-mobile: 768px;
+
+    --H1-size-large: 64px;
+    --H1-size-small: 48px;
+    --H2-size-large: 24px;
+    --H2-size-small: 20px;
+    --H3-size-large: 20px;
+    --H3-size-small: 18px;
+    --padding-full: 30px;
 }
 body {
     --H1-color: #222;
@@ -126,6 +139,9 @@ body.dark-theme {
 
 html {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 body {
     background: var(--bkg-color);
@@ -159,7 +175,7 @@ nav {
   }
 
 .nav-content {
-    max-width: 1024px;
+    max-width: var(--breakpoint-normal);
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -213,6 +229,15 @@ nav {
 .icon-small {
     width: 24px;
     height: 24px;
+    color: var(--text-color);
+    fill: var(--text-color);
+}
+
+.icon-medium {
+    width: 48px;
+    height: 48px;
+    color: var(--text-color);
+    fill: var(--text-color);
 }
 
 .mail-icon {
@@ -228,7 +253,8 @@ nav {
 
     .nav-content a {
     font-weight: 300;
-    }    
+    }
+
     .nav-links {
         position: fixed;
         top: 44px;
@@ -293,26 +319,26 @@ nav {
     font-weight: var(--text-weight);
 }
 .content h1 {
-    font-size: 64px;
+    font-size: var(--H1-size-large);
     margin-bottom: 0;
     font-weight: var(--H1-weight);
     color: var(--H1-color);
 }
     @media (max-width: 960px) {
         .content h1 {
-            font-size: 48px;
+            font-size: var(--H1-size-small);
         }
     }
 
 .content h2 {
-    font-size: 24px;
+    font-size: var(--H2-size-large);
     margin-bottom: 5px;
     font-weight: var(--H2-weight);
     color: var(--H2-color);
 }
 .content h3 {
-    font-size: 20px;
-    margin-bottom: -10px;
+    font-size: var(--H3-size-large);
+    margin-bottom: 5px;
     font-weight: var(--H3-weight);
     color: var(--H3-color);
 }
@@ -322,6 +348,28 @@ hr {
     height: 0;
     width: 80%;
     border-top: 1px solid var(--bkg-color-highlight);
+}
+
+.section-wide {
+    max-width: var(--breakpoint-wide);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    }
+
+.section-normal {
+    max-width: var(--breakpoint-normal);
+}
+
+.min25vh {
+    min-height: 25vh;
+}
+.spacer {
+    margin-top: 30px;
+}
+
+.marginbottom {
+    margin-bottom: 10px;
 }
     /* Buttons */
 
@@ -416,12 +464,18 @@ hr {
     .hasbackground-light {
         background: var(--bkg-color-highlight);
     }
+    
+    .hasbackground-dark {
+        background: var(--bkg-color);
+    }
+
     .isrounded {
         border-top-left-radius: var(--borderradius-mid);
         border-top-right-radius: var(--borderradius-mid);
         border-bottom-right-radius: var(--borderradius-mid);
         border-bottom-left-radius: var(--borderradius-mid);
     }
+
     /* -- Positioning */
     .center {
         display: flex;
@@ -430,7 +484,8 @@ hr {
         justify-content: center;
         gap: 1ch;
       }
-      .alignbottom {
+
+    .alignbottom {
         bottom: 0;
       }
 
@@ -440,25 +495,25 @@ hr {
     }
 
     .fullpadding {
-        padding: 30px;
+        padding: var(--padding-full);
     }
     .thirdpadding {
-        padding: 10px;
+        padding: calc(var(--padding-full)/3);
     }
     .hasmargin {
         margin: 10px;
-    }
-    .hasmaxwidth {
-        max-width: 1024px;
     }
 
 /*-- Pancake Layout --*/
     .pancakeparent {
         display: flex;
         flex-wrap: wrap;
+        gap: 20px;
     }
     
     .pancakechild {
         flex: 1 1 300px;
         justify-content: space-around;
-    }
+        flex-grow: 1;      /* <-- Lets them grow equally */
+        flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
+      }
