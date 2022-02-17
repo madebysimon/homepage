@@ -345,8 +345,6 @@ a {
 }
 .linkarrow:hover:after {
     content:' \2197';
-    color: var(--cta-color);
-    transition: var(--animation-speed-1);
 }
 
 .highlightlink, highlightlink:link {
