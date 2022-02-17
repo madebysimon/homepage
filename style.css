@@ -6,8 +6,8 @@
     --cta-color: color(srgb(-0.15 0.325 0.914));
     --cta-color-dark: color(rgb(0% 32.5% 91.4%));
     --cta-color-light: #0053e9;
-    --borderradius-small: 6px;
-    --borderradius-mid: 10px;
+    --borderradius-small: 6px; /* 3px */
+    --borderradius-mid: 10px; /* 5px */
     --universal-shadow: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
     --universal-shadow-light: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
 
@@ -16,6 +16,10 @@
     --breakpoint-thin: 960px;
     --breakpoint-mobile: 768px;
 
+    --animation-speed-1: 0.2s;
+    --font-size-button: 11px;
+    --font-size-nav: 14px;
+    --font-size-main: 16px;
     --H1-size-large: 64px;
     --H1-size-small: 48px;
     --H2-size-large: 24px;
@@ -23,13 +27,16 @@
     --H3-size-large: 20px;
     --H3-size-small: 18px;
     --padding-full: 30px;
+    --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 body {
     --H1-color: #222;
     --H2-color: #222;
     --H3-color: #222;
     --text-color: #222;
     --text-color-inverted: #fff;
+    --color-neutral: #bbb;
     --bkg-color: #fff;
     --bkg-color-highlight: rgb(245, 245, 245);
     --logo-fill: none;
@@ -64,6 +71,7 @@ body.dark-theme {
     --H2-color: #eee;
     --H3-color: #ddd;
     --text-color: #ddd;
+    --color-neutral: #444;
     --bkg-color: #121212;
     --bkg-color-highlight: #242424;
     --logo-fill: #fff;
@@ -104,6 +112,7 @@ body.dark-theme {
         --H3-color: #ddd;
         --text-color: #ddd;
         --bkg-color: #121212;
+        --color-neutral: #444;
         --bkg-color-highlight: #242424;
         --logo-fill: #fff;
         --H1-weight: 300;
@@ -126,6 +135,7 @@ body.dark-theme {
         --H3-color: #222;
         --text-color: #222;
         --bkg-color: #fff;
+        --color-neutral: #bbb;
         --bkg-color-highlight: rgb(240, 240, 240);
         --logo-fill: none;
         --H1-weight: 500;
@@ -137,8 +147,10 @@ body.dark-theme {
 
 /* Swatches Ende */
 
+
 html {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-main); 
+    font-size: var(--font-size-main);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: auto;
     scroll-behavior: smooth;
@@ -184,7 +196,7 @@ nav {
 
 .nav-content a {
     display: block;
-    font-size: 14px;
+    font-size: var(--font-size-nav);
     font-weight: 300;
     line-height: 44px;
     text-decoration: none;
@@ -229,17 +241,22 @@ nav {
 .icon-small {
     width: 24px;
     height: 24px;
-    color: var(--text-color);
-    fill: var(--text-color);
 }
 
 .icon-medium {
     width: 48px;
     height: 48px;
+}
+
+.icon-dark {
     color: var(--text-color);
     fill: var(--text-color);
 }
 
+.icon-light {
+    color: var(--text-color-inverted);
+    fill: var(--text-color-inverted);
+}
 .mail-icon {
     cursor: pointer;
     transition: all 0.3s;
@@ -279,9 +296,13 @@ nav {
         width: 0;
         opacity: 0;
         overflow: hidden;
-        margin-right: 50px;
-        margin-left: 50px;
+        margin-right: calc(2* var(--padding-full));
+        margin-left: calc(2* var(--padding-full));
         transition: opacity 1.5s, height 2s;
+    }
+    
+    .nav-links a:first-of-type {
+        margin-top: calc(0.5*var(--padding-full)); 
     }
 
     .show .nav-links a {
@@ -318,6 +339,42 @@ nav {
     color: var(--text-color);
     font-weight: var(--text-weight);
 }
+
+a {
+    color:inherit;
+}
+.linkarrow:hover:after {
+    content:' \2197';
+    color: var(--cta-color);
+    transition: var(--animation-speed-1);
+}
+
+.highlightlink, highlightlink:link {
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( rgba(0,0,0,0) 50%, var(--cta-color) 50%);
+    transition: var(--animation-speed-1) ease;
+    background-size: 2px;
+    background-size: auto 185%;
+}
+.highlightlink:hover {
+    background-position-y: 100%;
+    color: var(--text-color-inverted);
+}
+
+.highlightlink-light, highlightlink-light:link {
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( rgba(0,0,0,0) 50%, var(--bkg-color-highlight) 50%);
+    transition: var(--animation-speed-1) ease;
+    background-size: 2px;
+    background-size: auto 185%;
+}
+.highlightlink-light:hover {
+    background-position-y: 100%;
+    color: var(--text-color);
+}
+
 .content h1 {
     font-size: var(--H1-size-large);
     margin-bottom: 0;
@@ -340,7 +397,6 @@ nav {
     font-size: var(--H3-size-large);
     margin-bottom: 5px;
     font-weight: var(--H3-weight);
-    color: var(--H3-color);
 }
 
 hr {
@@ -373,7 +429,7 @@ hr {
 }
     /* Buttons */
 
-      
+
 .button-light {
     align-items: center;
     padding: 10px 17px;
@@ -381,16 +437,21 @@ hr {
     border-radius: var(--borderradius-small);
     color: var(--text-color);
     background:  var(--bkg-color-highlight);
+    font-family: var(--font-main);
+    font-size: var(--font-size-button);
     border: none;
+    box-shadow: inset 0 0 0 1px var(--bkg-color);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     }
     .button-light:hover {
-        background: var(--cta-color-light); 
+        background: var(--bkg-color); 
+        transition: var(--animation-speed-1);
     }
     .button-light:active {
-        background: var(--cta-color-dark);
+        background: var(--color-neutral);
+        transition: 0s;
         outline: none;
     }
     .button-light:focus {
@@ -403,6 +464,8 @@ hr {
     padding: 10px 17px;
     cursor: pointer;
     border-radius: var(--borderradius-small);
+    font-family: var(--font-main);
+    font-size: var(--font-size-button);
     border: none;
     color: #fff;
     background: var(--cta-color);
@@ -412,7 +475,8 @@ hr {
     touch-action: manipulation;
     }
     .button-blue:hover {
-        background: var(--cta-color-light); 
+        background: var(--cta-color-light);
+        transition: var(--animation-speed-1);
     }
     .button-blue:focus {
         box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
@@ -421,24 +485,37 @@ hr {
     .button-blue:active {
         background: var(--cta-color-dark);
         outline: none;
+        transition: 0s;
     }
 
     /* Custom Modifiers */
     /* -- Shadows */
 .permashadow {
     box-shadow: var(--universal-shadow);
+    overflow:visible;
 }
-.permashadow-light:after {
+.permashadow-light {
     box-shadow: var(--universal-shadow-light);
     overflow:visible;
 }
+
 .hovershadow:hover {
     border: 0px solid var(--cta-color-light);
     box-shadow: var(--universal-shadow);
     transition: box-shadow .3s;
 }
     /* -- Colors & Shapes*/
+    .invertfontcolor {
+        color: var(--text-color-inverted);
+    }
+    
+    .jadegreen {
+        background: linear-gradient(320deg, #0d8d51 0%, #205430 100%);
+    }
 
+    .babyblue {
+        background: linear-gradient(320deg, rgba(66,151,223,1) 0%, rgba(18,98,181,1) 100%);
+    }
     .hasbackground {
         background: var(--bkg-color);
     }
@@ -481,6 +558,9 @@ hr {
     }
     .thirdpadding {
         padding: calc(var(--padding-full)/3);
+    }
+    .thirdofgap {
+        gap: calc(var(--padding-full)/3);
     }
     .hasmargin {
         margin: 10px;
