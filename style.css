@@ -545,7 +545,9 @@ hr {
     .alignbottom {
         bottom: 0;
       }
-
+    .text-center {
+        text-align: center;
+    }
     .alignmiddle {
         margin-left: auto;
         margin-right: auto;
@@ -577,3 +579,45 @@ hr {
         flex-grow: 1;      /* <-- Lets them grow equally */
         flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
       }
+
+/*-- Scrollsnap Gallery --*/
+.hscrollsnap {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    gap: var(--padding-full);
+    margin-left: var(--padding-full);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+    .hscrollsnap::-webkit-scrollbar {
+        display: none;
+    }
+
+.hsn-card {
+    overflow: none;
+    scroll-snap-align: start;
+  }
+ 
+.hsn-card:first-of-type {
+    margin-left: var(--padding-full)
+  }
+
+
+.hsn-card img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 29vh;
+    max-height: calc(var(--breakpoint-wide)/6);
+    overflow: none;
+}
+@media (max-width: 768px) {
+    .hsn-card img {
+        max-width: 100vh;
+        max-height: 100vh;
+    }
+    .hsn-card {
+        max-width: 100vh;
+        max-height: 100vh;
+    }
+}
