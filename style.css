@@ -635,11 +635,11 @@ hr {
 }
 @media (max-width: 768px) {
     .hsn-card img {
-        max-width: 70vw, 300px;
+        max-width: 80vw, 300px;
         max-height: 100vh, 300px;
     }
     .hsn-card {
-        max-width: 70vw;
-        max-height: 100vh;
+        max-width: 80vw, 300px;
+        max-height: 100vh, 300px;
     }
 }
