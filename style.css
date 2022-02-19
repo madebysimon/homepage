@@ -20,6 +20,7 @@
     --font-size-button: 11px;
     --font-size-nav: 14px;
     --font-size-main: 16px;
+    --font-size-mono: calc(var(--font-size-main)*0.9);
     --H1-size-large: 64px;
     --H1-size-small: 48px;
     --H2-size-large: 24px;
@@ -44,6 +45,8 @@ body {
     --H2-weight: 400;
     --H3-weight: 400;
     --text-weight: 400;
+    --text-weight-mono: 400;
+    
   }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -451,7 +454,7 @@ hr {
     -webkit-user-select: none;
     touch-action: manipulation;
     }
-    .button-light:hover {
+    .button-light:hover :focus-within {
         background: var(--bkg-color); 
         transition: var(--animation-speed-1);
     }
@@ -511,6 +514,18 @@ hr {
     transition: box-shadow .3s;
 }
     /* -- Colors & Shapes*/
+
+    .font-mono {
+        font-family: 'Space Mono', monospace;
+        font-size: var(--font-size-mono);
+        font-weight: var(--text-weight-mono);
+    }
+    .font-code::before {
+        content:' ';
+    }
+    .font-code:after {
+        content:' ';
+    }
     .invertfontcolor {
         color: var(--text-color-inverted);
     }
