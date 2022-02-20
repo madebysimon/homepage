@@ -715,13 +715,15 @@ hr {
 .hsn-card img {
     margin-left: auto;
     margin-right: auto;
-    max-width: 300px;
-    max-height: 80vh, 300px;
+    /* max-width: 100vh; */
+    max-height: 50vh;
     overflow: none;
+    z-index: -1;
 }
 @media (max-width: 1340px) {
     .hscrollsnap {
         margin-left: var(--padding-full);
+        margin-right: var(--padding-full);
     }
 }
 @media (max-width: 768px) {
@@ -747,3 +749,34 @@ hr {
     font-size: var(--H4-size-large);
 }
 
+.scrollcontainer {
+    overflow-x: none;
+}
+
+.scrollsection {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow-x: none; /* für Ausblenden der Leiste*/
+    /* overflow-x: auto; */
+}
+.scrollsection:hover {
+    overflow-x: scroll;
+}
+
+.scrollsection::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.scrollsection::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: var(--cta-color);
+}
+.scrollsection::-webkit-scrollbar-thumb:hover {
+    background: var(--cta-color-light);
+}
+.scrollsection::-webkit-scrollbar-thumb:active {
+    background: var(--cta-color-dark);
+}
