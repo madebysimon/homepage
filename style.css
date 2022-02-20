@@ -11,6 +11,7 @@
 
     --animation-speed-1: 0.2s;
     --padding-full: 30px;
+    --padding-small: calc(var(--padding-full)/3);
 
     --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -24,7 +25,7 @@
     --H2-size-small: 20px;
     --H3-size-large: 20px;
     --H3-size-small: 18px;
-
+    --H4-size-large: 14px;
     --nav-height: 44px;
 }
 
@@ -50,6 +51,7 @@ body {
     --H3-weight: 400;
     --text-weight: 400;
     --text-weight-mono: 400;
+    --text-weight-bold: 600;
   }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -426,6 +428,19 @@ nav { /*-- Nav-Leiste --*/
     margin-bottom: 5px;
     font-weight: var(--H3-weight);
 }
+.content h4 {
+    font-size: var(--H4-size-large);
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: var(--text-weight);
+}
+.content h5 {
+    font-size: var(--H4-size-large);
+    margin-bottom: 5px;
+    font-weight: var(--text-weight);
+    text-transform: uppercase;
+}
+
 
 hr {
     border: 0;
@@ -547,6 +562,11 @@ hr {
         font-size: var(--font-size-mono);
         font-weight: var(--text-weight-mono);
     }
+
+    .text-bold {
+        font-weight: var(--text-weight-bold);
+       }
+
     .font-code::before {
         content:' ';
     }
@@ -612,6 +632,10 @@ hr {
         margin-left: auto;
         margin-right: auto;
     }
+    .text-left {
+        text-align: left;
+        padding-left: var(--padding-small);
+    }
 
     .fullpadding {
         padding: var(--padding-full);
@@ -640,6 +664,31 @@ hr {
         flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
       }
 
+    .footerchildleft {
+        flex: 1 1 calc(var(--breakpoint-thin)/2);
+        justify-content: space-around;
+        flex-grow: 1;      /* <-- Lets them grow equally */
+        flex-shrink: 1;
+    }
+    .footersubchildleft{
+        flex: 1 1 250px;
+        justify-content: space-around;
+        flex-grow: 0;      /* <-- Lets them grow equally */
+        flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
+    }
+    @media (min-width: 768px) {        
+        .footerchildleft {
+            max-width: 33%;
+        }
+    }
+
+    .footerchild {
+        flex: 1 1 25%;
+        justify-content: space-around;
+        flex-grow: 2;      /* <-- Lets them grow equally */
+        flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
+      }    
+
 /*-- Scrollsnap Gallery --*/
 
 .hscrollsnap {
@@ -647,12 +696,12 @@ hr {
     overflow-x: scroll;
     display: flex;
     gap: var(--padding-full);
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    /*  -ms-overflow-style: none; */ /* for IE and Edge */
+    /* scrollbar-width: none;  /* Firefox */
   }
-    .hscrollsnap::-webkit-scrollbar {
+/*     .hscrollsnap::-webkit-scrollbar {
         display: none;
-    }
+    } */
 
 .hsn-card {
     overflow: none;
@@ -685,3 +734,16 @@ hr {
         max-height: 100vh, 300px;
     }
 }
+
+.footerheading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    box-shadow: 0px 3px 0px 0.5px var(--color-neutral);
+}
+
+.footerlink {
+    text-decoration: none;
+    font-size: var(--H4-size-large);
+}
+
