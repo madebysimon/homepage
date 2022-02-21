@@ -408,6 +408,7 @@ nav { /*-- Nav-Leiste --*/
 
 .content h1 {
     font-size: var(--H1-size-large);
+    padding-top: none;
     margin-bottom: 0;
     font-weight: var(--H1-weight);
     color: var(--H1-color);
@@ -464,16 +465,17 @@ hr {
     overflow: hidden;
 }
 
-
 .section-normal {
     max-width: var(--breakpoint-normal);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .min25vh {
     min-height: 25vh;
 }
 .spacer {
-    margin-top: 30px;
+    margin-top: var(--padding-full);
 }
 
 .marginbottom {
@@ -654,6 +656,12 @@ hr {
     .fullpadding {
         padding: var(--padding-full);
     }
+    .fullpaddingsection {
+        padding-left: var(--padding-full);
+        padding-right: var(--padding-full);
+        padding-bottom: var(--padding-full);
+    }
+
     .thirdpadding {
         padding: calc(var(--padding-full)/3);
     }
@@ -677,7 +685,8 @@ hr {
         justify-content: space-around;
         flex-grow: 1;      /* <-- Lets them grow equally */
         flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
-      }
+        max-height: 50vh;
+    }
 
     .footerchildleft {
         flex: 1 1 calc(var(--breakpoint-thin)/2);
@@ -702,7 +711,7 @@ hr {
         justify-content: space-around;
         flex-grow: 2;      /* <-- Lets them grow equally */
         flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
-      }    
+      }
 
 /*-- Scrollsnap Gallery --*/
 
@@ -735,20 +744,14 @@ hr {
     overflow: none;
     z-index: -1;
 }
-@media (max-width: 1340px) {
-    .hscrollsnap {
-        margin-left: var(--padding-full);
-        margin-right: var(--padding-full);
-    }
-}
 @media (max-width: 768px) {
     .hsn-card img {
-        max-width: 80vw, 300px;
-        max-height: 100vh, 300px;
+        max-width: 80vw;
+        max-height: 100vh;
     }
     .hsn-card {
-        max-width: 80vw, 300px;
-        max-height: 100vh, 300px;
+        max-width: 80vw;
+        max-height: 100vh;
     }
     .hsn-card img {
         max-width: 70vw;
@@ -756,7 +759,6 @@ hr {
         overflow: none;
         z-index: -1;
     }
-
 }
 
 .footerheading::after {
@@ -788,8 +790,8 @@ hr {
 }
 
 .scrollsection::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
 }
 .scrollsection::-webkit-scrollbar-thumb {
     -webkit-border-radius: 3px;
