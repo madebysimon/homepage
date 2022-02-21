@@ -761,12 +761,12 @@ hr {
     }
 }
 
-.footerheading::after {
+/* .footerheading::after {
     content: '';
     display: block;
     width: 100%;
     box-shadow: 0px 3px 0px 0.5px var(--color-neutral);
-}
+} */
 
 .footerlink {
     text-decoration: none;
