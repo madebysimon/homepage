@@ -687,31 +687,32 @@ hr {
         flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
         max-height: 50vh;
     }
-
+    
     .footerchildleft {
         flex: 1 1 calc(var(--breakpoint-thin)/2);
         justify-content: space-around;
         flex-grow: 1;      /* <-- Lets them grow equally */
         flex-shrink: 1;
     }
+    
     .footersubchildleft{
         flex: 1 1 250px;
         justify-content: space-around;
         flex-grow: 0;      /* <-- Lets them grow equally */
         flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
     }
-    @media (min-width: 768px) {        
+
+    @media (min-width: 769px) {        
         .footerchildleft {
-            max-width: 33%;
+            max-width: 20%;
+            
+        }
+
+        .footerchild {
+            max-width: 20%;
         }
     }
 
-    .footerchild {
-        flex: 1 1 25%;
-        justify-content: space-around;
-        flex-grow: 2;      /* <-- Lets them grow equally */
-        flex-shrink: 1;    /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
-      }
 
 /*-- Scrollsnap Gallery --*/
 
@@ -761,12 +762,12 @@ hr {
     }
 }
 
-/* .footerheading::after {
+.footerheading::after {
     content: '';
     display: block;
     width: 100%;
-    box-shadow: 0px 3px 0px 0.5px var(--color-neutral);
-} */
+    box-shadow: 0px 3px 0px 0.5px var(--bkg-color-highlight);
+}
 
 .footerlink {
     text-decoration: none;
