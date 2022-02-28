@@ -127,7 +127,7 @@ body.dark-theme {
     body.light-theme {
         --text-color: #222;
         --bkg-color: #fff;
-        --cta-color: rgb(0% 36.6% 100%);
+        --cta-color: rgb(0, 68, 194);
         --cta-color-dark: color(rgb(0% 32.5% 91.4%));
         --cta-color-light: #0053e9;
         --H1-color: #222;
@@ -516,15 +516,17 @@ nav { /*-- Nav-Leiste --*/
 }
 
 .content .hero-text {
-    padding-top: 0px;
+    padding-bottom: var(--padding-full);
     margin-top: 0px;
     font-size: 120px;
     font-weight: 300;
+    line-height: 70%;
     color: white;
 }
 
 .hero-pretext {
     text-transform: uppercase;
+    padding-bottom: var(--padding-small);
     font-size: var(--font-size-button);
     color: white;
     opacity: 70%;
@@ -759,6 +761,9 @@ hr {
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     } */
 
+    .gradient-graphite {
+        background: linear-gradient(320deg, #343934 0%, #252724 100%);
+    }
 
     .gradient-jadegreen {
         background: linear-gradient(320deg, #0d8d51 0%, #205430 100%);
@@ -811,7 +816,7 @@ hr {
         border-top-right-radius: var(--borderradius-mid);
     }
     /* -- Positioning */
-    
+
     .center {
         display: flex;
         flex-direction: column;
@@ -917,7 +922,8 @@ hr {
 
 .hsn-card {
     overflow: none;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
+    margin-bottom: var(--padding-small);
   }
  
 .hsn-card:last-child {
@@ -932,14 +938,91 @@ hr {
     overflow: none;
     z-index: -1;
 }
+
+.newscard {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+    width: 37.5vh;
+    min-height: 200px;
+    min-width: 150px;
+    max-width: 80vw;
+    max-height: 50vh;
+    overflow: none;
+    position: relative;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+}
+
+.newscard .badge-new {
+    height: 48px;
+    width: 48px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    right: var(--padding-small);
+    top: var(--padding-small);
+}
+
+.newscard .badge-text {
+    text-transform: uppercase;
+    font-size: var(--font-size-button);
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.newscard .newsdate {
+    font-size: var(--font-size-nav);
+    padding-top: var(--padding-small);
+    padding-left: var(--padding-small);
+    font-weight: 300;
+}
+.newscard .newstitle {
+    font-size: var(--H3-size-large);
+    padding-top: var(--padding-small-half);
+    padding-left: var(--padding-small);
+    font-weight: 500;
+    margin-right: var(--padding-full);
+} 
+.newscard .newstags {
+    text-transform: uppercase;
+    padding-left: var(--padding-small);
+    padding-top: var(--padding-small-half);
+    font-size: var(--font-size-button);
+    font-weight: 600;
+
+}
+.newscard .newstags a {
+    text-decoration: none;
+    opacity: .5;
+}
+.newscard .newstags a:hover {
+    text-decoration: none;
+    opacity: .8;
+}
+/* 
+.newscard .overlay {
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+} */
+
+.newscard img {
+    height: auto;
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
-    .hsn-card img {
-        max-width: 80vw;
-        max-height: 100vh;
-    }
     .hsn-card {
         max-width: 80vw;
         max-height: 100vh;
+        scroll-snap-align: center;
     }
     .hsn-card img {
         max-width: 70vw;
@@ -1075,6 +1158,10 @@ hr {
   }
   
   @media (max-width: 768px) {
+    .hero-pretext {
+        padding-bottom: var(--padding-small);
+    }
+
     .worko-tabs .tab {
         padding-left: 0;
         padding-right: 0;
