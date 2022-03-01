@@ -36,7 +36,7 @@ body {
     --main-nav-color: rgb(32, 33, 36, .9);
     --alt-nav-color: rgba(32, 33, 36, 1);
     --cta-color: color(srgb(0.15 0.325 0.914));
-    --cta-color-dark: color(rgb(0% 32.5% 91.4%));
+    --cta-color-dark: rgb(0% 32.5% 91.4%);
     --cta-color-light: #0053e9;
     --H1-color: #222;
     --H2-color: #222;
@@ -128,7 +128,7 @@ body.dark-theme {
         --text-color: #222;
         --bkg-color: #fff;
         --cta-color: rgb(0, 68, 194);
-        --cta-color-dark: color(rgb(0% 32.5% 91.4%));
+        --cta-color-dark: rgb(0% 32.5% 91.4%);
         --cta-color-light: #0053e9;
         --H1-color: #222;
         --H2-color: #222;
@@ -179,11 +179,17 @@ nav { /*-- Nav-Leiste --*/
     z-index: 100;
 }
 
+.hero {
+    height:101vh; /* aktiviert lassen, wenn notice */
+}
 .heroframe {
-    background:rgb(0, 0, 0, 0.1)
+    background:rgb(0, 0, 0, 0.1);
 }
 
 .navplaceholder {
+    height: var(--nav-height);
+}
+.noticebanner {
     height: var(--nav-height);
 }
 
@@ -328,7 +334,6 @@ nav { /*-- Nav-Leiste --*/
 .logo {
     cursor: pointer;
 }
-
 
 .icon-small {
     width: 24px;
@@ -586,7 +591,6 @@ nav { /*-- Nav-Leiste --*/
     text-transform: uppercase;
 }
 
-
 hr {
     border: 0;
     height: 0;
@@ -742,6 +746,10 @@ hr {
         font-weight: var(--text-weight-bold);
        }
 
+    .allcaps {
+        text-transform: uppercase;
+    }
+
     .font-code::before {
         content:' ';
     }
@@ -761,6 +769,9 @@ hr {
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     } */
 
+    .gradient-nightblack {
+        background: radial-gradient(#202220 0%, #101110 100%);
+    }
     .gradient-graphite {
         background: linear-gradient(320deg, #343934 0%, #252724 100%);
     }
@@ -954,13 +965,35 @@ hr {
     background-blend-mode: overlay;
     background-position: center;
 }
-
-.newscard .badge-new {
+.badge {
     height: 48px;
     width: 48px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: inline-block;
+    position: relative;
+}
+footer .badge {
+    margin-left: var(--padding-small-half);
+    cursor: hand;
+    cursor: pointer;
+    position: relative;
+}
+footer .badge:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+footer .badge-icon {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: 600;
+}
+.newscard .badge {
     position: absolute;
     right: var(--padding-small);
     top: var(--padding-small);
@@ -1234,3 +1267,104 @@ hr {
       border-bottom: none; /* add border if Text only */
     }
   }
+
+.footerwrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: var(--padding-full);
+    padding-left: var(--padding-full);
+    padding-right: var(--padding-full);
+    padding-bottom: var(--padding-full);
+}
+
+@media (max-width: 768px) {
+    .footerleft {
+        order: 1;
+    }
+    .footermiddle {
+        order: 3;
+    }
+    .footerright {
+        order: 2;
+    }
+}
+
+.footerleft {
+    flex: 1 1 150px;
+    justify-content: space-around;
+    max-height: 50vh;
+}
+
+.lowerfooterleft {
+    flex: 1 1 225px;
+    justify-content: space-around;
+    max-height: 50vh;
+}
+.footermiddle {
+    flex: 1 1 300px;
+    justify-content: space-around;
+    max-height: 50vh;
+}
+.lowerfootermiddle {
+    flex: 1 1 225px;
+    max-height: 50vh;
+    text-align: end;
+}
+.footerright {
+    flex: 1 1 150px;
+    justify-content: space-around;
+    max-height: 50vh;
+}
+.lowerfooterright {
+    align-items: flex-end;
+    justify-content: space-around;
+    flex: 1 1 150px;
+    min-height: 44px;
+    max-height: 50vh;
+    overflow: visible;
+    z-index: 9900;
+}
+
+.lowerfooter-iconwrap {
+    position: absolute;
+
+}
+.footerlinktitle {
+    padding-top: var(--padding-full);
+    padding-bottom: var(--padding-small);
+    font-size: var(--font-size-button);
+    color: white;
+    opacity: 70%;
+}
+.footerlinktitle-light {
+    padding-bottom: var(--padding-small);
+    font-size: var(--font-size-button);
+    color: white;
+    opacity: 100%;
+}
+
+.footertext {
+    font-size: var(--H3-size-large);
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-weight: var(--H3-weight);
+    color: white;
+    opacity: 100%;
+}
+
+.footermap {
+    background-color: var(--alt-nav-color);
+    min-height: var(--padding-full);
+}
+
+.cursorpointer {
+    cursor: pointer;
+}
+
+.isinteractive {
+    cursor: pointer;
+}
+.isinteractive:hover {
+    opacity: 0.8;
+}

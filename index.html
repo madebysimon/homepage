@@ -35,8 +35,10 @@
             <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="#ffffff" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path fill-rule="evenodd" d="M19.25 1a.75.75 0 01.75.75V4h2.25a.75.75 0 010 1.5H20v2.25a.75.75 0 01-1.5 0V5.5h-2.25a.75.75 0 010-1.5h2.25V1.75a.75.75 0 01.75-.75zM9 6a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM4 9.5a5 5 0 117.916 4.062 7.973 7.973 0 015.018 7.166.75.75 0 11-1.499.044 6.469 6.469 0 00-12.932 0 .75.75 0 01-1.499-.044 7.973 7.973 0 015.059-7.181A4.993 4.993 0 014 9.5z"></path></svg>
         </div>
     </nav>
+    </div>
     <section id="hero" class="hero gradient-turquoise">
         <div class="navplaceholder"></div>
+        <div class="noticebanner gradient-cta"></div>
         <div class="section-wide content fullpadding">
             <section id="hero" class="heroframe isrounded">
                 <div class="hero-content">
@@ -44,7 +46,7 @@
                         <div class="hero-left-center">
                             <div class="hero-pretext">Hello my name is</div>
                             <h1 class="hero-text">Simon</h1>
-                            <span class="hero-link"><a>View Projects</a><a class="hero-link-option"> or </a><a>Read About Me</a></span>
+                            <span class="hero-link"><a class="isinteractive">View Projects</a><a class="hero-link-option"> or </a><a class="isinteractive">Read About Me</a></span>
                             <p class="hero-subtext"> I work as a clinical psychologist by day and design software by night.<br>
                                 Recently I co-founded maia health, a mental health provider.<br>
                                 This site was built for sharing content with my clients,<br>
@@ -150,26 +152,9 @@
     <div class="spacer"></div>
     <section id="Newsroom" class="section-wide fullpaddingsection scrollcontainer">
         <div id="hscrollsnap" class="scrollsection hscrollsnap">
-            <div class="hsn-card center">
-                <div class="newscard isrounded gradient-jadegreen" style="background-image: url('img/dog1.jpg'), linear-gradient(320deg, #0d8d51 0%, #205430 100%)">
-                    <div class="badge-new center"><div class="badge-text">
-                        New
-                    </div></div>
-                    <div class="newsdate">
-                        22.02.2022
-                    </div>
-                    <div class="newstitle">
-                        Lights On –<br>Design und Entwicklung eines zeitgemäßen Online Portfolios.
-                    </div>
-                    <div href="" class="newstags">
-                        <a href="">#Frontend</a><br>
-                        <a href="">#Strop</a>
-                    </div>  
-                </div>
-            </div>
             <div class="hsn-card permashadow isrounded center">
                 <div class="newscard isrounded gradient-jadegreen" style="background-image: url('img/dog1.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
-                    <div class="badge-new center"><div class="badge-text">
+                    <div class="badge center"><div class="badge-text">
                         New
                     </div></div>
                     <div class="newsdate">
@@ -186,28 +171,21 @@
             </div>
             <div class="hsn-card center">
                 <div class="newscard isrounded gradient-jadegreen" style="background-image: url('img/dog2.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
-                    <div class="badge-new center"><div class="badge-text">
-                        New
-                    </div></div>
                     <div class="newsdate">
-                        22.02.2022
+                        03.01.2022
                     </div>
                     <div class="newstitle">
-                        Lights On –<br>Design und Entwicklung eines zeitgemäßen Online Portfolios.
+                        Second Project –<br>Lorem Ipsum Dolor sit amet blabla the quick brown fox.
                     </div>
                     <div href="" class="newstags">
-                        <a href="">#Frontend</a><br>
-                        <a href="">#Strop</a>
+                        <a href="">#Second</a>
                     </div>  
                 </div>
             </div>
             <div class="hsn-card center">
                 <div class="newscard isrounded gradient-jadegreen" style="background-image: url('img/dog3.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
-                    <div class="badge-new center"><div class="badge-text">
-                        New
-                    </div></div>
                     <div class="newsdate">
-                        22.02.2022
+                        16.12.2021
                     </div>
                     <div class="newstitle">
                         Lights On –<br>Design und Entwicklung eines zeitgemäßen Online Portfolios.
@@ -220,11 +198,8 @@
             </div>
             <div class="hsn-card center">
                 <div class="newscard isrounded gradient-jadegreen" style="background-image: url('img/dog4.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
-                    <div class="badge-new center"><div class="badge-text">
-                        New
-                    </div></div>
                     <div class="newsdate">
-                        22.02.2022
+                        8.11.2021
                     </div>
                     <div class="newstitle">
                         Lights On –<br>Design und Entwicklung eines zeitgemäßen Online Portfolios.
@@ -256,8 +231,7 @@
             </div>
         </div>
     </section>
-
-    <footer class="content fullpaddingsection">
+    <!-- <footer class="content fullpaddingsection">
         <hr class="section-normal">
         <section id="footer-links">
             <div class="alignmiddle section-normal pancakeparent">
@@ -297,15 +271,67 @@
                     </div>
                 </div>
             </div>
+
             <hr class="section-normal">
-            <div class="alignmiddle section-normal">
+            
+            <div id="legal" class="alignmiddle section-normal">
                 <span class="center thirdpadding text-left">
                     © 2022 All rights reserved.
                     <a class="footerlink button-light" href="#">back to top</a>
                 </span>
             </div>
         </section>
+    </footer> -->
+   
+    <footer id="footer">
+        <div class="gradient-nightblack">
+            <div id="upperfooter" class="section-wide footerwrap">
+                <div class="footerleft">
+                    <div class="footerlinktitle allcaps">call me</div>
+                    <a href="" class="footertext isinteractive">+49 234 56 78 90</a>
+                    <div class="footerlinktitle allcaps">email me</div>
+                    <a href=""class="footertext isinteractive">hello@simonkelch.de</a>
+                    <div class="footerlinktitle allcaps">follow me</div>
+                    <a class="footerlinktitle-light allcaps isinteractive">LinkedIn</a>  <a class="footerlinktitle-light allcaps isinteractive">Twitter</a>  <a class="footerlinktitle-light allcaps isinteractive">behance</a>
+                </div>
+                <div class="footermiddle">
+                    <div class="footerlinktitle allcaps">Location</div>
+                    <div class="footertext isinteractive">Hauptstraße 1, 12345 Musterstadt</div>
+                    <div class="footermap cursorpointer isrounded">
+
+                    </div>
+                </div>
+                <div class="footerright">
+                    <div class="footerlinktitle allcaps">Office Hours</div>
+                    <div class="footertext">Monday - Friday</div>
+                    <div class="footertext">10AM - 6PM</div>
+                </div>
+            </div>
+            <div id="lowerfooter" class="section-wide footerwrap">
+                <div class="lowerfooterleft">
+                    <a class="footerlinktitle">© Simon Kelch, 2022. All rights reserved.</a>
+                </div>
+                <div class="lowerfootermiddle">
+                    <a class="footerlinktitle cursorpointer">Privacy Policy</a>  <a class="footerlinktitle cursorpointer">Terms and Conditions</a>
+                </div>
+                <div class="lowerfooterright center">
+                    <div class="lowerfooter-iconwrap">
+                        <div id="icon-acessibility" class="badge backdrop-blur">
+                            <div class="badge-icon">♿️</div>
+                        </div>
+                        <div id="icon-darkmode" class="badge backdrop-blur">
+                            <div class="badge-icon">⚪️</div>
+                        </div>
+                        <div id="icon-go-up" class="badge gradient-cta">
+                            <div class="badge-icon">↑</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </footer>
+
 </body>
 <script>
     const navIcon = document.querySelector(".nav-icon");
@@ -316,8 +342,8 @@
     }
 
     /*-- Theme Switch auf Logo --*/
-    const logoIcon = document.querySelector(".logo");
-    logoIcon.onclick = function () {
+    const DarkmodeIcon = document.querySelector(".logo");
+    DarkmodeIcon.onclick = function () {
     }
 
     /*-- Theme Switch Anfang */
