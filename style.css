@@ -152,11 +152,13 @@ html {
     font-size: var(--font-size-main);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+    background: var(--bkg-color);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 body {
-    background: var(--bkg-color);
     margin: 0;
+   
 }
 
 a {
@@ -354,6 +356,7 @@ nav { /*-- Nav-Leiste --*/
     color: var(--text-color-inverted);
     fill: var(--text-color-inverted);
 }
+
 .mail-icon {
     cursor: pointer;
     transition: all 0.3s;
@@ -555,8 +558,9 @@ nav { /*-- Nav-Leiste --*/
 
 .content h1 {
     font-size: var(--H1-size-large);
-    padding-top: none;
-    margin-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: var(--padding-small);
     font-weight: var(--H1-weight);
     color: var(--H1-color);
 }
@@ -589,6 +593,11 @@ nav { /*-- Nav-Leiste --*/
     margin-bottom: 5px;
     font-weight: var(--text-weight);
     text-transform: uppercase;
+}
+
+.smallcapslabel {
+    text-transform: uppercase;
+    font-size: var(--font-size-button);
 }
 
 hr {
@@ -629,7 +638,10 @@ hr {
     margin-bottom: 10px;
 }
     /* Buttons */
-
+.marginfull-lr {
+    margin-left: var(--padding-full);
+    margin-right: var(--padding-full);
+}
 
 .button-light {
     align-items: center;
@@ -833,7 +845,6 @@ hr {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1ch;
       }
 
     .alignbottom {
@@ -973,35 +984,22 @@ hr {
     display: inline-block;
     position: relative;
 }
-footer .badge {
-    margin-left: var(--padding-small-half);
-    cursor: hand;
-    cursor: pointer;
-    position: relative;
-}
-footer .badge:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+.bubble {
+    height: calc(4*var(--borderradius-small));
+    border-radius: calc(2*var(--borderradius-small));
+    width: fit-content;
+    font-size: var(--font-size-button);
+    padding-left: calc(var(--borderradius-small));
+    padding-right: calc(var(--borderradius-small));
 }
 
-footer .badge-icon {
-    position: relative;
-    margin: 0 auto;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-    font-weight: 600;
-}
 .newscard .badge {
     position: absolute;
     right: var(--padding-small);
     top: var(--padding-small);
 }
 
-.newscard .badge-text {
-    text-transform: uppercase;
-    font-size: var(--font-size-button);
+.center-text {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1301,6 +1299,7 @@ footer .badge-icon {
     justify-content: space-around;
     max-height: 50vh;
 }
+
 .footermiddle {
     flex: 1 1 300px;
     justify-content: space-around;
@@ -1327,9 +1326,32 @@ footer .badge-icon {
 }
 
 .lowerfooter-iconwrap {
-    position: absolute;
-
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: row;
 }
+
+footer .badge {
+    margin-left: var(--padding-small-half);
+    cursor: hand;
+    cursor: pointer;
+    position: relative;
+}
+footer .badge:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+footer .badge-icon {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: 600;
+}
+
 .footerlinktitle {
     padding-top: var(--padding-full);
     padding-bottom: var(--padding-small);
