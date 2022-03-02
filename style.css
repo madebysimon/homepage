@@ -153,7 +153,7 @@ html {
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
     background: var(--bkg-color);
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 body {
