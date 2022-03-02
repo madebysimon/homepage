@@ -152,13 +152,11 @@ html {
     font-size: var(--font-size-main);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-    background: var(--bkg-color);
-    margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 body {
     margin: 0;
-   
+    background: var(--bkg-color);
 }
 
 a {
