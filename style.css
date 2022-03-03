@@ -154,6 +154,26 @@ html {
     scroll-behavior: smooth;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  ul li {
+    position: relative;
+    margin-left: 1em;
+  }
+  
+  ul li:before {
+    position: absolute;
+    left: -1em;
+    color: var(--cta-color-dark);
+    content: "▪";
+  }
+
+
 body {
     margin: 0;
     background: var(--bkg-color);
@@ -180,7 +200,10 @@ nav { /*-- Nav-Leiste --*/
 }
 
 .hero {
-    height:101vh; /* aktiviert lassen, wenn notice */
+    height:100vh; /* aktiviert lassen, wenn notice */
+}
+.hero-article {
+    height:50vh; /* aktiviert lassen, wenn notice */
 }
 .heroframe {
     background:rgb(0, 0, 0, 0.1);
@@ -290,6 +313,9 @@ nav { /*-- Nav-Leiste --*/
     color: #ffffff;
     }
 
+footer .badge a {
+    text-decoration: none;
+}
 .nav-content a:hover,
 .nav-icon:hover,
 .mail-icon:hover {
@@ -1388,3 +1414,22 @@ footer .badge-icon {
 .isinteractive:hover {
     opacity: 0.8;
 }
+
+/* hover transform  */
+
+.hovertransform {
+    -webkit-transition: all 0.2s cubic-bezier(.42, 0, .58, 1);
+    transition: all 0.2s cubic-bezier(.42, 0, .58, 1);
+}
+
+.hovertransform:active {
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, -10px) skew(0deg, 0deg);
+    overflow: visible;
+
+  }
+  .wraphovertransform {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+  }
