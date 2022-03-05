@@ -26,9 +26,9 @@
 </head>
 <body>
     <!-- Looking up some source code? I publish on github. You're welcome. -->
-    <nav class="backdrop-blur">
+    <nav id="navbar" class="backdrop-blur">
         <div class="nav-content">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <svg width="18" height="44" display="block">
                     <circle cx="9" cy="22" r="8" stroke="white" stroke-width="1" fill="var(--logo-fill)" />
                 </svg>
@@ -109,13 +109,14 @@
         <section id="projectpreview" class="fullpaddingsection content">
             <div class=" section-wide pancakeparent isrounded">
                 <div class="pancakechild gradient-graphite isrounded invertfontcolor min25vh"> <!--alternate color babyblue -->
-                    <br>
-                    <div class="fullpaddingsection">
+                    <div class="fullpadding">
                         <svg class="icon-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#eee" stroke-width="0"><path fill-rule="evenodd" d="M15.938 31.875c8.718 0 15.937-7.219 15.937-15.938C31.875 7.235 24.641 0 15.922 0 7.219 0 0 7.234 0 15.938c0 8.718 7.234 15.937 15.938 15.937zm9.906-7.047c-1.578-1.875-5.203-3.562-9.907-3.562s-8.312 1.672-9.906 3.547c-2.093-2.344-3.36-5.454-3.36-8.875 0-7.36 5.876-13.282 13.25-13.282S29.204 8.578 29.22 15.937a13.134 13.134 0 01-3.375 8.891zm-9.907-6.219c3 .032 5.36-2.53 5.36-5.89 0-3.156-2.36-5.781-5.36-5.781s-5.374 2.625-5.359 5.78c.016 3.36 2.36 5.86 5.36 5.891z"></path></svg>
                         <h3 class="invertfontcolor">Blabla</h3>    
-                        Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink-light">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+                        Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink-light">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    </div>
+                    <div class="fullpaddingsection">
                     <button class="button-light">read more</button>
-                    <br>
+                    </div> 
                 </div>
                 <div class="pancakechild center isrounded gradient-jadegreen min25vh">
                     <div class="no-overflow alignvmiddle isrounded">
@@ -382,7 +383,7 @@
     </footer> -->
     </div>
     <footer id="footer">
-        <div class="gradient-nightblack">
+        <div class="nav-color backdrop-blur">
             <div id="upperfooter" class="section-wide footerwrap">
                 <div class="footerleft">
                     <div class="footerlinktitle allcaps">call me</div>
@@ -395,8 +396,11 @@
                 <div class="footermiddle">
                     <div class="footerlinktitle allcaps">Location</div>
                     <div class="footertext isinteractive">Hauptstraße 1, 12345 Musterstadt</div>
-                    <div class="footermap cursorpointer isrounded">
-
+                    <br>
+                    <div class="footermap cursorpointer isrounded no-overflow max25vh">
+                        <div class="responsive-map isrounded">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="footerright">
