@@ -1498,6 +1498,8 @@ footer .badge-icon {
     max-height: fit-content;
     overflow: hidden;
     align-content: center;
+    display: block;
+    vertical-align: middle;
 }
 
 .no-overflow {

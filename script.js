@@ -36,8 +36,6 @@
 
   /*-- Parallax Library --*/
 
-  var parallax = new Rellax('.parallax');
-
   var rellax = new Rellax('.rellax', {
     wrapper: null,
     round: true,
