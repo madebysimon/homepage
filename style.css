@@ -1478,6 +1478,7 @@ footer .badge-icon {
 
 .parallaximage {
     max-width: 100%;
+    max-height: fit-content;
     overflow: hidden;
     align-content: center;
 }
