@@ -1045,6 +1045,10 @@ hr {
     font-weight: 500;
     margin-right: var(--padding-full);
 } 
+
+.newscard .newstitle a {
+    text-decoration: none;
+}
 .newscard .newstags {
     text-transform: uppercase;
     padding-left: var(--padding-small);
@@ -1061,12 +1065,6 @@ hr {
     text-decoration: none;
     opacity: .8;
 }
-/* 
-.newscard .overlay {
-    position: absolute;
-    z-index: 10;
-    box-sizing: border-box;
-} */
 
 .newscard img {
     height: auto;
@@ -1234,9 +1232,6 @@ hr {
 
     .flex-tabs {
       flex-direction: column;
-    }
-    
-    .flex-tabs .tab {
     }
 
     .flex-tabs .tab::after {
@@ -1433,3 +1428,61 @@ footer .badge-icon {
     -webkit-perspective-origin: 50% 50%;
     perspective-origin: 50% 50%;
   }
+
+
+  /* Cardshadow */
+.cardshadow  {
+    overflow: visible;
+    position:relative;        
+  }
+
+.cardshadow-left:before  {
+  content:"";
+  width:80%;
+  max-width: 300px;
+  height:8px;
+  bottom: 20px;
+  left: 13px;
+  z-index: -20;
+  position: absolute;
+  box-shadow: -10px 10px 20px rgba(0,0,0,0.3);
+  -moz-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+
+.cardshadow-right:after  {
+  content:"";
+  width:80%;
+  max-width: 300px;
+  z-index: -20;
+  height:8px;
+  bottom: 20px;
+  right: 13px;
+  position: absolute;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+  -moz-transform: scale(1) rotate(5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(5deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+
+/**/
+/**/
+/* Parallax Test */
+/**/
+/**/
+
+.parallaximage {
+    max-width: 100%;
+    overflow: hidden;
+    align-content: center;
+}
+
+.no-overflow {
+    overflow: hidden;
+    z-index: 0;
+}

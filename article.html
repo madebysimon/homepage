@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Home | SimonKelch.de</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Your name">
+    <meta name="description" content="Brief description">
+    <meta property="og:title" content="Your Page Title">
+    <meta property="og:description" content="Brief description">
+    <meta property="og:image" content="/some-image.png">
+    <meta property="og:url" content="/this-page.html">
+    <meta property="og:site_name" content="Your Site Name">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="image description">  
+    <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#0d8d51" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#205430" media="(prefers-color-scheme: dark)">
-    <title>Home | SimonKelch.de</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     </style>
+    <script src="rellax.min.js"></script>
 </head>
 <body>
     <!-- Looking up some source code? I publish on github. You're welcome. -->
@@ -44,25 +55,60 @@
             </div>
             <h1 class="section-heading">Something</h1>
             <div class="content section-normal marginfull-lr text-left">
-                <ul>
-                    <li>Coffee</li>
-                    <li>Tea
-                    <ul>
-                        <li>Black tea</li>
-                        <li>Green tea</li>
-                    </ul>
-                    </li>
-                    <li>Milk</li>
-                </ul>
+                some text
             </div>
+            <div class="spacer"></div>
         </div>
+
+        <section id="projectpreview" class="fullpaddingsection content">
+            <div class="alignmiddle section-normal pancakeparent isrounded">
+                <div class="pancakechild center min25vh"> <!--alternate color babyblue -->
+                    <br>
+                    <h3 class="">What</h3>
+                    <br>
+                    <div class="fullpaddingsection text-left">Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+                    <button class="button-light">read more</button>
+                    <br>
+                </div>
+                <div class="pancakechild center min25vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center">
+                    <div class="no-overflow alignvmiddle isrounded">
+                        <div class="rellax center" data-rellax-speed="-2" data-rellax-percentage="0.5">
+                            <img class="isrounded parallaximage" src="https://i.redd.it/vq0lniu41sg11.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="cardshadowtest" class="section-normal fullpaddingsection">
+            <div class="isrounded cardshadow cardshadow-left cardshadow-right hasbackground-light min25vh">
+                <div id="content" class="fullpadding">
+                    
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea
+                        <ul>
+                            <li>Black tea</li>
+                            <li>Green tea</li>
+                        </ul>
+                        </li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     
         <section id="Doggo" class="section-normal fullpaddingsection scrollcontainer">
-            <div id="hscrollsnap" class="scrollsection hscrollsnap">
+            <div id="hscrollsnap" class="scrollsection hscrollsnap fullpadding">
                 <div class="hsn-card center isrounded">
-                    <img class="isrounded" src="img/dog1.jpg">
+                    <div class="no-overflow alignvmiddle isrounded">
+                        <div class="rellax center" data-rellax-speed="5" data-rellax-percentage="0.5">
+                            <img class="isrounded parallaximage" src="img/dog1.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div class="hsn-card center isrounded">
+                <div class="hsn-card center ">
                     <img class="isrounded" src="img/dog2.jpg">
                 </div>
                 <div class="hsn-card center isrounded">
@@ -181,37 +227,6 @@
         </div>
 
     </footer>
+    <script src="script.js"></script>
 </body>
-<script>
-    const navIcon = document.querySelector(".nav-icon");
-    const nav = document.querySelector("nav");
-
-    navIcon.onclick = function () {
-        nav.classList.toggle('show');
-    }
-
-    /*-- Theme Switch auf Logo --*/
-    const DarkmodeIcon = document.querySelector(".toggle-darkmode");
-    DarkmodeIcon.onclick = function () {
-    }
-
-    /*-- Theme Switch Anfang */
-    const btn = document.querySelector(".btn-toggle");
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme == "dark") {
-    document.body.classList.toggle("dark-theme");
-    } else if (currentTheme == "light") {
-    document.body.classList.toggle("light-theme");
-    }
-    btn.addEventListener("click", function() {
-    if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-    var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-    } else {
-    document.body.classList.toggle("dark-theme");
-    var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-    }
-    localStorage.setItem("theme", theme);
-    });
-</script>
+</html>
