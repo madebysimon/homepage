@@ -1494,6 +1494,7 @@ footer .badge-icon {
 
 .parallaximage {
     max-width: 100%;
+    min-width: 100%;
     max-height: fit-content;
     overflow: hidden;
     align-content: center;
@@ -1502,6 +1503,13 @@ footer .badge-icon {
 .no-overflow {
     overflow: hidden;
     z-index: 0;
+}
+
+.imagemiddle {
+    display: table-cell;
+    position: relative;
+}
+.imagemiddle img {
 }
 
 /* Footer Map */
@@ -1543,3 +1551,4 @@ footer .badge-icon {
 .full-bleed {
     grid-column: 1 / -1;
   }
+
