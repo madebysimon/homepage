@@ -23,12 +23,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     </style>
     <script src="rellax.min.js"></script>
+    <script src="simpleParallax.min.js"></script>
 </head>
 <body>
-    <!-- Looking up some source code? I publish on github. You're welcome. -->
+    <!-- Looking up some source code? I publish on github. -->
     <nav class="backdrop-blur">
         <div class="nav-content">
-            <a href="#" class="logo">
+            <a href="/index.html" class="logo">
                 <svg width="18" height="44" display="block">
                     <circle cx="9" cy="22" r="8" stroke="white" stroke-width="1" fill="var(--logo-fill)" />
                 </svg>
@@ -48,16 +49,18 @@
     </nav>
     <!-- <div class="navplaceholder"></div> -->
     <div class="content">
-        <div id="bottompart" class="alignmiddle section-normal isrounded">
-            <div class="center min25vh max50vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center">
-                <div class="no-overflow alignvmiddle isrounded">
-                    <div class="rellax center" data-rellax-speed="-2" data-rellax-percentage="0.5">
-                        <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2384&q=80">
+        <div class="alignmiddle section-normal isrounded">
+            <div class="center min50vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center no-overflow" style="position: relative">
+                <div class="no-overflow isrounded" style="position: absolute">
+                    <div class="alignvmiddle center">
+                        <div class="rellax center" data-rellax-speed="-2" data-rellax-percentage="0.5">
+                            <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2384&q=80">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+    
         <div class="spacer"></div>
 
         <div id="heading-middle" class="section-normal center">
@@ -91,11 +94,20 @@
                     <br>
                 </div>
                 <div class="pancakechild center min25vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center">
-                    <div class="no-overflow isrounded">
-                        <div class="rellax imagemiddle" data-rellax-speed="-2" data-rellax-percentage="0.5">
-                            <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1646001943936-f1edc87d4ac5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80">
+                    <div class="center min50vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center no-overflow" style="position: relative">
+                        <div class="no-overflow isrounded" style="position: relative">
+                            <div class="alignvmiddle center">
+                                <div class="rellax center" data-rellax-speed="-2" data-rellax-percentage="0.5">
+                                    <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2384&q=80">
+                                </div>
+                            </div>
                         </div>
                     </div>
+<!--                     <div class="no-overflow isrounded">
+                        <div class="imagemiddle" data-rellax-speed="-2" data-rellax-percentage="0.5">
+                            <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1646001943936-f1edc87d4ac5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80">
+                        </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -104,7 +116,7 @@
             <div class="alignmiddle section-normal pancakeparent isrounded">
                 <div class="pancakechild center min25vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center">
                     <div class="no-overflow alignvmiddle isrounded">
-                        <div class="rellax center" data-rellax-speed="-2" data-rellax-percentage="0.5">
+                        <div class="center rellax" data-rellax-speed="-2" data-rellax-percentage="0.5"> <!-- rellax -->
                             <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1646061550931-74b78e83863c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80">
                         </div>
                     </div>
@@ -149,9 +161,9 @@
             <div class="spacer"></div>
         </section>
 
-        <section id="video" class="section-normal fullpaddingsection">
-            <div class="cardshadow cardshadow-left cardshadow-right">
-                <video class="isrounded" width="100%" height="auto" controls muted > <!-- loop autoplay preload="auto" poster="img/dog1.jpg"-->
+        <section id="video" class="section-normal wraphovertransform fullpaddingsection">
+            <div class="cardshadow hovertransform cardshadow-left cardshadow-right">
+                <video class="isrounded" width="100%" height="auto" controls loop muted > <!-- loop autoplay preload="auto" poster="img/dog1.jpg"-->
                     <source src="https://media.istockphoto.com/videos/abstract-background-loopable-video-id1288523103" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -182,18 +194,18 @@
 
     <footer id="footer">
         <div class="nav-color backdrop-blur">
-            <div id="upperfooter" class="section-wide footerwrap">
+            <div id="upperfooter" class="section-wide wraphovertransform footerwrap">
                 <div class="footerleft">
                     <div class="footerlinktitle allcaps">call me</div>
-                    <a href="" class="footertext isinteractive">+49 234 56 78 90</a>
+                    <div class="hovertransform"><a href="" class="footertext isinteractive">+49 234 56 78 90</a></div>
                     <div class="footerlinktitle allcaps">email me</div>
-                    <a href=""class="footertext isinteractive">hello@simonkelch.de</a>
-                    <div class="footerlinktitle allcaps">follow me</div>
-                    <a class="footerlinktitle-light allcaps isinteractive">LinkedIn</a>  <a class="footerlinktitle-light allcaps isinteractive">Twitter</a>  <a class="footerlinktitle-light allcaps isinteractive">behance</a>
+                    <div class="hovertransform"><a href="" class="footertext isinteractive">hello@simonkelch.de</a></div>
+                    <div class="footerlinktitle allcaps ">follow me</div>
+                    <a class="footerlinktitle-light allcaps isinteractive">LinkedIn</a>  <a class="footerlinktitle-light allcaps isinteractive hovertransform">Twitter</a>  <a class="footerlinktitle-light allcaps isinteractive hovertransform">behance</a>
                 </div>
-                <div class="footermiddle">
+                <div class="footermiddle wraphovertransform">
                     <div class="footerlinktitle allcaps">Location</div>
-                    <div class="footertext isinteractive">Hauptstraße 1, 12345 Musterstadt</div>
+                    <div class="footertext isinteractive hovertransform">Hauptstraße 1, 12345 Musterstadt</div>
                     <br>
                     <div class="footermap cursorpointer isrounded no-overflow max25vh">
                         <div class="responsive-map isrounded">
@@ -212,22 +224,21 @@
                     <a class="footerlinktitle">© Simon Kelch, 2022. All rights reserved.</a>
                 </div>
                 <div class="lowerfootermiddle">
-                    <a class="footerlinktitle cursorpointer">Privacy Policy</a>  <a class="footerlinktitle cursorpointer">Terms and Conditions</a>
+                    <a class="footerlinktitle cursorpointer isinteractive">Imprint</a>  <a class="footerlinktitle cursorpointer isinteractive">Privacy Policy</a>  <a class="footerlinktitle cursorpointer isinteractive">Terms and Conditions</a>
                 </div>
-                <div class="lowerfooterright center">
+                <div class="lowerfooterright center wraphovertransform">
                     <div class="lowerfooter-iconwrap">
-                        <div id="icon-acessibility" class="footericon badge backdrop-blur">
+                        <a id="icon-acessibility" class="footericon hovertransform badge backdrop-blur">
                             <div class="badge-icon">♿️</div>
-                        </div>
-                        <div id="icon-darkmode" class="footericon toggle-darkmode btn-toggle badge backdrop-blur">
+                        </a>
+                        <a id="icon-darkmode" class="footericon hovertransform toggle-darkmode btn-toggle badge backdrop-blur">
                             <div class="badge-icon">
                                 <svg width="22" height="22">
                                     <circle cx="11" cy="11" r="10" stroke="white" stroke-width="1" fill="var(--logo-fill)"/>
                                 </svg>
                             </div>
-  
-                        </div>
-                        <a href="#" id="icon-go-up" class="footericon badge gradient-cta">
+                        </a>
+                        <a href="#" id="icon-go-up" class="footericon hovertransform badge gradient-cta">
                             <div class="badge-icon">↑</div>
                         </a>
                     </div>

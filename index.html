@@ -49,15 +49,15 @@
     <div class="content">
         <section id="hero" class="hero gradient-turquoise">
             <div class="navplaceholder"></div>
-            <div class="noticebanner gradient-cta"></div>
+            <div class="backdrop-blur noticebanner"></div>
             <div class="section-wide content fullpadding">
-                <section id="hero" class="heroframe isrounded">
+                <section class="heroframe isrounded">
                     <div class="hero-content">
                         <span class="hero-left">
                             <div class="hero-left-center">
                                     <div class="hero-pretext">Hello my name is</div>
                                     <h1 class="hero-text">Simon</h1>
-                                    <span class="hero-link"><a class="isinteractive">View Projects</a><a class="hero-link-option"> or </a><a class="isinteractive">Read About Me</a></span>
+                                    <span class="hero-link"><a class="isinteractive">View Projects</a><a class="hero-link-option"> or </a><a class="isinteractive hovertransform">Read About Me</a></span>
                                     <p class="hero-subtext"> I work as a clinical psychologist by day and design software by night.<br>
                                         Recently I co-founded maia health, a mental health provider.<br>
                                         This site was built for sharing content with my clients,<br>
@@ -91,7 +91,42 @@
                 </section>
             </div>
         </section>
-
+        <section id="accordeon" class="wraphovertransform longform-container fullpadding">
+            <div class="accordeon">
+                <details open>
+                    <summary class="isrounded hovertransform">
+                        How do you create an accordion?
+                    </summary>
+                    <div class="accordeon">
+                        Easy! As long as you don't have to support IE11 or older browsers you could use <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> natively.
+                    </div>
+                </details>
+                <details>
+                    <summary class="isrounded hovertransform">
+                        What if I have to support IE11 or older browsers?
+                    </summary>
+                    <div class="accordeon">
+                        No worries. The fallback for these elements is quite good. They will display as open. You won't get the open/close mechanism, but you won't lose any content either.
+                    </div>
+                </details>
+                <details>
+                    <summary class="isrounded hovertransform">
+                        What type of content can I have inside one of these?
+                    </summary>
+                    <div class="accordeon">
+                        Almost anything you'd like. The <code>&lt;details&gt;</code> element allows all <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#flow_content" target="_blank">flow content</a>, which is basically everything.
+                    </div>
+                </details>
+                <details>
+                    <summary class="isrounded hovertransform">
+                        How does it work?
+                    </summary>
+                    <div class="accordeon">
+                        The <code>&lt;details&gt;</code> element encapsulates the <code>&lt;summary&gt;</code> element. The <code>&lt;summary&gt;</code> becomes the 'label' for the <code>&lt;details&gt;</code> and acts like a button. When clicked, the attribute <code>open</code> is added to the <code>&lt;details&gt;</code> element, making it display. You can therefore style the open and closed states seperately if you'd like.
+                    </div>
+                </details>
+            </div>
+        </section>
 
         <div id="heading-middle" class="section-wide center">
             <div class="spacer"></div>
@@ -105,17 +140,16 @@
             <div class="spacer"></div>
         </div>
 
-    
-        <section id="projectpreview" class="fullpaddingsection content">
+        <section id="projectpreview" class=" fullpaddingsection content">
             <div class=" section-wide pancakeparent isrounded">
-                <div class="pancakechild gradient-graphite isrounded invertfontcolor min25vh"> <!--alternate color babyblue -->
+                <div class="pancakechild wraphovertransform gradient-graphite isrounded invertfontcolor min25vh"> <!--alternate color babyblue -->
                     <div class="fullpadding">
                         <svg class="icon-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#eee" stroke-width="0"><path fill-rule="evenodd" d="M15.938 31.875c8.718 0 15.937-7.219 15.937-15.938C31.875 7.235 24.641 0 15.922 0 7.219 0 0 7.234 0 15.938c0 8.718 7.234 15.937 15.938 15.937zm9.906-7.047c-1.578-1.875-5.203-3.562-9.907-3.562s-8.312 1.672-9.906 3.547c-2.093-2.344-3.36-5.454-3.36-8.875 0-7.36 5.876-13.282 13.25-13.282S29.204 8.578 29.22 15.937a13.134 13.134 0 01-3.375 8.891zm-9.907-6.219c3 .032 5.36-2.53 5.36-5.89 0-3.156-2.36-5.781-5.36-5.781s-5.374 2.625-5.359 5.78c.016 3.36 2.36 5.86 5.36 5.891z"></path></svg>
                         <h3 class="invertfontcolor">Blabla</h3>    
                         Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink-light">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
                     </div>
                     <div class="fullpaddingsection">
-                    <button class="button-light">read more</button>
+                    <button class="button-light hovertransform">read more</button>
                     </div> 
                 </div>
                 <div class="pancakechild center isrounded gradient-jadegreen min25vh">
@@ -125,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pancakechild center isrounded gradient-purple invertfontcolor min25vh">
+                <div class="pancakechild wraphovertransform center isrounded gradient-purple invertfontcolor min25vh">
                     <br>
                     <h3>What</h3>
                     <div class="fullpaddingsection">
@@ -141,7 +175,7 @@
                             <li>Milk</li>
                         </ul>
                     </div>
-                    <a href="./article.html"><button class="button-transparent-light">read more</button></a>
+                    <a href="./article.html"><button class="button-transparent-light hovertransform">read more</button></a>
                     <br>
                 </div>
             </div>
@@ -159,7 +193,7 @@
             </div>
         </div>
         
-        <section id="tabs" class="tab-container content section-wide fullpadding">
+        <section id="tabs" class="tab-container wraphovertransform content section-wide fullpadding">
             <div class="worko-tabs">
                 <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked />
                 <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two" />
@@ -167,17 +201,17 @@
                 <!-- <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" /> -->
 
                 <div class="tabs flex-tabs">
-                    <label for="tab-one" id="tab-one-label" class="tab">
+                    <label for="tab-one" id="tab-one-label" class="tab hovertransform">
                         <h3 class="tabheading">Psychologisches Coaching</h3>
                         lorem ipsum dolor sit amet. Blablabla. Something
                         <br> 
                     </label>
-                    <label for="tab-two" id="tab-two-label" class="tab">
+                    <label for="tab-two" id="tab-two-label" class="tab hovertransform">
                         <h3 class="tabheading">Supervision Workshops</h3>
                         für Teams in Klinik und Wirtschaft
                         <br> 
                     </label>
-                    <label for="tab-three" id="tab-three-label" class="tab">
+                    <label for="tab-three" id="tab-three-label" class="tab hovertransform">
                         <h3 class="tabheading">Über mich</h3>
                         Beschreibender Text3
                         <br> 
@@ -186,17 +220,14 @@
     -->            
                     <div id="tab-one-panel" class="panel isrounded gradient-jadegreen">
                         <div class="tabnumber">01</div>
-                        Tab one content<br>
                         <a href="./article.html"><button class="button-transparent-light tabbuttonright">read more</button></a>
                     </div>
-                    <div id="tab-two-panel" class="panel isrounded gradient-purple permashadow">
+                    <div id="tab-two-panel" class="panel isrounded gradient-purple">
                         <div class="tabnumber">02</div>
-                        Tab two content
                         <a href="./article.html"><button class="button-transparent-light tabbuttonright">read more</button></a>
                     </div>
-                    <div id="tab-three-panel" class="panel isrounded gradient-mokka permashadow">
+                    <div id="tab-three-panel" class="panel isrounded gradient-mokka">
                         <div class="tabnumber">03</div>
-                        Tab three content
                         <a href="./article.html"><button class="button-transparent-light tabbuttonright">read more</button></a>
                     </div>
                     <!-- <div id="tab-four-panel" class="panel">
@@ -220,7 +251,7 @@
 
         <section id="Newsroom" class="section-wide fullpaddingsection invertfontcolor text-left scrollcontainer">
             <div id="hscrollsnap" class="scrollsection hscrollsnap">
-                <div class="hsn-card wraphovertransform isrounded center">
+                <div class="hsn-card wraphovertransform margin-small-topbottom isrounded center">
                     <div class="newscard isrounded hovertransform" style="background-image: url('img/dog1.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
                         <div class="badge center backdrop-blur"><div class="center-text smallcapslabel">
                             New
@@ -237,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hsn-card center wraphovertransform">
+                <div class="hsn-card center wraphovertransform margin-small-topbottom">
                     <div class="newscard isrounded hovertransform" style="background-image: url('img/dog2.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
                         <div class="badge center backdrop-blur"><div class="center-text smallcapslabel">
                             New
@@ -253,7 +284,7 @@
                         </div>  
                     </div>
                 </div>
-                <div class="hsn-card center wraphovertransform">
+                <div class="hsn-card center wraphovertransform margin-small-topbottom">
                     <div class="newscard isrounded hovertransform" style="background-image: url('img/dog3.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
                         <div class="newsdate">
                             16.12.2021
@@ -267,7 +298,7 @@
                         </div>  
                     </div>
                 </div>
-                <div class="hsn-card center wraphovertransform">
+                <div class="hsn-card center wraphovertransform margin-small-topbottom">
                     <div class="newscard isrounded hovertransform" style="background-image: url('img/dog4.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
                         <div class="newsdate">
                             8.11.2021
@@ -282,7 +313,7 @@
                     </div>
                 </div>
 
-                <div class="hsn-card center wraphovertransform">
+                <div class="hsn-card center wraphovertransform margin-small-topbottom">
                     <div class="newscard isrounded hovertransform" style="background-image: url('img/dog4.jpg'), linear-gradient(320deg, #343934 0%, #252724 100%)">
                         <div class="newsdate">
                             8.11.2021
@@ -330,6 +361,7 @@
                 </div>
             </div>
         </section>
+
         <!-- <footer class="content fullpaddingsection">
         <hr class="section-normal">
         <section id="footer-links">
@@ -384,18 +416,18 @@
     </div>
     <footer id="footer">
         <div class="nav-color backdrop-blur">
-            <div id="upperfooter" class="section-wide footerwrap">
+            <div id="upperfooter" class="section-wide wraphovertransform footerwrap">
                 <div class="footerleft">
                     <div class="footerlinktitle allcaps">call me</div>
-                    <a href="" class="footertext isinteractive">+49 234 56 78 90</a>
+                    <div class="hovertransform"><a href="" class="footertext isinteractive">+49 234 56 78 90</a></div>
                     <div class="footerlinktitle allcaps">email me</div>
-                    <a href=""class="footertext isinteractive">hello@simonkelch.de</a>
-                    <div class="footerlinktitle allcaps">follow me</div>
-                    <a class="footerlinktitle-light allcaps isinteractive">LinkedIn</a>  <a class="footerlinktitle-light allcaps isinteractive">Twitter</a>  <a class="footerlinktitle-light allcaps isinteractive">behance</a>
+                    <div class="hovertransform"><a href="" class="footertext isinteractive">hello@simonkelch.de</a></div>
+                    <div class="footerlinktitle allcaps ">follow me</div>
+                    <a class="footerlinktitle-light allcaps isinteractive">LinkedIn</a>  <a class="footerlinktitle-light allcaps isinteractive hovertransform">Twitter</a>  <a class="footerlinktitle-light allcaps isinteractive hovertransform">behance</a>
                 </div>
-                <div class="footermiddle">
+                <div class="footermiddle wraphovertransform">
                     <div class="footerlinktitle allcaps">Location</div>
-                    <div class="footertext isinteractive">Hauptstraße 1, 12345 Musterstadt</div>
+                    <div class="footertext isinteractive hovertransform">Hauptstraße 1, 12345 Musterstadt</div>
                     <br>
                     <div class="footermap cursorpointer isrounded no-overflow max25vh">
                         <div class="responsive-map isrounded">
@@ -414,22 +446,21 @@
                     <a class="footerlinktitle">© Simon Kelch, 2022. All rights reserved.</a>
                 </div>
                 <div class="lowerfootermiddle">
-                    <a class="footerlinktitle cursorpointer">Privacy Policy</a>  <a class="footerlinktitle cursorpointer">Terms and Conditions</a>
+                    <a class="footerlinktitle cursorpointer isinteractive">Imprint</a>  <a class="footerlinktitle cursorpointer isinteractive">Privacy Policy</a>  <a class="footerlinktitle cursorpointer isinteractive">Terms and Conditions</a>
                 </div>
-                <div class="lowerfooterright center">
+                <div class="lowerfooterright center wraphovertransform">
                     <div class="lowerfooter-iconwrap">
-                        <div id="icon-acessibility" class="footericon badge backdrop-blur">
+                        <a id="icon-acessibility" class="footericon hovertransform badge backdrop-blur">
                             <div class="badge-icon">♿️</div>
-                        </div>
-                        <div id="icon-darkmode" class="footericon toggle-darkmode btn-toggle badge backdrop-blur">
+                        </a>
+                        <a id="icon-darkmode" class="footericon hovertransform toggle-darkmode btn-toggle badge backdrop-blur">
                             <div class="badge-icon">
                                 <svg width="22" height="22">
                                     <circle cx="11" cy="11" r="10" stroke="white" stroke-width="1" fill="var(--logo-fill)"/>
                                 </svg>
                             </div>
-  
-                        </div>
-                        <a href="#" id="icon-go-up" class="footericon badge gradient-cta">
+                        </a>
+                        <a href="#" id="icon-go-up" class="footericon hovertransform badge gradient-cta">
                             <div class="badge-icon">↑</div>
                         </a>
                     </div>

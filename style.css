@@ -9,6 +9,7 @@
     --breakpoint-thin: 960px;
     --breakpoint-mobile: 768px;
 
+    --icon-size-badge: 24px;
     --animation-speed-1: 0.2s;
     --padding-full: 30px;
     --padding-small: 10px;
@@ -196,6 +197,10 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
 
+code {
+    font-family: monospace;
+}
+
 nav { /*-- Nav-Leiste --*/
     margin: 0;
     overflow: hidden;
@@ -205,7 +210,7 @@ nav { /*-- Nav-Leiste --*/
     top:0;
     width:100%;
     overscroll-behavior-y: none;
-    z-index: 100;
+    z-index: 900;
 }
 .nav-color {
     background: var(--main-nav-color);
@@ -224,6 +229,9 @@ nav { /*-- Nav-Leiste --*/
 .navplaceholder {
     height: var(--nav-height);
 }
+.gradient-nav {
+    background-color: var(--main-nav-color);
+}
 .noticebanner {
     height: var(--nav-height);
 }
@@ -231,6 +239,7 @@ nav { /*-- Nav-Leiste --*/
 .backdrop-blur {
     background-color: var(--main-nav-color);
   }
+
   /* if backdrop support: very transparent and blurred */
   @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .backdrop-blur {
@@ -666,6 +675,9 @@ hr {
 .min25vh {
     min-height: 25vh;
 }
+.min50vh {
+    min-height: 50vh;
+}
 .max25vh {
     max-height: 25vh;
 }
@@ -791,7 +803,7 @@ hr {
 }
     /* -- Colors & Shapes*/
 
-    .font-mono {
+    .font-mono, code {
         font-family: 'Space Mono', monospace;
         font-size: var(--font-size-mono);
         font-weight: var(--text-weight-mono);
@@ -881,6 +893,11 @@ hr {
         border-top-left-radius: var(--borderradius-mid);
         border-top-right-radius: var(--borderradius-mid);
     }
+
+    .isrounded-bottom {
+        border-bottom-left-radius: var(--borderradius-mid);
+        border-bottom-right-radius: var(--borderradius-mid);
+    }
     /* -- Positioning */
 
     .center {
@@ -913,6 +930,11 @@ hr {
     .fullpadding {
         padding: var(--padding-full);
     }
+    .margin-small-topbottom {
+        margin-top: var(--padding-small);
+        margin-bottom: var(--padding-small);
+    }
+
     .fullpaddingsection {
         padding-left: var(--padding-full);
         padding-right: var(--padding-full);
@@ -1151,10 +1173,10 @@ hr {
 /* Tabs */
   .tabheading {
     padding-bottom: var(--padding-small-half);
-    box-shadow: 0px 1px 0px 0px var(--color-neutral);
+    /* box-shadow: 0px 1px 0px 0px var(--color-neutral); */
   }
   .tab:hover .tabheading {
-    box-shadow: 0px 1px 0px 0px var(--text-color);
+    /* box-shadow: 0px 1px 0px 0px var(--text-color); */
   }
 
   .tabnumber {
@@ -1380,9 +1402,12 @@ footer .badge:hover {
 }
 
 footer .badge-icon {
-    position: relative;
+    position: absolute;
     margin: 0 auto;
+    width: var(--icon-size-badge);
+    height: var(--icon-size-badge);
     top: 50%;
+    right: calc(var(--icon-size-badge)/2);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -1436,11 +1461,15 @@ footer .badge-icon {
     transition: all 0.2s cubic-bezier(.42, 0, .58, 1);
 }
 
-.hovertransform:active {
+  .hovertransform:hover {
+    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, +5px) skew(0deg, 0deg);
+    overflow: visible;
+  }
+  .hovertransform:active {
     transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, -10px) skew(0deg, 0deg);
     overflow: visible;
-
   }
+
   .wraphovertransform {
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1452,7 +1481,7 @@ footer .badge-icon {
   /* Cardshadow */
 .cardshadow  {
     overflow: visible;
-    position:relative;        
+    position: relative;        
   }
 
 .cardshadow-left:before  {
@@ -1511,8 +1540,6 @@ footer .badge-icon {
     display: table-cell;
     position: relative;
 }
-.imagemiddle img {
-}
 
 /* Footer Map */
 
@@ -1554,3 +1581,81 @@ footer .badge-icon {
     grid-column: 1 / -1;
   }
 
+
+/* --------- */
+/* Accordeon */
+/* --------- */
+
+
+.accordeon *, *:after, *:before {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+details .accordeon { /* the closed sections */
+/* 	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid var(--bkg-color-highlight); */
+    padding: var(--padding-small);
+    padding-bottom: calc(var(--padding-small)*2);
+}
+
+.accordeon h3 {
+    margin: 0;
+}
+/* details .accordeon > * + * {
+	margin-top: 1.5em;
+} */
+/* 
+details + details {
+	margin-top: .5rem;
+} */
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	padding: var(--padding-small);
+	cursor: pointer;
+	position: relative;
+    font-weight: var(--text-weight-bold);
+	/* padding-left: calc(1.75rem + .75rem + .75rem); */
+}
+
+summary:before {     /* the icon */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: var(--padding-small);
+	content: "+";
+    font-size: var(--font-size-main);
+	width: 1.75rem;
+	height: 1.75rem;
+	/* background-color: #fff; */
+	color: var(--color-neutral);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+details[open] summary {
+	background-color: var(--bkg-color-highlight);
+}
+
+details[open] summary:before {
+	content: "×";
+    /* transform: rotate(45deg); */
+}
+
+summary:hover {
+	background-color: var(--bkg-color-highlight);
+}

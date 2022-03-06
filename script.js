@@ -34,7 +34,7 @@
 
 
 
-  /*-- Parallax Library --*/
+  /*-- Rellax Parallax --*/
 
   var rellax = new Rellax('.rellax', {
     wrapper: null,
@@ -42,3 +42,8 @@
     vertical: true,
     horizontal: false
   });
+
+
+  /*-- SimpleParallax Library --*/
+  var images = document.querySelectorAll('simpleparallax');
+  new simpleParallax(images);
