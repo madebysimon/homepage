@@ -22,15 +22,15 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     </style>
-    
+
     <script src="rellax.min.js"></script>
     <script src="simpleParallax.min.js"></script>
 </head>
 <body>
     <!-- Looking up some source code? I publish on github. -->
-    <nav class="backdrop-blur">
+    <nav id="navbar" class="backdrop-blur">
         <div class="nav-content">
-            <a href="/index.html" class="logo">
+            <a href="/" class="logo">
                 <svg width="18" height="44" display="block">
                     <circle cx="9" cy="22" r="8" stroke="white" stroke-width="1" fill="var(--logo-fill)" />
                 </svg>
@@ -50,7 +50,7 @@
     </nav>
     <!-- <div class="navplaceholder"></div> -->
     <div class="content">
-        <div class="alignmiddle section-normal isrounded">
+        <div id="hero-image" class="alignmiddle section-normal isrounded">
             <div class="center min50vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center no-overflow" style="position: relative">
                 <div class="no-overflow isrounded" style="position: absolute">
                     <div class="alignvmiddle center">
@@ -83,15 +83,15 @@
             <div class="spacer"></div>
         </section>
 
-        <section id="projectpreview" class="fullpaddingsection content">
+        <section id="image-section" class="fullpaddingsection content">
 
             <div class="alignmiddle section-normal pancakeparent isrounded">
-                <div class="pancakechild center min25vh"> <!--alternate color babyblue -->
+                <div class="pancakechild wraphovertransform center min25vh"> <!--alternate color babyblue -->
                     <br>
                     <h3 class="">What</h3>
                     <br>
                     <div class="fullpaddingsection text-left">Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
-                    <button class="button-blue">read more</button>
+                    <a href="./index.html"><button class="button-light hovertransform">read more</button></a>
                     <br>
                 </div>
                 <div class="pancakechild center min25vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center">
@@ -170,27 +170,6 @@
                 </video>
             </div>
         </section>
-
-        
-        <section id="Doggo" class="section-normal fullpaddingsection scrollcontainer">
-            <div id="hscrollsnap" class="scrollsection hscrollsnap fullpadding">
-                <div class="hsn-card center ">
-                    <img class="isrounded" src="img/dog1.jpg">
-                </div>
-                <div class="hsn-card center ">
-                    <img class="isrounded" src="img/dog2.jpg">
-                </div>
-                <div class="hsn-card center isrounded">
-                    <img class="isrounded" src="img/dog3.jpg">
-                </div>
-                <div class="hsn-card center isrounded">
-                    <img class="isrounded" src="img/dog4.jpg">
-                </div>
-                <div class="hsn-card center isrounded">
-                    <img class="isrounded" src="img/dog1.jpg">
-                </div>
-            </div>
-        </section>
     </div>
 
     <footer id="footer">
@@ -225,12 +204,12 @@
                     <a class="footerlinktitle">© Simon Kelch, 2022. All rights reserved.</a>
                 </div>
                 <div class="lowerfootermiddle">
-                    <a class="footerlinktitle cursorpointer isinteractive">Imprint</a>  <a class="footerlinktitle cursorpointer isinteractive">Privacy Policy</a>  <a class="footerlinktitle cursorpointer isinteractive">Terms and Conditions</a>
+                    <a class="footerlinktitle cursorpointer isinteractive">Imprint</a>  <a class="footerlinktitle cursorpointer isinteractive">Privacy Policy</a>  <a class="footerlinktitle cursorpointer isinteractive">Terms and Conditions</a>  <a class="footerlinktitle cursorpointer isinteractive">V0.4.0</a>
                 </div>
                 <div class="lowerfooterright center wraphovertransform">
                     <div class="lowerfooter-iconwrap">
                         <a id="icon-acessibility" class="footericon hovertransform badge backdrop-blur">
-                            <div class="badge-icon">♿️</div>
+                            <div class="badge-text-correction badge-icon">&#9855;</div>
                         </a>
                         <a id="icon-darkmode" class="footericon hovertransform toggle-darkmode btn-toggle badge backdrop-blur">
                             <div class="badge-icon">
@@ -240,7 +219,7 @@
                             </div>
                         </a>
                         <a href="#" id="icon-go-up" class="footericon hovertransform badge gradient-cta">
-                            <div class="badge-icon">↑</div>
+                            <div class="badge-text-correction badge-icon">↑</div>
                         </a>
                     </div>
                 </div>

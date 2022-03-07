@@ -180,6 +180,20 @@ body {
     background: var(--bkg-color);
 }
 
+/* Text Selection */
+/*       ---      */
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--text-color-inverted);
+    background: var(--cta-color-dark);
+  }
+
+::selection {
+    color: var(--text-color-inverted);
+    background: var(--cta-color-dark);
+}
+    /* Text Selection End */
+
 input, button, textarea, select {
     font: inherit;
   }
@@ -808,6 +822,9 @@ hr {
         font-size: var(--font-size-mono);
         font-weight: var(--text-weight-mono);
     }
+    code {
+        background-color: var(--bkg-color-highlight);
+    }
 
     .text-bold {
         font-weight: var(--text-weight-bold);
@@ -817,11 +834,14 @@ hr {
         text-transform: uppercase;
     }
 
-    .font-code::before {
-        content:' ';
+    code::before {
+        content:'';
+        padding-left: 2px;
     }
-    .font-code:after {
-        content:' ';
+    code::after {
+        content:'';
+        padding-right: 2px;
+    
     }
     .invertfontcolor {
         color: var(--text-color-inverted);
@@ -835,7 +855,10 @@ hr {
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     } */
-
+    .gradient-deepblue {
+        /* background: linear-gradient(320deg, #0044c2 0%, #004bd6 100%); */
+        background: linear-gradient(320deg, #0c4cc2 0%, #073fa8 100%);
+    }
     .gradient-nightblack {
         background: radial-gradient(#202220 0%, #101110 100%);
     }
@@ -1041,6 +1064,9 @@ hr {
     background-blend-mode: overlay;
     background-position: center;
 }
+.lastnewscard {
+    width: 18.75vh;
+}
 .badge {
     height: 48px;
     width: 48px;
@@ -1062,6 +1088,13 @@ hr {
     position: absolute;
     right: var(--padding-small);
     top: var(--padding-small);
+}
+
+.lastnewscard .badge {
+position: relative;
+padding: 0;
+margin: 0;
+text-align: center;
 }
 
 .center-text {
@@ -1175,9 +1208,9 @@ hr {
     padding-bottom: var(--padding-small-half);
     /* box-shadow: 0px 1px 0px 0px var(--color-neutral); */
   }
-  .tab:hover .tabheading {
-    /* box-shadow: 0px 1px 0px 0px var(--text-color); */
-  }
+  /* .tab:hover .tabheading {
+     box-shadow: 0px 1px 0px 0px var(--text-color); 
+  }*/
 
   .tabnumber {
       background-color: none;
@@ -1381,8 +1414,9 @@ hr {
     flex: 1 1 150px;
     min-height: 44px;
     max-height: 50vh;
+    min-width: 200px;
     overflow: visible;
-    z-index: 9900;
+    z-index: 99;
 }
 
 .lowerfooter-iconwrap {
@@ -1400,19 +1434,23 @@ footer .badge {
 footer .badge:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
-
-footer .badge-icon {
+.badge-text-correction {
     position: absolute;
-    margin: 0 auto;
+    line-height: 1;
+}
+.badge-icon {
     width: var(--icon-size-badge);
     height: var(--icon-size-badge);
-    top: 50%;
-    right: calc(var(--icon-size-badge)/2);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
     font-weight: 600;
+    font-size: var(--icon-size-badge);
+    /* line-height: 1; */
+    position: absolute;
+    right: calc(var(--icon-size-badge)/2);
+    text-align: center;
+    
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
 }
 
 .footerlinktitle {
@@ -1503,10 +1541,10 @@ footer .badge-icon {
 
 .cardshadow-right:after  {
   content:"";
-  width:80%;
+  width: 80%;
   max-width: 300px;
   z-index: -20;
-  height:8px;
+  height: 8px;
   bottom: 20px;
   right: 13px;
   position: absolute;
@@ -1527,7 +1565,8 @@ footer .badge-icon {
     max-height: fit-content;
     overflow: hidden;
     align-content: center;
-    display: block;
+    display: grid;
+    place-content: center;
     vertical-align: middle;
 }
 
@@ -1601,6 +1640,7 @@ details .accordeon { /* the closed sections */
 	border-bottom: 1px solid var(--bkg-color-highlight); */
     padding: var(--padding-small);
     padding-bottom: calc(var(--padding-small)*2);
+    /* background-color: var(--bkg-color-highlight); */
 }
 
 .accordeon h3 {
@@ -1626,7 +1666,7 @@ summary {
 	padding: var(--padding-small);
 	cursor: pointer;
 	position: relative;
-    font-weight: var(--text-weight-bold);
+    font-weight: var(--text-weight);
 	/* padding-left: calc(1.75rem + .75rem + .75rem); */
 }
 
@@ -1659,3 +1699,44 @@ details[open] summary:before {
 summary:hover {
 	background-color: var(--bkg-color-highlight);
 }
+
+
+/* Lightbox */
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+    /* Default to hidden */
+    display: none;
+  
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* A bit of padding around image */
+    padding: 1em;
+    background-color: rgba(0,0,0,.8);
+    /* Translucent background */
+  }
+ 
+  /* Unhide the lightbox when it's the target */
+  .lightbox:target {
+    display: block;
+  }
+  
+  .lightbox span {
+    /* Full width and height */
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
