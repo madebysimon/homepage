@@ -1,5 +1,5 @@
 
-/* Main (OS Light Mode) Swatches */
+/* Main Colors (Light) */
 :root {
     --borderradius-mid: 10px; /* 5px */
     --borderradius-small: 6px; /* 3px */
@@ -162,12 +162,12 @@ ul {
     text-align: left;
   }
   
-  ul li {
+ul li {
     position: relative;
     margin-left: 1em;
   }
   
-  ul li:before {
+ul li:before {
     position: absolute;
     left: -1em;
     color: var(--cta-color-dark);
@@ -202,6 +202,10 @@ a {
     color:inherit;
 }
 
+q {
+    quotes: """ """;
+  }
+
 p, span {
     margin: 0;
     padding: 0;
@@ -210,6 +214,16 @@ p, span {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
+
+  /* mark links as external */
+p a:not([href*='domain.com']):not([href^='#']):not([href^='/']):after {
+    content: ' ↗';
+    /* oder */
+    /*
+    content: url(/link/to/icon.svg);
+    margin-left: 0.25rem;
+    */
+}
 
 code {
     font-family: monospace;
@@ -231,13 +245,15 @@ nav { /*-- Nav-Leiste --*/
 }
 
 .hero {
-    height:100vh; /* aktiviert lassen, wenn notice */
+    padding-top: var(--nav-height);
 }
 .hero-article {
     height:50vh; /* aktiviert lassen, wenn notice */
 }
 .heroframe {
     background:rgb(0, 0, 0, 0.1);
+    /* max-height: calc(100vh - 3*var(--nav-height)); */
+    overflow: hidden;
 }
 
 .navplaceholder {
@@ -248,6 +264,12 @@ nav { /*-- Nav-Leiste --*/
 }
 .noticebanner {
     height: var(--nav-height);
+    position: absolute;
+    width: 100%;
+}
+.notice-content .calltoaction {
+    position: relative;
+    right: 0px;
 }
 
 .backdrop-blur {
@@ -855,6 +877,10 @@ hr {
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     } */
+
+    .gradient-lavender {
+        background: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+    }
     .gradient-deepblue {
         /* background: linear-gradient(320deg, #0044c2 0%, #004bd6 100%); */
         background: linear-gradient(320deg, #0c4cc2 0%, #073fa8 100%);
@@ -949,9 +975,17 @@ hr {
         text-align: left;
         padding-left: var(--padding-small);
     }
+    .text-right {
+        text-align: right;
+        padding-right: var(--padding-small);
+    }
 
     .fullpadding {
         padding: var(--padding-full);
+    }
+
+    .smallpadding {
+        padding: var(--padding-small);
     }
     .margin-small-topbottom {
         margin-top: var(--padding-small);
@@ -1227,9 +1261,13 @@ text-align: center;
     right: var(--padding-small);
   }
 
-  .worko-tabs .tab {
+  .flex-tabs .tab {
     padding-left: var(--padding-full);
     padding-right: var(--padding-full);
+}
+
+.worko-tabs .flex-tabs .tab {
+    flex: 1;
   }
 
   .worko-tabs .state {
@@ -1241,9 +1279,7 @@ text-align: center;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .worko-tabs .flex-tabs .tab {
-    flex: 1;
-  }
+
   .worko-tabs .flex-tabs .panel {
     min-height: 300px;
     display: none;
@@ -1257,6 +1293,7 @@ text-align: center;
     vertical-align: top;
     color: var(--color-neutral);
     padding-right: var(--padding-small);
+    padding-bottom: var(--padding-small);
     cursor: hand;
     cursor: pointer;
     border-radius: var(--borderradius-mid);
@@ -1272,7 +1309,6 @@ text-align: center;
   #tab-four:checked ~ .tabs #tab-four-label {
     cursor: default;
     color: var(--text-color);
-    border-bottom-color: var(--cta-color);
     cursor: hand;
     cursor: pointer;
   }
@@ -1312,7 +1348,7 @@ text-align: center;
         content: '';
         display: block;
         width: 100%;
-        box-shadow: 0px 0px 0px 0.5px var(--color-neutral);
+        box-shadow: 0px 10px 0px 0.5px var(--bkg-color-highlight);
     }
 
     .flex-tabs .tab:last-of-type::after {
@@ -1718,7 +1754,7 @@ summary:hover {
     bottom: 0;
     
     /* A bit of padding around image */
-    padding: 1em;
+    padding: var(--padding-small);
     background-color: rgba(0,0,0,.8);
     /* Translucent background */
   }
@@ -1739,4 +1775,39 @@ summary:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  /* image contain or cover */
+  .image-contain {
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .image-cover {
+    object-fit: cover;
+    object-position: right top;
+  }
+
+  /* HR Shadow */
+  .hrshadow hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    position: relative;
+    margin-bottom: var(--padding-full);
+  }
+  .hrshadow hr:before, .hrshadow hr:after {
+    content: '';
+    position: absolute;
+    bottom:0px;
+    height: 5em;
+    width: 100%;
+    background: radial-gradient(ellipse at bottom, rgba(255,255,255,0.35) 0%,rgba(255,255,255,0) 70%);
+    z-index:0;
+  }
+  .hrshadow hr:after {
+    top:0px;
+    bottom:auto;
+    height: 1.5em;
+    background: radial-gradient(ellipse at top, rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 70%);
   }

@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home | SimonKelch.de</title>
+    <title>Home | SimonKelch.ᴅᴇ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your name">
-    <meta name="description" content="Brief description">
-    <meta property="og:title" content="Your Page Title">
-    <meta property="og:description" content="Brief description">
-    <meta property="og:image" content="/some-image.png">
-    <meta property="og:url" content="/this-page.html">
-    <meta property="og:site_name" content="Your Site Name">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:alt" content="image description">  
+    
+    <!-- Meta Tags-->
+    <meta name="author" content="Simon Kelch">
+    <meta name="publisher" content="Simon Kelch">
+    <meta name="copyright" content="Simon Kelch">
+    <!-- <meta name="robots" content="index,follow"> -->
+        <!-- to index your page vs. "noindex"-->
+        <!-- to follow links on page vs. "nofollow" -->
+    <!-- <meta http-equiv="cache-control" content="no-cache"/> to stop cache-ing - disable after development -->
+    <!-- <meta http-equiv="expires" content="43200"/> --> <!-- to have chace expire in 12h (43200s) -->
+    <meta name="description" content="This site was built for sharing content with my clients, colleagues, friends and others on the internet.">
+    <meta name="keywords" content="Stichwort 1, Stichwort 2, Stichwort 3"/>
+    <meta name="page-topic" content="service">
+    <meta name="page-type" content="Homepage">
+    <meta property="og:title" content="OG Title">
+    <meta property="og:description" content="OG description">
+    <meta property="og:image" content="img/index/home.png">
+    <meta property="og:url" content="simonkelch.de">
+    <meta property="og:site_name" content="simonkelch.de">
+    <meta name="twitter:card" content="img/index/home.png">
+    <meta name="twitter:image:alt" content="twitter image description">  
     <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- Favicon Stuff -->
+        <!-- Fallback of 32x32 favicon.ico in Root Folder -->
+    <link rel="icon" href="favicon.svg">
+    <link rel="mask-icon" href="mask-icon.svg" color="#000000"> <!-- has to be made of single color on transparent background -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- in 180x180 px -->
+    <link rel="manifest" href="manifest.json"> <!-- for Android, Chrome & Lighthouse in 512x512 -->
+    <!-- Theme Colors -->
     <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#0d8d51" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#205430" media="(prefers-color-scheme: dark)">
@@ -25,7 +43,7 @@
     <script src="rellax.min.js"></script>
 </head>
 <body>
-    <!-- Looking up some source code? I publish on github. You're welcome. -->
+    <!-- This source code is minified. But I publish annotated code on github under CC BY-NC-SA 4.0 (non commercial only, share with attribution, only under the same licence) -->
     <nav id="navbar" class="backdrop-blur">
         <div class="nav-content">
             <a href="/" class="logo">
@@ -47,10 +65,18 @@
         </div>
     </nav>
     <div class="content">
+        <div class="navplaceholder"></div>
+        <div id="banner" class="noticebanner hasbackground-light">
+    
+            <div id="notice" class="notice-content">
+                <a class="calltoaction" href="./article.html">
+                    <button class="button-blue">contact me</button>
+                </a>
+            </div>
+        
+        </div>
         <section id="hero" class="hero gradient-turquoise">
-            <div class="navplaceholder"></div>
-            <div class="backdrop-blur noticebanner"></div>
-            <div class="section-wide content fullpadding">
+            <div class="section-wide fullpadding">
                 <section class="heroframe isrounded">
                     <div class="hero-content">
                         <span class="hero-left">
@@ -90,6 +116,9 @@
                 -->
                 </section>
             </div>
+            <div id="content-intro">
+                <div class="isrounded-top hasbackground smallpadding"></div>
+            </div>
         </section>
 
         <div id="heading-middle" class="section-wide center">
@@ -124,11 +153,10 @@
                     <div class="fullpadding">
                         <svg class="icon-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="var(--cta-color)" stroke-width="0"><path fill-rule="evenodd" d="M15.938 31.875c8.718 0 15.937-7.219 15.937-15.938C31.875 7.235 24.641 0 15.922 0 7.219 0 0 7.234 0 15.938c0 8.718 7.234 15.937 15.938 15.937zm9.906-7.047c-1.578-1.875-5.203-3.562-9.907-3.562s-8.312 1.672-9.906 3.547c-2.093-2.344-3.36-5.454-3.36-8.875 0-7.36 5.876-13.282 13.25-13.282S29.204 8.578 29.22 15.937a13.134 13.134 0 01-3.375 8.891zm-9.907-6.219c3 .032 5.36-2.53 5.36-5.89 0-3.156-2.36-5.781-5.36-5.781s-5.374 2.625-5.359 5.78c.016 3.36 2.36 5.86 5.36 5.891z"></path></svg>
                         <h3 class="">interactive CV</h3>    
-                        Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink-light">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                        Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset <a href="#" class="highlightlink-light">concludaturque</a> et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+                        <div class="spacer"></div>
+                        <a href="./article.html"><button class="button-blue hovertransform">read more</button></a>
                     </div>
-                    <div class="fullpaddingsection">
-                    <a href="./article.html"><button class="button-blue hovertransform">read more</button></a>
-                    </div> 
                 </div>
             </div>
         </section>
@@ -153,21 +181,18 @@
                 <!-- <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" /> -->
 
                 <div class="tabs flex-tabs">
-                    <label for="tab-one" id="tab-one-label" class="tab hovertransform">
-                        <h3 class="tabheading">Psychological Coaching</h3>
-                        lorem ipsum dolor sit amet. Blablabla. Something
-                        <br> 
+                    <label for="tab-one" id="tab-one-label" class="tab tab-container hovertransform">
+                            <h3 class="tabheading">Psychological Coaching</h3>
+                            lorem ipsum dolor sit amet. Blablabla. Something
                     </label>
                     <label for="tab-two" id="tab-two-label" class="tab hovertransform">
                         <h3 class="tabheading">Supervision Workshops</h3>
                         für Teams in Klinik und Wirtschaft
-                        <br> 
                     </label>
                     <label for="tab-three" id="tab-three-label" class="tab hovertransform">
-                        <h3 class="tabheading">Counselling in Data Science</h3>
+                        <div class="tabheading"><h3 >Counselling in Data Science</h3>
                         description
-
-                        <br> 
+                        </div>
                     </label>
                     <!-- <label for="tab-four" id="tab-four-label" class="tab">Tab Four</label>
     -->            
@@ -192,6 +217,8 @@
                 </div>
             </div>
         </section>
+
+        <hr class="section-wide">
 
         <div id="heading Newsroom" class="section-wide center">
             <div class="spacer"></div>
@@ -309,6 +336,8 @@
             </div>
         </section>
 
+        <hr class="section-wide">
+
         <div id="gallery-heading" class="section-wide center">
             <div class="spacer"></div>
             <div class="bubble hasbackground-light allcaps">
@@ -326,7 +355,7 @@
                 <div class="hsn-card center isrounded">
                     <a href="#gallerylightbox1"><img class="isrounded" src="img/dog1.jpg"></a>
                     <a href="#gallery-heading" class="lightbox backdrop-blur" id="gallerylightbox1"> <!-- lightbox container hidden with CSS -->
-                    <span class="isrounded" style="background-image: url('img/dog1.jpg')"></span></a>
+                    <span style="background-image: url('img/dog1.jpg')"></span></a>
                     </a>
                 </div>
                 <div class="hsn-card center isrounded">

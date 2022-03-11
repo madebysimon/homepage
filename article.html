@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Home | SimonKelch.de</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your name">
-    <meta name="description" content="Brief description">
-    <meta property="og:title" content="Your Page Title">
-    <meta property="og:description" content="Brief description">
-    <meta property="og:image" content="/some-image.png">
-    <meta property="og:url" content="/this-page.html">
-    <meta property="og:site_name" content="Your Site Name">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:alt" content="image description">  
-    <!-- <link rel="stylesheet" href="reset.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="color-scheme" content="dark light">
-    <meta name="theme-color" content="#0d8d51" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#205430" media="(prefers-color-scheme: dark)">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style>
-
-    <script src="rellax.min.js"></script>
-    <script src="simpleParallax.min.js"></script>
-</head>
+    <head>
+        <title>Article | SimonKelch.ᴅᴇ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Meta Tags-->
+        <meta name="author" content="Simon Kelch">
+        <meta name="publisher" content="Simon Kelch">
+        <meta name="copyright" content="Simon Kelch">
+        <!-- <meta name="robots" content="index,follow"> -->
+            <!-- to index your page vs. "noindex"-->
+            <!-- to follow links on page vs. "nofollow" -->
+        <!-- <meta http-equiv="cache-control" content="no-cache"/> to stop cache-ing - disable after development -->
+        <!-- <meta http-equiv="expires" content="43200"/> --> <!-- to have chace expire in 12h (43200s) -->
+        <meta name="description" content="This site was built for sharing content with my clients, colleagues, friends and others on the internet.">
+        <meta name="keywords" content="Stichwort 1, Stichwort 2, Stichwort 3"/>
+        <meta name="page-topic" content="service">
+        <meta name="page-type" content="Homepage">
+        <meta property="og:title" content="OG Title">
+        <meta property="og:description" content="OG description">
+        <meta property="og:image" content="img/index/home.png">
+        <meta property="og:url" content="simonkelch.de">
+        <meta property="og:site_name" content="simonkelch.de">
+        <meta name="twitter:card" content="img/index/home.png">
+        <meta name="twitter:image:alt" content="twitter image description">  
+        <!-- <link rel="stylesheet" href="reset.css"> -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Favicon Stuff -->
+            <!-- Fallback of 32x32 favicon.ico in Root Folder -->
+        <link rel="icon" href="favicon.svg">
+        <link rel="mask-icon" href="mask-icon.svg" color="#000000"> <!-- has to be made of single color on transparent background -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- in 180x180 px -->
+        <link rel="manifest" href="manifest.json"> <!-- for Android, Chrome & Lighthouse in 512x512 -->
+        <!-- Theme Colors -->
+        <meta name="color-scheme" content="dark light">
+        <meta name="theme-color" content="#0d8d51" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#205430" media="(prefers-color-scheme: dark)">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        </style>
+        <script src="rellax.min.js"></script>
+    </head>
 <body>
     <!-- Looking up some source code? I publish on github. -->
     <nav id="navbar" class="backdrop-blur">
@@ -104,6 +120,7 @@
                             </div>
                         </div>
                     </div>
+
 <!--                     <div class="no-overflow isrounded">
                         <div class="imagemiddle" data-rellax-speed="-2" data-rellax-percentage="0.5">
                             <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1646001943936-f1edc87d4ac5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80">
@@ -139,7 +156,7 @@
         <section id="cardshadowtest" class="section-normal fullpaddingsection">
             <div class="isrounded cardshadow cardshadow-left cardshadow-right hasbackground-light min25vh">
                 <div id="content" class="fullpadding">
-                    
+                    <p>
                     <ul>
                         <li>Coffee</li>
                         <li>Tea
@@ -150,14 +167,17 @@
                         </li>
                         <li>Milk</li>
                     </ul>
+                    </p>
                 </div>
             </div>
         </section>
 
-
         <section class="longform-container text-left">
+
+            <div class="hrshadow"><hr></div>
+
             <p>
-                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                 Lorem "ipsum" dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo <a href="http://google.com"> blabla </a> ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
             <div class="spacer"></div>
         </section>
