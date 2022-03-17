@@ -1,5 +1,3 @@
-
-/* Main Colors (Light) */
 :root {
     --borderradius-mid: 10px; /* 5px */
     --borderradius-small: 6px; /* 3px */
@@ -16,21 +14,28 @@
     --padding-small-half: 5px;
 
     --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-
-    --font-size-main: 16px;
+    
+    --font-size-base: 18px;
+    --font-size-main: calc(16/16*var(--font-size-base));
+    --font-size-small: calc(var(--font-size-main)*0.9);
     --font-size-mono: calc(var(--font-size-main)*0.9);
-    --font-size-nav: 14px;
-    --font-size-button: 11px;
-    --H1-size-large: 64px;
-    --H1-size-small: 48px;
-    --H2-size-large: 24px;
-    --H2-size-small: 20px;
-    --H3-size-large: 20px;
-    --H3-size-small: 18px;
-    --H4-size-large: 14px;
+    --font-size-nav: calc(var(--font-size-main)/18*15);
+    --font-size-button: 12px;
+    --font-size-hero-large: 120px;
+    --font-size-hero-large-s: calc(var(--font-size-hero-large)*0.8);
+    --font-size-hero-small: 60px;
+    --font-size-hero-small-s: calc(var(--font-size-hero-small)*0.8);
+    --H1-size-large: calc(var(--font-size-main)/18*64);
+    --H1-size-small: calc(var(--font-size-main)/18*48);
+    --H2-size-large: calc(var(--font-size-main)/18*24);
+    --H2-size-small: calc(var(--font-size-main)/18*20);
+    --H3-size-large: calc(var(--font-size-main)/18*22);
+    --H3-size-small: var(--font-size-main);
+    --H4-size-large: calc(var(--font-size-main)/18*14);
+    
     --nav-height: 44px;
 }
-
+/* Main Colors (Light) */
 body {
     --universal-shadow: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
     --universal-shadow-light: 1.3px 1.3px 2.2px -24px rgba(0, 0, 0, 0.056), 3.2px 3.2px 5.3px -24px rgba(0, 0, 0, 0.081), 6px 6px 10px -24px rgba(0, 0, 0, 0.1), 10.7px 10.7px 17.9px -24px rgba(0, 0, 0, 0.119), 20.1px 20.1px 33.4px -24px rgba(0, 0, 0, 0.144), 48px 48px 80px -24px rgba(0, 0, 0, 0.2);
@@ -467,10 +472,11 @@ footer .badge a {
         flex-direction: column;
     }
 
-
     .hero-subtext {
         padding-top: 0;
         padding-bottom: 0;
+        text-align: center;
+        font-size: var(--font-size-small);
     }
 
     .hero-left {
@@ -499,9 +505,7 @@ footer .badge a {
         min-height: 10vh;
     }
 
-    .hero-subtext {
-        text-align: center;
-    }
+
     .nav-links {
         position: fixed;
         top: var(--nav-height);
@@ -617,17 +621,38 @@ footer .badge a {
 .content .hero-text {
     padding-bottom: var(--padding-full);
     margin-top: 0px;
-    font-size: 120px;
+    font-size: var(--font-size-hero-large-s);
+    -webkit-transition: font-size .25s ease-in-out;
+    -moz-transition: font-size .25s ease-in-out;
+    -o-transition: font-size .25s ease-in-out;
+    transition: font-size .25s ease-in-out;
     font-weight: 300;
     line-height: 70%;
 }
+@media (min-width: 769px) {
+    .content .hero-text {
+        font-size: var(--font-size-hero-large);
+    }
+}
+
 .content .hero-text-small {
     padding-bottom: var(--padding-full);
     margin-top: 0px;
-    font-size: 60px;
+    font-size: var(--font-size-hero-small-s);
+    -webkit-transition: font-size .25s ease-in-out;
+    -moz-transition: font-size .25s ease-in-out;
+    -o-transition: font-size .25s ease-in-out;
+    transition: font-size .25s ease-in-out;
     font-weight: 500;
     line-height: 100%;
 }
+@media (min-width: 769px) {
+    .content .hero-text-small {
+        font-size: var(--font-size-hero-small);
+    }
+}
+
+
 .hero-pretext {
     text-transform: uppercase;
     padding-top: var(--padding-full);
@@ -639,7 +664,6 @@ footer .badge a {
 .hero-subtext {
     padding-top: var(--padding-full);
     padding-bottom: var(--padding-full);
-    font-size: var(--font-size-main);
     opacity: 70%;
 }
 
@@ -812,7 +836,7 @@ hr {
         box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
         outline: 0;
     }
-.button-blue {
+.button-cta {
     align-items: center;
     padding: 10px 17px;
     cursor: pointer;
@@ -827,15 +851,15 @@ hr {
     -webkit-user-select: none;
     touch-action: manipulation;
     }
-    .button-blue:hover {
+    .button-cta:hover {
         background: var(--cta-color-light);
         transition: var(--animation-speed-1);
     }
-    .button-blue:focus {
+    .button-cta:focus {
         box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
         border: none;
       }
-    .button-blue:active {
+    .button-cta:active {
         background: var(--cta-color-dark);
         outline: none;
         transition: 0s;
@@ -1013,6 +1037,11 @@ hr {
         margin-top: var(--padding-small);
         margin-bottom: var(--padding-small);
     }
+    .margin-topbottom {
+        margin-top: var(--padding-full);
+        margin-bottom: var(--padding-full);
+    }
+
 
     .fullpaddingsection {
         padding-left: var(--padding-full);
@@ -1722,17 +1751,18 @@ summary::-webkit-details-marker {
 
 summary {
 	padding: var(--padding-small);
+    width: 100%;
 	cursor: pointer;
 	position: relative;
     font-weight: var(--text-weight);
+    text-align: center;
 	/* padding-left: calc(1.75rem + .75rem + .75rem); */
 }
 
-summary:before {     /* the icon */
+summary:after {     /* the icon */
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	right: var(--padding-small);
 	content: "+";
     font-size: var(--font-size-main);
 	width: 1.75rem;
@@ -1749,7 +1779,7 @@ details[open] summary {
 	background-color: var(--bkg-color-highlight);
 }
 
-details[open] summary:before {
+details[open] summary:after {
 	content: "×";
     /* transform: rotate(45deg); */
 }
@@ -1912,7 +1942,7 @@ summary:hover {
     }
 }
 .font-large {
-    font-size: large;
+    font-size: var(--font-size-main);
     font-weight: 400;
 }
 
