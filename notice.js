@@ -1,6 +1,6 @@
 const noticeClose = document.querySelector(".noticeclose");
 const noticebanner = document.querySelector(".noticebanner");
-const noticetoggle = document.querySelector(".mail-icon");
+const noticetoggle = document.querySelector(".noticetoggle");
 
 noticeClose.onclick = function () {
   noticebanner.classList.toggle('showNotice');
