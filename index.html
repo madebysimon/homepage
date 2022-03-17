@@ -46,7 +46,7 @@
     <!-- This source code is minified. But I publish annotated code on github under CC BY-NC-SA 4.0 (non commercial only, share with attribution, only under the same licence) -->
     <nav id="navbar" class="backdrop-blur">
         <div class="nav-content">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <svg width="18" height="44" display="block">
                     <circle cx="9" cy="22" r="8" stroke="white" stroke-width="1" fill="var(--logo-fill)" />
                 </svg>
@@ -57,7 +57,7 @@
             </div>
             <div class="nav-links">
                 <a href="about.html">About</a>
-                <a href="projects">Projects</a>
+                <a href="article.html">Projects</a>
                 <a href="resources">Resources</a>
                 <a href="opus">Links & Socials</a>
             </div>
@@ -65,16 +65,19 @@
         </div>
     </nav>
     <div class="content">
-        <!-- <div class="navplaceholder"></div> -->
-        <div id="banner" class="noticebanner hasbackground-light">
-    
-            <div id="notice" class="notice-content">
-                <a class="calltoaction" href="article.html">
-                    <button class="button-cta">contact me</button>
-                </a>
+        <div id="banner" class="noticebanner font-dark blur">
+        <div class="section-normal">
+            <div id="notice" class="notice-content font-nav center">
+                <p>This website is currently in development.</p>
             </div>
-    
+            <a class="calltoaction">
+                <button class="button-transparent-dark font-dark noticeclose">okay</button>
+            </a>
         </div>
+        </div>
+    </div>
+    <script src="notice.js"></script>
+
         <section id="hero" class="hero gradient-turquoise">
             <div class="section-wide fullpadding">
                 <section class="heroframe isrounded">
@@ -84,10 +87,11 @@
                                     <div class="hero-pretext">Hello my name is</div>
                                     <div class="h1 hero-text invertfontcolor">Simon</div>
                                     <span class="hero-link"><a class="isinteractive">View Projects</a><a class="hero-link-option"> or </a><a class="isinteractive hovertransform">Read About Me</a></span>
-                                    <p class="hero-subtext"> I work as a clinical psychologist by day and design software by night.<br>
-                                        Recently I co-founded maia health, a mental health provider.<br>
-                                        This site was built for sharing content with my clients,<br>
-                                        colleagues, friends and others on the internet.</p>
+                                    <div class="hero-subtext">
+                                        <p>I work as a clinical psychologist by day and design software by night.<br></p>
+                                        <p>Recently I co-founded maia health, a mental health provider.<br></p>
+                                        <p>This site was built for sharing content with my clients,<br>
+                                        colleagues, friends and others on the internet.</p></div>
                             </div>
                         </span>
                         <span class="hero-scroll alignmiddle">
@@ -136,7 +140,7 @@
         <section id="projectpreview" class=" fullpaddingsection content">
             <div class=" section-wide pancakeparent isrounded">
                 <div class="pancakechild wraphovertransform center isrounded hasbackground-light min25vh">
-                    <div class="fullpaddingsection gs_reveal center">
+                    <div class="fullpadding gs_reveal center">
                         Quick Links
                         <h3>"If you are not embarrassed by the first version of your product you’ve launched too late."</h3>
                         <br>Reid Hoffman

@@ -256,7 +256,17 @@ nav { /*-- Nav-Leiste --*/
 .nav-color {
     background: var(--main-nav-color);
 }
-
+.ribbon {
+    height: calc((2*var(--nav-height)) + var(--padding-full));
+    position: relative;
+}
+.ribbonintro {
+    position: absolute;
+    top: calc(2* var(--nav-height));
+    width: 100%;
+    color: var(--bkg-color);
+    min-height: var(--nav-height);
+}
 .hero {
     padding-top: var(--nav-height);
 }
@@ -272,16 +282,49 @@ nav { /*-- Nav-Leiste --*/
 .gradient-nav {
     background-color: var(--main-nav-color);
 }
+
 .noticebanner {
-    height: var(--nav-height);
+    height: 0;
+    opacity: 0;
     position: absolute;
+    top: 0px;
     width: 100%;
-}
-.notice-content .calltoaction {
-    position: relative;
-    right: 0px;
+    visibility: hidden;
+    transition: .2s;
 }
 
+.showNotice {
+    visibility: visible;
+    opacity: 1;
+    height: calc(2*var(--nav-height));
+    transition: 0s;
+}
+
+.notice-content {
+    height: var(--nav-height);
+    position: relative;
+    text-align: center;
+    top: var(--nav-height);
+}
+.notice-content p {
+    text-align: center;
+}
+.noticebanner .calltoaction {
+    margin-right: var(--padding-full);
+    height: var(--nav-height);
+    top: 48px;
+    position: absolute;
+    right: 0px;
+}
+.noticebanner .calltoaction .button-transparent-dark {
+    margin: 0px;    
+}
+
+.blur {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
 .backdrop-blur {
     background-color: var(--main-nav-color);
   }
@@ -836,6 +879,38 @@ hr {
         box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
         outline: 0;
     }
+
+
+    .button-transparent-dark {
+        align-items: center;
+        padding: 10px 17px;
+        cursor: pointer;
+        border-radius: var(--borderradius-small);
+        color: var(--text-color);
+        background: rgba(255, 255, 255, 0.1);
+        font-family: var(--font-main);
+        font-size: var(--font-size-button);
+        border: none;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+        .button-transparent-dark:hover {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 0 0 1px rgba(31, 31, 31, 0.5);
+            transition: var(--animation-speed-1);
+        }
+        .button-transparent-dark:active {
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            transition: 0s;
+            outline: none;
+        }
+        .button-transparent-dark:focus {
+            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+            outline: 0;
+        }
 .button-cta {
     align-items: center;
     padding: 10px 17px;
@@ -887,6 +962,10 @@ hr {
         font-size: var(--font-size-mono);
         font-weight: var(--text-weight-mono);
     }
+    .font-nav {
+        font-size: var(--font-size-nav);
+    }
+
     code {
         background-color: var(--bkg-color-highlight);
     }
@@ -910,6 +989,10 @@ hr {
     }
     .invertfontcolor {
         color: var(--text-color-inverted);
+    }
+    .font-dark {
+        color: var(--main-nav-color);
+        font-weight: 400;
     }
     
 /*     .frostedglass {
