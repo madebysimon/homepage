@@ -86,6 +86,20 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* -- GSAP Parallax -- */
+
+
+let parallax = gsap.timeline()
+.to('.rellax img', {
+  y:-200,
+  scrollTrigger:{
+    start:'top 100%',
+    end:'bottom 0%',
+    scrub:'1',
+    markers: false,
+    invalidateOnRefresh: true,
+  }
+})
+
 /* gsap.utils.toArray(".parallaxcontainer .parallaximage").forEach((section, i) => {
   const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
 
@@ -103,12 +117,13 @@ ease: "none"
 });
  */
 
-/*-- Rellax Parallax --*/
+/*-- Rellax Parallax (retired by GSAP) --*/
 
-var rellax = new Rellax('.rellax', {
+/* var rellax = new Rellax('.rellax', {
   wrapper: null,
   round: true,
   vertical: true,
   horizontal: false
 });
 
+ */
