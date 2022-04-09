@@ -7,19 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Meta Tags-->
+    {% include meta.html %}
+
     <meta name="author" content="Simon Kelch">
-    <meta name="publisher" content="Simon Kelch">
-    <meta name="copyright" content="Simon Kelch">
-    <!-- <meta name="robots" content="index,follow"> -->
-        <!-- to index your page vs. "noindex"-->
-        <!-- to follow links on page vs. "nofollow" -->
-    <!-- <meta http-equiv="cache-control" content="no-cache"/> to stop cache-ing - disable after development -->
-    <!-- <meta http-equiv="expires" content="43200"/> --> <!-- to have chace expire in 12h (43200s) -->
     <meta name="description" content="This site was built for sharing content with my clients, colleagues, friends and others on the internet.">
     <meta name="keywords" content="Stichwort 1, Stichwort 2, Stichwort 3"/>
-    <meta name="page-topic" content="service">
-    <meta name="page-type" content="Homepage">
+
     <meta property="og:title" content="Simon Kelch">
     <meta property="og:description" content="OG description">
     <meta property="og:image" content="img/index/home.png">
@@ -27,14 +20,9 @@
     <meta property="og:site_name" content="simonkelch.de">
     <meta name="twitter:card" content="img/index/home.png">
     <meta name="twitter:image:alt" content="twitter image description">  
-    <!-- <link rel="stylesheet" href="reset.css"> -->
+
     <link rel="stylesheet" href="style/style.css">
-    <!-- Favicon Stuff -->
-        <!-- Fallback of 32x32 favicon.ico in Root Folder -->
-        <link rel="icon" href="favicon/favicon.svg">
-        <link rel="mask-icon" href="favicon/mask-icon.svg" color="#000000"> <!-- has to be made of single color on transparent background -->
-        <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"> <!-- in 180x180 px -->
-        <link rel="manifest" href="favicon/manifest.json"> <!-- for Android, Chrome & Lighthouse in 512x512 -->
+    
     <!-- Theme Colors -->
     <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#202124" media="(prefers-color-scheme: light)">
@@ -453,60 +441,9 @@
         </section>
 
     </div>
-    <footer id="footer">
-        <div class="nav-color backdrop-blur">
-            <div id="upperfooter" class="section-wide wraphovertransform footerwrap">
-                <div class="footerleft">
-                    <div class="footerlinktitle allcaps">call me</div>
-                    <div class="hovertransform"><a href="" class="footertext isinteractive">+49 234 56 78 90</a></div>
-                    <div class="footerlinktitle allcaps">email me</div>
-                    <div class="hovertransform"><a href="" class="footertext isinteractive">hello@simonkelch.de</a></div>
-                    <div class="footerlinktitle allcaps ">follow me</div>
-                    <a class="footerlinktitle-light allcaps isinteractive">LinkedIn</a>  <a class="footerlinktitle-light allcaps isinteractive hovertransform">Twitter</a>  <a class="footerlinktitle-light allcaps isinteractive hovertransform">behance</a>
-                </div>
-                <div class="footermiddle wraphovertransform">
-                    <div class="footerlinktitle allcaps">Location</div>
-                    <div class="footertext isinteractive hovertransform">Hauptstraße 1, 12345 Musterstadt</div>
-                    <br>
-                    <div class="footermap cursorpointer isrounded no-overflow max25vh">
-                        <div class="responsive-map isrounded">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="footerright">
-                    <div class="footerlinktitle allcaps">Office Hours</div>
-                    <div class="footertext">Monday - Friday</div>
-                    <div class="footertext">9⁰⁰ - 17⁰⁰</div>
-                </div>
-            </div>
-            <div id="lowerfooter" class="section-wide footerwrap">
-                <div class="lowerfooterleft">
-                    <a class="footerlinktitle">© Simon Kelch, 2022. All rights reserved.</a>
-                </div>
-                <div class="lowerfootermiddle">
-                    <a class="footerlinktitle cursorpointer isinteractive" href="terms.html#imprint">Imprint</a>  <a class="footerlinktitle cursorpointer isinteractive" href="terms.html#privacy">Privacy Policy</a>  <a class="footerlinktitle cursorpointer isinteractive" href="terms.html#terms">Terms and Conditions</a>  <a class="footerlinktitle">V0.4.0</a>
-                </div>
-                <div class="lowerfooterright gs_reveal center wraphovertransform">
-                    <div class="lowerfooter-iconwrap">
-                        <a id="icon-acessibility" class="footericon hovertransform invertfontcolor badge backdrop-blur">
-                            <div class="badge-text-correction badge-icon">&#9855;</div>
-                        </a>
-                        <a id="icon-darkmode" class="footericon hovertransform toggle-darkmode btn-toggle badge backdrop-blur">
-                            <div class="badge-icon">
-                                <svg width="22" height="22">
-                                    <circle cx="11" cy="11" r="10" stroke="white" stroke-width="1" fill="var(--logo-fill)"/>
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="#" id="icon-go-up" class="footericon hovertransform invertfontcolor badge gradient-cta">
-                            <div class="badge-text-correction badge-icon">↑</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+    {% include footer.html %}
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="script/script.js"></script>
