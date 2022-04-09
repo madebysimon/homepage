@@ -129,8 +129,8 @@ ease: "none"
  */
 
 /*-- Barba.js Page Transitions --*/
-Barba.Pjax.start();
-Barba.Prefetch.init();
+/* barba.Pjax.start();
+barba.Prefetch.init();
 
 barba.init({
   transitions: [{
@@ -148,14 +148,15 @@ barba.init({
   }]
 });
 
-Barba.Dispatcher.on('newPageReady', function(currentStatus) {
+barba.Dispatcher.on('newPageReady', function(currentStatus) {
   const link = currentStatus.url.split(window.location.origin)[1].substring(1); // get path of current page
 
   const navigation             = document.querySelector('.navbar');
   const navigationLinks        = navigation.querySelectorAll('.nav-link');
-  const navigationLinkIsActive = navigation.querySelector(`[href="${link}"]`);
+  const navigationLinkIsActive = navigation.querySelector("a[href='" + link + "']");
 
   Array.prototype.forEach.call(navigationLinks, (navigationLink) => navigationLink.classList.remove('is-active')); // remove CSS class 'is-active' from all .navigation__links
 
   navigationLinkIsActive.classList.add('nav-active'); // add CSS class to current .navigation__link
 });
+ */
