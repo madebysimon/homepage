@@ -1668,6 +1668,7 @@ footer .badge:hover {
 .footerlinktitle-light {
     padding-bottom: var(--padding-small);
     font-size: var(--font-size-button);
+    text-decoration: none;
     color: white;
     opacity: 100%;
 }
