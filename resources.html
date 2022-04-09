@@ -43,7 +43,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         </style>
     </head>
-<body>
+<body data-barba="wrapper">
     <!-- Looking up some source code? I publish on github. -->
     <nav id="navbar" class="backdrop-blur">
         <div class="nav-content">
@@ -67,7 +67,7 @@
     </nav>
     <!-- <div class="navplaceholder"></div> -->
 
-    <div class="content">
+    <div class="content" data-barba="container" data-barba-namespace="resources">
         <div id="banner" class="noticebanner font-dark blur">
             <div id="notice" class="notice-content section-normal font-nav center">
                 <p>This website is currently in development.</p>
@@ -162,6 +162,8 @@
         </div>
 
     </footer>
+
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="script/script.js"></script>

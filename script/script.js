@@ -127,3 +127,35 @@ ease: "none"
 });
 
  */
+
+/*-- Barba.js Page Transitions --*/
+Barba.Pjax.start();
+Barba.Prefetch.init();
+
+barba.init({
+  transitions: [{
+    name: 'opacity-transition',
+    leave(data) {
+      return gsap.to(data.current.container, {
+        opacity: 0
+      });
+    },
+    enter(data) {
+      return gsap.from(data.next.container, {
+        opacity: 0
+      });
+    }
+  }]
+});
+
+Barba.Dispatcher.on('newPageReady', function(currentStatus) {
+  const link = currentStatus.url.split(window.location.origin)[1].substring(1); // get path of current page
+
+  const navigation             = document.querySelector('.navbar');
+  const navigationLinks        = navigation.querySelectorAll('.nav-link');
+  const navigationLinkIsActive = navigation.querySelector(`[href="${link}"]`);
+
+  Array.prototype.forEach.call(navigationLinks, (navigationLink) => navigationLink.classList.remove('is-active')); // remove CSS class 'is-active' from all .navigation__links
+
+  navigationLinkIsActive.classList.add('nav-active'); // add CSS class to current .navigation__link
+});
