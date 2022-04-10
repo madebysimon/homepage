@@ -27,6 +27,23 @@ barba.init({
 			},
 		},
 	],
+  views: [{
+    namespace: 'home',
+    beforeEnter() {
+      // sets the nav-active
+        $(function () {
+          $('.nav-links a').each(function () {
+              $(this).removeClass('nav-active');
+              if ($(this).prop('href') == window.location.href) {
+                  $(this).addClass('nav-active');
+              }
+          });
+        });
+    },
+    afterEnter() {
+      
+    }
+  }]
 });
 
 function allAnimationComponents() {

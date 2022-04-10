@@ -32,7 +32,7 @@ localStorage.setItem("theme", theme);
 
 
 /*-- Barba.js Page Transitions --*/
-barba.init({
+/* barba.init({
   transitions: [{
     name: 'opacity-transition',
     leave(data) {
@@ -78,7 +78,7 @@ barba.hooks.after(() => {
   //removes the transition class
 });
 
-
+ */
 /* barba.Pjax.start();
 barba.Prefetch.init();
 
