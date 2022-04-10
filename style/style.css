@@ -2310,13 +2310,7 @@ a.footnote:after {
     text-decoration: none;
 }
 
-.barba-transitioning {
-    pointer-events: none;
-    cursor: progress;
-}
-
 /*-- Barba JS Transitions --*/
-
 .transition {
   position: absolute;
   z-index: 99;
@@ -2330,6 +2324,7 @@ a.footnote:after {
   margin: 0;
   padding: 0;
   pointer-events: none;
+  cursor: progress;
 }
 
 .transition li {
