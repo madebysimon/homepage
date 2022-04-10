@@ -129,9 +129,6 @@ ease: "none"
  */
 
 /*-- Barba.js Page Transitions --*/
-/* barba.Pjax.start();
-barba.Prefetch.init();
-
 barba.init({
   transitions: [{
     name: 'opacity-transition',
@@ -147,6 +144,11 @@ barba.init({
     }
   }]
 });
+
+/* barba.Pjax.start();
+barba.Prefetch.init();
+
+
 
 barba.Dispatcher.on('newPageReady', function(currentStatus) {
   const link = currentStatus.url.split(window.location.origin)[1].substring(1); // get path of current page
