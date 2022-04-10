@@ -2309,3 +2309,8 @@ a.footnote:after {
 .textdecoration-none {
     text-decoration: none;
 }
+
+.barba-transitioning {
+    pointer-events: none;
+    cursor: progress;
+}
