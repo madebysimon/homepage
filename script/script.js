@@ -143,6 +143,30 @@ barba.init({
       });
     }
   }]
+  views: [{
+    namespace: 'home',
+    beforeEnter() {
+      // sets the nav-active
+        $(function () {
+          $('.nav-links a').each(function () {
+              $(this).removeClass('nav-active');
+              if ($(this).prop('href') == window.location.href) {
+                  $(this).addClass('nav-active');
+              }
+          });
+        });
+    },
+    afterEnter() {
+      // refresh the parallax based on new page content
+      ScrollTrigger.refresh();
+      //?
+      
+      barba.hooks.enter(() => {
+        window.scrollTo(0, 0);
+      });
+    }
+  }]
+
 });
 
 // do something before the transition starts
@@ -153,20 +177,8 @@ barba.hooks.before(() => {
 barba.hooks.after(() => {
   document.querySelector('html').classList.remove('barba-transitioning');
   //removes the transition class
+});
 
-  $(function () {
-    $('.nav-links a').each(function () {
-        $(this).removeClass('nav-active');
-        if ($(this).prop('href') == window.location.href) {
-            $(this).addClass('nav-active');
-        }
-    });
-  });
-  //sets the nav-active
-});
-barba.hooks.enter(() => {
-  window.scrollTo(0, 0);
-});
 
 /* barba.Pjax.start();
 barba.Prefetch.init();
