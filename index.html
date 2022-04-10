@@ -15,13 +15,13 @@
 
         <meta property="og:title" content="Simon Kelch">
         <meta property="og:description" content="OG description">
-        <meta property="og:image" content="img/index/home.png">
+        <meta property="og:image" content="/img/index/home.png">
         <meta property="og:url" content="simonkelch.de">
         <meta property="og:site_name" content="simonkelch.de">
-        <meta name="twitter:card" content="img/index/home.png">
+        <meta name="twitter:card" content="/img/index/home.png">
         <meta name="twitter:image:alt" content="twitter image description">  
 
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="/style/style.css">
         
         <!-- Theme Colors -->
         <meta name="color-scheme" content="dark light">
@@ -32,6 +32,9 @@
         </style>
     </head>
     <body data-barba="wrapper">
+        <ul class="transition">
+            <li></li>
+        </ul>
         <!-- This source code is minified. But I publish annotated code on github under CC BY-NC-SA 4.0 (non commercial only, share with attribution, only under the same licence) -->
         {% include nav.html %}
         <main data-barba="container" data-barba-namespace="home">
@@ -442,8 +445,8 @@
 
             </div>
 
-        <script src="script/animation.js"></script>
-        <script src="script/vanilla-tilt.js"></script>
+        <script src="/script/animation.js"></script>
+        <script src="/script/vanilla-tilt.js"></script>
 
         </main>
 
@@ -452,6 +455,7 @@
         <script src="https://unpkg.com/@barba/core"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-        <script src="script/script.js"></script>
+        <script src="/script/script.js"></script>
+        <script src="/script/barbaanimation.js"></script>
     </body>
 </html>
