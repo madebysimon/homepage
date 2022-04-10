@@ -1,0 +1,223 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page.title }} | SimonKelch.ᴅᴇ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Meta Tags-->
+        <meta name="author" content="Simon Kelch">
+        <meta name="publisher" content="Simon Kelch">
+        <meta name="copyright" content="Simon Kelch">
+        <!-- <meta name="robots" content="index,follow"> -->
+            <!-- to index your page vs. "noindex"-->
+            <!-- to follow links on page vs. "nofollow" -->
+        <!-- <meta http-equiv="cache-control" content="no-cache"/> to stop cache-ing - disable after development -->
+        <!-- <meta http-equiv="expires" content="43200"/> --> <!-- to have chace expire in 12h (43200s) -->
+        <meta name="description" content="This site was built for sharing content with my clients, colleagues, friends and others on the internet.">
+        <meta name="keywords" content="Stichwort 1, Stichwort 2, Stichwort 3"/>
+        <meta name="page-topic" content="service">
+        <meta name="page-type" content="Homepage">
+        <meta property="og:title" content="{{ page.title }}">
+        <meta property="og:description" content="OG description">
+        <meta property="og:image" content="img/index/home.png">
+        <meta property="og:url" content="simonkelch.de">
+        <meta property="og:site_name" content="simonkelch.de">
+        <meta name="twitter:card" content="img/index/home.png">
+        <meta name="twitter:image:alt" content="twitter image description">  
+        <!-- <link rel="stylesheet" href="reset.css"> -->
+        <link rel="stylesheet" href="style/style.css">
+        <!-- Favicon Stuff -->
+        <!-- Fallback of 32x32 favicon.ico in Root Folder -->
+        <link rel="icon" href="favicon/favicon.svg">
+        <link rel="mask-icon" href="favicon/mask-icon.svg" color="#000000"> <!-- has to be made of single color on transparent background -->
+        <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"> <!-- in 180x180 px -->
+        <link rel="manifest" href="favicon/manifest.json"> <!-- for Android, Chrome & Lighthouse in 512x512 -->
+        <!-- Theme Colors -->
+        <meta name="color-scheme" content="dark light">
+        <meta name="theme-color" content="#202124" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#205430" media="(prefers-color-scheme: dark)">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        </style>
+    </head>
+<body>
+    <!-- Looking up some source code? I publish on github. -->
+    {% include nav2.html %}
+    <!-- <div class="navplaceholder"></div> -->
+    <div class="content">
+        <div id="banner" class="noticebanner font-dark blur">
+            <div id="notice" class="notice-content section-normal font-nav center">
+                <p>This website is currently in development.</p>
+            </div>
+            <a class="calltoaction">
+                <button class="button-transparent-dark font-dark noticeclose">okay</button>
+            </a>
+        </div>
+        <script src="notice.js"></script>
+
+
+        <div id="hero-image" class="alignmiddle section-normal isrounded">
+            <div class="center min50vh gradient-graphite isrounded cardshadow cardshadow-left cardshadow-right center no-overflow" style="position: relative">
+                <div class="no-overflow isrounded" style="position: absolute">
+                    <div class="alignvmiddle center">
+                        <div class="rellax center">
+                            <img class="isrounded parallaximage" src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2384&q=80">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="spacer"></div>
+
+        <div id="heading-middle" class="gs_reveal section-normal center">
+            <div class="spacer"></div>
+            <div class="bubble hasbackground-light allcaps">
+                <div class="center-text smallcapslabel ">Of bubbles and bias</div>
+            </div>
+            <h1 class="section-heading">{{ page.title }}</h1>
+
+            <div class="headhing-subtext longform-container">
+                <p>Rest of the Text is centered and grey Lorem Ipsum dolor sit amet.<br>Consequet ur blabla some text to enable charakter breaks.<br>
+                About three lines should do it and make it readable.</p>
+            </div>
+            <div class="spacer"></div>
+        </div>
+
+        <section id="author" class="longform-container">
+            <div class="author-container">
+                <div class="author-info">
+                    <span class="alignvmiddle">
+                        <img title="Author One" class="author-pic" src="https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png">
+                        <img title="Author Two" class="author-pic" src="https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png">
+                        <img title="Author Three" class="author-pic" src="https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png">
+                    </span>
+                    <span class="text-left author-info-text">
+                        <div>Simon Kelch</div>
+                        <div class="author-info-company">CX @maia health</div>
+                    </span>
+                </div>
+                <div class="date-info">
+                    <span class="alignvmiddle author-info-text text-right author-info-company">
+                        <div><span class="">published on </span><span class="">08.04.22</span></div>
+                        <div><span class="">last edit on </span><span class="">08.04.22</span></div>
+                    </span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="longform-container text-left">
+            <p>
+                climb.
+                Sometimes you feel right on track, but at times got so cought up in the goal you chose an ineffective path. What from the inside looks like progress may only mask treading in the wrong direction.
+                Entrusting someone with informing about these choices is a tough call for many, but bears great potential.   
+                
+                In business goal-vision and 
+                pride and prejudice
+            </p>
+            <div class="spacer"></div>
+        </section>
+
+        <section id="tabs" class="tab-container wraphovertransform content longform-container fullpadding">
+            <div class="worko-tabs">
+                <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked />
+                <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two" />
+                <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" />
+                <!-- <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" /> -->
+
+                <div class="tabs flex-tabs">
+                    <label for="tab-one" id="tab-one-label" class="tab tab-container hovertransform">
+                        <h3 class="tabheadinglight tabheading">Highlights</h3>
+                    </label>
+                    <label for="tab-two" id="tab-two-label" class="tab hovertransform">
+                        <h3 class="tabheadinglight tabheading">On This Page</h3>
+                    </label>
+                    <label for="tab-three" id="tab-three-label" class="tab hovertransform">
+                        <h3 class="tabheadinglight tabheading">Cite & Share</h3>
+                    </label>
+                    <!-- <label for="tab-four" id="tab-four-label" class="tab">Tab Four</label>
+    -->            
+                    <div id="tab-one-panel" class="panel text-left isrounded hasbackground-light">
+                        <div class="fullpadding ">
+                            <ul>
+                                <li>unordered list arent made to move and do cognitive tasks at once</li>
+                                <li>the same is second highlight
+                                <ul>
+                                    <li>second one</li>
+                                    <li>second two</li>
+                                </ul>
+                                </li>
+                                <li>Third Highlight</li>
+                            </ul>
+                        </div>
+                        <a href="./article.html"><button class="button-transparent-light">read more</button></a>
+                    </div>
+                    <div id="tab-two-panel" class="panel text-left isrounded hasbackground-light">
+                        <div class="fullpadding">
+                            <ol>
+                                <li>ordered list</li>
+                                <li>Tea</li>
+                                <li>Milk</li>
+                              </ol>
+                        </div>
+                        <a href="./article.html"><button class="button-transparent-light tabbuttonright">read more</button></a>
+                    </div>
+                    <div id="tab-three-panel" class="panel text-left isrounded hasbackground-light">
+                        <div class="fullpadding">
+                            <span>
+                            Kelch, S. J. (2022, April 08). Title of page: Subtitle (if any). Website name. http://www.maiahealth.de/thislink
+                            </span>
+                        </div>
+                    </div>
+                    <!-- <div id="tab-four-panel" class="panel">
+                        Tab four content
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+        <section id="articlecontent" class="longform-container text-left articlecontent">
+            {{ content }}
+            <div class="spacer"></div>
+        </section>
+
+        <div class="spacer"></div>
+        
+        <section id="upnext" class="upnext gs_reveal section-wide fullpadding">
+            <div id="upnext-previous" class="upnext-element align-left isrounded-right no-overflow hasbackground-light isinteractive">
+                <div class="upnext-image min25vh gradient-graphite">
+                    <div class="upnext-label backdrop-blur align-right invertfontcolor">
+                        <div class="bubble alignmiddle"><div class="center-text smallcapslabel">more recently</div></div>
+                        <div class="title marginfull-lr">This is the title of the previous article</div>
+                        <div class="arrow">←</div>
+                    </div>
+                    <div class="align-left">
+                        <img src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format">
+                    </div>
+                </div>
+            </div>
+            <div id="upnext-next" class="upnext-element align-right isrounded-left no-overflow hasbackground-light isinteractive">
+                <div class="upnext-image min25vh gradient-graphite">
+                    <div class="upnext-label backdrop-blur align-left invertfontcolor">
+                        <div class="bubble alignmiddle"><div class="center-text smallcapslabel">Up Next</div></div>
+                        <div class="title marginfull-lr">This is the title of the next article</div>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="align-right">
+                        <img src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2384&q=80">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    {% include footer2.html %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/vanilla-tilt.js"></script>
+</body>
+</html>
