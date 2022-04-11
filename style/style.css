@@ -2346,6 +2346,6 @@ a.footnote:after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--cta-color);
+    background-color: var(--cta-color-dark);
     mix-blend-mode: lighten;
 }{}
