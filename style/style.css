@@ -2294,6 +2294,7 @@ a.footnote:after {
 .feature-icon {
     width: min(15vw, 60px);
     padding-bottom: var(--padding-small);
+    filter: invert(11%) sepia(90%) saturate(7453%) hue-rotate(216deg) brightness(86%) contrast(101%);
 }
 @media (max-width: 768px) {
     .feature-icon {
