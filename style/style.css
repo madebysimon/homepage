@@ -2338,9 +2338,11 @@ a.footnote:after {
 
 .colored-icon {
     position: relative;
+    mix-blend-mode: screen;
 }
 .colored-icon::after {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
