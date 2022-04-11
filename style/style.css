@@ -2294,8 +2294,16 @@ a.footnote:after {
 .feature-icon {
     width: min(15vw, 60px);
     padding-bottom: var(--padding-small);
-    fill: var(--cta-color-dark);
+    color: var(--cta-color-dark);
 }
+
+.feature-icon path{
+    color: var(--cta-color-light);;
+  }
+.feature-icon circle{
+    color: var(--cta-color-light);;
+}
+
 @media (max-width: 768px) {
     .feature-icon {
         width: min(15vw, 50px);
