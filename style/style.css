@@ -2294,14 +2294,7 @@ a.footnote:after {
 .feature-icon {
     width: min(15vw, 60px);
     padding-bottom: var(--padding-small);
-    color: var(--cta-color-dark);
-}
-
-.feature-icon path{
-    color: var(--cta-color-light);;
-  }
-.feature-icon circle{
-    color: var(--cta-color-light);;
+    color: "#0041b9";
 }
 
 @media (max-width: 768px) {
