@@ -2356,7 +2356,7 @@ a.footnote:after {
 
 .footnote::before {
     content: '';
-    display: block;
+    display: inline-block;
     height: var(--nav-height);
     margin-top: calc(-1* var(--nav-height));
     visibility: hidden;
@@ -2364,7 +2364,7 @@ a.footnote:after {
 
 .reversefootnote::before {
     content: '';
-    display: block;
+    display: inline-block;
     height: var(--nav-height);
     margin-top: calc(-1* var(--nav-height));
     visibility: hidden;
