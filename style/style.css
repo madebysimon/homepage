@@ -2366,6 +2366,25 @@ table {
     border-bottom: 1px solid rgba(238, 235, 238, 0.5);
     border-left:1px solid #eeebee
 }
+
+
+th:first-of-type, td:first-of-type {
+    border-left:0
+}
+
+tbody tr:last-of-type th, tbody tr:last-of-type td {
+    border-bottom:0
+}
+
+tbody tr:last-of-type td {
+    padding-bottom:.75rem
+}
+
+thead th {
+    border-bottom:1px solid #eeebee
+}
+
+/* 
 table.thead.tr {
     font-weight: var(--text-weight-bold);
 }
@@ -2381,4 +2400,4 @@ table.tbody.tr { /*-- rows in body --*/
 }
 table.tbody.tr.td { /*-- individual cells --*/
     
-}
+} */
