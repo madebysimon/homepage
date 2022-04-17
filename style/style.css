@@ -2354,7 +2354,7 @@ a.footnote:after {
 
 /*-- Style Tables --*/
 
-.fl-table {
+.content table {
     border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
@@ -2366,35 +2366,35 @@ a.footnote:after {
     background-color: white;
 }
 
-.fl-table td, .fl-table th {
+.content table td, .content table th {
     text-align: center;
     padding: 8px;
 }
 
-.fl-table td {
+.content table td {
     border-right: 1px solid #f8f8f8;
     font-size: 12px;
 }
 
-.fl-table thead th {
+.content table thead th {
     color: #ffffff;
     background: #4FC3A1;
 }
 
 
-.fl-table thead th:nth-child(odd) {
+.content table thead th:nth-child(odd) {
     color: #ffffff;
     background: #324960;
 }
 
-.fl-table tr:nth-child(even) {
+.content table tr:nth-child(even) {
     background: #F8F8F8;
 }
 
 /* Responsive */
 
 @media (max-width: 767px) {
-    .fl-table {
+    .content table {
         display: block;
         width: 100%;
     }
@@ -2406,21 +2406,21 @@ a.footnote:after {
         color: white;
         padding: 0 0 10px;
     }
-    .fl-table thead, .fl-table tbody, .fl-table thead th {
+    .content table thead, .content table tbody, .content table thead th {
         display: block;
     }
-    .fl-table thead th:last-child{
+    .content table thead th:last-child{
         border-bottom: none;
     }
-    .fl-table thead {
+    .content table thead {
         float: left;
     }
-    .fl-table tbody {
+    .content table tbody {
         width: auto;
         position: relative;
         overflow-x: auto;
     }
-    .fl-table td, .fl-table th {
+    .content table td, .content table th {
         padding: 20px .625em .625em .625em;
         height: 60px;
         vertical-align: middle;
@@ -2431,27 +2431,27 @@ a.footnote:after {
         font-size: 13px;
         text-overflow: ellipsis;
     }
-    .fl-table thead th {
+    .content table thead th {
         text-align: left;
         border-bottom: 1px solid #f7f7f9;
     }
-    .fl-table tbody tr {
+    .content table tbody tr {
         display: table-cell;
     }
-    .fl-table tbody tr:nth-child(odd) {
+    .content table tbody tr:nth-child(odd) {
         background: none;
     }
-    .fl-table tr:nth-child(even) {
+    .content table tr:nth-child(even) {
         background: transparent;
     }
-    .fl-table tr td:nth-child(odd) {
+    .content table tr td:nth-child(odd) {
         background: #F8F8F8;
         border-right: 1px solid #E6E4E4;
     }
-    .fl-table tr td:nth-child(even) {
+    .content table tr td:nth-child(even) {
         border-right: 1px solid #E6E4E4;
     }
-    .fl-table tbody td {
+    .content table tbody td {
         display: block;
         text-align: center;
     }
