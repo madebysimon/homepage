@@ -2445,5 +2445,6 @@ a.footnote:after {
 
 /*-- Style Images in Content --*/
 .content p img {
+    display: block;
     max-width: 100%;
 }
