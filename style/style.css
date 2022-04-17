@@ -2414,7 +2414,7 @@ a.footnote:after {
         box-sizing: border-box;
         overflow-x: hidden;
         overflow-y: auto;
-        min-width: 120px;
+        /* min-width: 120px; */
         text-overflow: clip;
         text-align: left !important;
     }
