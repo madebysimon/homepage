@@ -2352,20 +2352,33 @@ a.footnote:after {
     mix-blend-mode: lighten;
 }{}
 
-/*-- style footnote so links are offset on page -*/
+/*-- Style Tables --*/
 
-.footnote::before {
-    content: '';
-    display: inline-block;
-    height: var(--nav-height);
-    margin-top: calc(-1* var(--nav-height));
-    visibility: hidden;
-  }
+table {
+    min-width: 100%;
+    border-collapse: separate;
+    min-width: 120px;
+    padding-top: .5rem;
+    padding-right: .75rem;
+    padding-bottom: .5rem;
+    padding-left: .75rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(238, 235, 238, 0.5);
+    border-left:1px solid #eeebee
+}
+table.thead.tr {
+    font-weight: var(--text-weight-bold);
+}
+table.thead {/*-- table head --*/
+    border-bottom: 1px solid rgb(90, 90, 90);
+}
 
-.reversefootnote::before {
-    content: '';
-    display: inline-block;
-    height: var(--nav-height);
-    margin-top: calc(-1* var(--nav-height));
-    visibility: hidden;
-  }
+table.tbody { /*-- table body --*/
+    
+}
+table.tbody.tr { /*-- rows in body --*/
+    /* border-bottom: 1px solid rgb(90, 90, 90); */
+}
+table.tbody.tr.td { /*-- individual cells --*/
+    
+}
