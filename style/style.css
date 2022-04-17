@@ -2351,3 +2351,21 @@ a.footnote:after {
     background-color: var(--cta-color-dark);
     mix-blend-mode: lighten;
 }{}
+
+/*-- style footnote so links are offset on page -*/
+
+.footnote::before {
+    content: '';
+    display: block;
+    height: var(--nav-height);
+    margin-top: calc(-1* var(--nav-height));
+    visibility: hidden;
+  }
+
+.reversefootnote::before {
+    content: '';
+    display: block;
+    height: var(--nav-height);
+    margin-top: calc(-1* var(--nav-height));
+    visibility: hidden;
+  }
