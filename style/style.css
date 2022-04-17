@@ -2421,7 +2421,6 @@ a.footnote:after {
     
     .content table thead th {
         text-align: left;
-
     }
     .content table tbody tr {
         display: table-cell;
@@ -2442,4 +2441,9 @@ a.footnote:after {
         display: block;
         text-align: center;
     }
+}
+
+/*-- Style Images in Content --*/
+.content p img {
+    max-width: 100%;
 }
