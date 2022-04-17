@@ -2350,45 +2350,38 @@ a.footnote:after {
     height: 100%;
     background-color: var(--cta-color-dark);
     mix-blend-mode: lighten;
-}{}
+}
 
 /*-- Style Tables --*/
 
 .content table {
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
+    margin-top: 10px;
     border: none;
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
     white-space: nowrap;
-    background-color: white;
 }
 
 .content table td, .content table th {
-    text-align: center;
     padding: 8px;
 }
 
 .content table td {
-    border-right: 1px solid #f8f8f8;
-    font-size: 12px;
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
 }
 
-.content table thead th {
-    color: #ffffff;
-    background: #4FC3A1;
+.content table thead tr {
+    background: rgba(128, 128, 128, 0.03);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 }
-
 
 .content table thead th:nth-child(odd) {
-    color: #ffffff;
-    background: #324960;
+    /* background: rgba(128, 128, 128, 0.03); */
 }
 
 .content table tr:nth-child(even) {
-    background: #F8F8F8;
+    background: rgba(128, 128, 128, 0.03);
 }
 
 /* Responsive */
@@ -2398,14 +2391,10 @@ a.footnote:after {
         display: block;
         width: 100%;
     }
-    .table-wrapper:before{
-        content: "Scroll horizontally >";
-        display: block;
-        text-align: right;
-        font-size: 11px;
-        color: white;
-        padding: 0 0 10px;
+    .content table thead tr th {
+    text-align: left !important;
     }
+    
     .content table thead, .content table tbody, .content table thead th {
         display: block;
     }
@@ -2421,19 +2410,18 @@ a.footnote:after {
         overflow-x: auto;
     }
     .content table td, .content table th {
-        padding: 20px .625em .625em .625em;
-        height: 60px;
         vertical-align: middle;
         box-sizing: border-box;
         overflow-x: hidden;
         overflow-y: auto;
-        width: 120px;
-        font-size: 13px;
-        text-overflow: ellipsis;
+        min-width: 120px;
+        text-overflow: clip;
+        text-align: left !important;
     }
+    
     .content table thead th {
         text-align: left;
-        border-bottom: 1px solid #f7f7f9;
+
     }
     .content table tbody tr {
         display: table-cell;
@@ -2445,31 +2433,13 @@ a.footnote:after {
         background: transparent;
     }
     .content table tr td:nth-child(odd) {
-        background: #F8F8F8;
-        border-right: 1px solid #E6E4E4;
+        background: rgba(128, 128, 128, 0.03);
     }
     .content table tr td:nth-child(even) {
-        border-right: 1px solid #E6E4E4;
+        background: rgba(128, 128, 128, 0.0);
     }
     .content table tbody td {
         display: block;
         text-align: center;
     }
 }
-/* 
-table.thead.tr {
-    font-weight: var(--text-weight-bold);
-}
-table.thead {
-    border-bottom: 1px solid rgb(90, 90, 90);
-}
-
-table.tbody { 
-    
-}
-table.tbody.tr { 
-    border-bottom: 1px solid rgb(90, 90, 90);
-}
-table.tbody.tr.td { 
-    
-} */
