@@ -47,8 +47,7 @@
             <h1 class="section-heading">{{ page.title }}</h1>
 
             <div class="headhing-subtext longform-container">
-                <p>Rest of the Text is centered and grey Lorem Ipsum dolor sit amet.<br>Consequet ur blabla some text to enable charakter breaks.<br>
-                About three lines should do it and make it readable.</p>
+                <p>{{ page.intro }}</p>
             </div>
             <div class="spacer"></div>
         </div>
@@ -77,7 +76,7 @@
         
         <section class="longform-container text-left">
             <p>
-                {{ page.intro }}
+                {{ page.abstract }}
             </p>
             <div class="spacer"></div>
         </section>
@@ -139,7 +138,7 @@
 
         <section id="footnotes" class="longform-container text-left">
             * footnotes will be placed here. This line is necessary
-            {:footnotes}
+            {{:footnotes}}
         </section>
 
         <section id="articlecontent" class="longform-container text-left articlecontent">

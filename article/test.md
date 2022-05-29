@@ -7,7 +7,8 @@ tagline: Of Bubbles and Bias
 author: Simon Kelch
 authortagline: CX @maia health
 authorpicture: https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png
-intro: "Sometimes you feel right on track, but at times got so cought up in the goal you chose an ineffective path. What from the inside looks like progress may only mask treading in the wrong direction. Entrusting someone with informing about these choices is a tough call for many, but bears great potential."
+intro: "Rest of the Text is centered and grey Lorem Ipsum dolor sit amet.<br>Consequet ur blabla some text to enable charakter breaks.<br>About three lines should do it and make it readable."
+abstract: "Sometimes you feel right on track, but at times got so cought up in the goal you chose an ineffective path. What from the inside looks like progress may only mask treading in the wrong direction. Entrusting someone with informing about these choices is a tough call for many, but bears great potential."
 ---
 
 ## Heading Two
