@@ -47,7 +47,7 @@
             <h1 class="section-heading">{{ page.title }}</h1>
 
             <div class="headhing-subtext longform-container">
-                <p>{{ page.intro }}</p>
+                <p>{{ page.subtitle }}</p>
             </div>
             <div class="spacer"></div>
         </div>
@@ -113,19 +113,19 @@
                                 <li>Third Highlight</li>
                             </ul>
                         </div>
-                        <a href="./article.html"><button class="button-transparent-light">read more</button></a>
+                        <a href="./article/test"><button class="button-transparent-light">read more</button></a>
                     </div>
                     <div id="tab-two-panel" class="panel text-left isrounded hasbackground-light">
                         <div class="fullpadding">
                             * TOC
                             {:toc}
                         </div>
-                        <a href="./article.html"><button class="button-transparent-light tabbuttonright">read more</button></a>
+                        <a href="./article/test"><button class="button-transparent-light tabbuttonright">read more</button></a>
                     </div>
                     <div id="tab-three-panel" class="panel text-left isrounded hasbackground-light">
                         <div class="fullpadding">
                             <span>
-                            Kelch, S. J. (2022, April 08). {{ page.title }}: Subtitle (if any). Website name. http://www.maiahealth.de{{ page.url }}
+                            Kelch, S. J. (2022, April 08). {{ page.title }}: Subtitle (if any). simonkelch.de. http://www.simonkelch.de{{ page.url }}
                             </span>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
 
         <section id="footnotes" class="longform-container text-left">
             * footnotes will be placed here. This line is necessary
-            {{:footnotes}}
+            {:footnotes}
         </section>
 
         <section id="articlecontent" class="longform-container text-left articlecontent">
@@ -153,11 +153,11 @@
                 <div class="upnext-image min25vh gradient-graphite">
                     <div class="upnext-label backdrop-blur align-right invertfontcolor">
                         <div class="bubble alignmiddle"><div class="center-text smallcapslabel">more recently</div></div>
-                        <div class="title marginfull-lr">This is the title of the previous article</div>
+                        <div class="title marginfull-lr">{{ page.previous-title }}</div>
                         <div class="arrow">←</div>
                     </div>
                     <div class="align-left">
-                        <img src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format">
+                        <img src="{{ page.previous-image }}">
                     </div>
                 </div>
             </div>
@@ -165,11 +165,11 @@
                 <div class="upnext-image min25vh gradient-graphite">
                     <div class="upnext-label backdrop-blur align-left invertfontcolor">
                         <div class="bubble alignmiddle"><div class="center-text smallcapslabel">Up Next</div></div>
-                        <div class="title marginfull-lr">This is the title of the next article</div>
+                        <div class="title marginfull-lr">{{ page.next-title }}</div>
                         <div class="arrow">→</div>
                     </div>
                     <div class="align-right">
-                        <img src="https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2384&q=80">
+                        <img src="{{ page.next-image }}">
                     </div>
                 </div>
             </div>
