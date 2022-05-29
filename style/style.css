@@ -2472,7 +2472,8 @@ a.footnote:after {
 /*-- Breadcrumbs --*/
 
 .breadcrumbs {
-    color: var(--color-neutral);
+    color: var(--text-color);
+    opacity: 0.7;
 }
 .breadcrumbs a {
     text-decoration: none;
