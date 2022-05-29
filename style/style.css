@@ -2468,3 +2468,10 @@ a.footnote:after {
     display: block;
     font-size: 12px;
     }
+
+/*-- Breadcrumbs --*/
+
+.breadcrumbs {
+    color: var(--color-neutral);
+    text-decoration: none;
+}
