@@ -553,7 +553,6 @@ footer .badge a {
         min-height: 10vh;
     }
 
-
     .nav-links {
         position: fixed;
         top: var(--nav-height);
@@ -2352,6 +2351,7 @@ a.footnote:after {
     mix-blend-mode: lighten;
 }
 
+
 /*-- Style Tables --*/
 
 .content table {
@@ -2386,7 +2386,7 @@ a.footnote:after {
 
 /* Responsive */
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     .content table {
         display: block;
         width: 100%;
@@ -2446,5 +2446,26 @@ a.footnote:after {
 /*-- Style Images in Content --*/
 .content p img {
     display: block;
-    max-width: 100%;
+    max-width: 100%; 
 }
+
+.content p img {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    }
+  
+ .content p img:before { 
+    content: "Sorry, the image below is broken ☹️";
+    display: block;
+    margin-bottom: 10px;
+    }
+  
+.content p img:after { 
+    content: "(url: " attr(src) ")";
+    display: block;
+    font-size: 12px;
+    }
+

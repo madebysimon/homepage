@@ -1,0 +1,30 @@
+.pds-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pds-category {
+    display: flex;
+    flex-basis: 25%;
+    max-width: 250px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bkg-color-highlight);
+}
+
+.pds-element {
+    
+}
+
+.pds-category-title {
+    
+}
+
+.pds-element::before {
+    content:'';
+    padding-left: 10px;
+}
