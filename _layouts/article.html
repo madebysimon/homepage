@@ -42,7 +42,7 @@
         <div id="heading-middle" class="gs_reveal section-normal center">
             <div class="spacer"></div>
             <div class="bubble hasbackground-light allcaps">
-                <div class="center-text smallcapslabel ">Of bubbles and bias</div>
+                <div class="center-text smallcapslabel ">{{ page.tagline }}</div>
             </div>
             <h1 class="section-heading">{{ page.title }}</h1>
 
@@ -59,17 +59,17 @@
                     <span class="alignvmiddle">
                         <img title="Author One" class="author-pic" src="https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png">
                         <img title="Author Two" class="author-pic" src="https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png">
-                        <img title="Author Three" class="author-pic" src="https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png">
+                        <img title="{{ page.author }}" class="author-pic" src="{{ page.authorpicture }}">
                     </span>
                     <span class="text-left author-info-text">
-                        <div>Simon Kelch</div>
-                        <div class="author-info-company">CX @maia health</div>
+                        <div>{{ page.author }}</div>
+                        <div class="author-info-company">{{ page.authortagline }}</div>
                     </span>
                 </div>
                 <div class="date-info">
                     <span class="alignvmiddle author-info-text text-right author-info-company">
-                        <div><span class="">published on </span><span class="">08.04.22</span></div>
-                        <div><span class="">last edit on </span><span class="">08.04.22</span></div>
+                        <div><span class="">published on </span><span class=""></span>{{ page.date }}</div>
+                        <div><span class="">last edit on </span><span class="">{{ page.edit }}</span></div>
                     </span>
                 </div>
             </div>
@@ -77,12 +77,7 @@
         
         <section class="longform-container text-left">
             <p>
-                climb.
-                Sometimes you feel right on track, but at times got so cought up in the goal you chose an ineffective path. What from the inside looks like progress may only mask treading in the wrong direction.
-                Entrusting someone with informing about these choices is a tough call for many, but bears great potential.   
-                
-                In business goal-vision and 
-                pride and prejudice
+                {{ page.intro }}
             </p>
             <div class="spacer"></div>
         </section>
@@ -131,7 +126,7 @@
                     <div id="tab-three-panel" class="panel text-left isrounded hasbackground-light">
                         <div class="fullpadding">
                             <span>
-                            Kelch, S. J. (2022, April 08). Title of page: Subtitle (if any). Website name. http://www.maiahealth.de/thislink
+                            Kelch, S. J. (2022, April 08). {{ page.title }}: Subtitle (if any). Website name. http://www.maiahealth.de{{ page.url }}
                             </span>
                         </div>
                     </div>

@@ -1,6 +1,13 @@
 ---
-title: Test Page
 layout: article
+date: 08.04.22
+edit: 08.04.22
+title: A Test Page
+tagline: Of Bubbles and Bias
+author: Simon Kelch
+authortagline: CX @maia health
+authorpicture: https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png
+intro: "Sometimes you feel right on track, but at times got so cought up in the goal you chose an ineffective path. What from the inside looks like progress may only mask treading in the wrong direction. Entrusting someone with informing about these choices is a tough call for many, but bears great potential."
 ---
 
 ## Heading Two
