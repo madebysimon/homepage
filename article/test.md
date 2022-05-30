@@ -9,6 +9,9 @@ author: Simon Kelch
 authortagline: CX @maia health
 authorpicture: https://www.senertec.de/wp-content/uploads/2020/04/blank-profile-picture-973460_1280.png
 abstract: "Sometimes you feel right on track, but at times got so cought up in the goal you chose an ineffective path. What from the inside looks like progress may only mask treading in the wrong direction. Entrusting someone with informing about these choices is a tough call for many, but bears great potential."
+tags:
+  - Test
+  - HTML
 previous-title: This is the title of the previous article
 previous-image: https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format
 next-title: This is the title of the previous article
