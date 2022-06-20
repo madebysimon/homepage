@@ -225,6 +225,8 @@ p, span {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    -webkit-hyphens: auto; /* for Safari */
+    hyphens: auto;
   }
 
   /* mark links as external */
@@ -1698,6 +1700,9 @@ footer .badge:hover {
     opacity: 0.8;
 }
 
+.footericon {
+    font-family: monospace;
+}
 /* hover transform  */
 
 .hovertransform {
