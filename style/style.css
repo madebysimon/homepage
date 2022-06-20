@@ -182,8 +182,8 @@ ul li {
 ul li:before {
     position: absolute;
     left: -1em;
-    color: var(--cta-color-dark);
-    content: "▪&#xFE0E;";
+    color: var(--text-color);
+    content: "▪";
     font-family: monospace;
   }
 
