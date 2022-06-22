@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Not Found | SimonKelch.ᴅᴇ</title>
+        <title>Video | SimonKelch.ᴅᴇ</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -22,19 +22,19 @@
         <meta name="page-type" content="Homepage">
         <meta property="og:title" content="OG Title">
         <meta property="og:description" content="OG description">
-        <meta property="og:image" content="img/index/home.png">
+        <meta property="og:image" content="../img/index/home.png">
         <meta property="og:url" content="simonkelch.de">
         <meta property="og:site_name" content="simonkelch.de">
-        <meta name="twitter:card" content="img/index/home.png">
+        <meta name="twitter:card" content="../img/index/home.png">
         <meta name="twitter:image:alt" content="twitter image description">  
         <!-- <link rel="stylesheet" href="reset.css"> -->
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="../style/style.css">
         <!-- Favicon Stuff -->
             <!-- Fallback of 32x32 favicon.ico in Root Folder -->
-        <link rel="icon" href="favicon/favicon.svg">
-        <link rel="mask-icon" href="favicon/mask-icon.svg" color="#000000"> <!-- has to be made of single color on transparent background -->
-        <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"> <!-- in 180x180 px -->
-        <link rel="manifest" href="favicon/manifest.json"> <!-- for Android, Chrome & Lighthouse in 512x512 -->
+            <link rel="icon" href="../favicon/favicon.svg">
+            <link rel="mask-icon" href="../favicon/mask-icon.svg" color="#000000"> <!-- has to be made of single color on transparent background -->
+            <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png"> <!-- in 180x180 px -->
+            <link rel="manifest" href="../favicon/manifest.json"> <!-- for Android, Chrome & Lighthouse in 512x512 -->    
         <!-- Theme Colors -->
         <meta name="color-scheme" content="dark light">
         <meta name="theme-color" content="#202124" media="(prefers-color-scheme: light)">
@@ -47,45 +47,41 @@
     <!-- Looking up some source code? I publish on github. -->
     {% include nav.html %}
     <!-- <div class="navplaceholder"></div> -->
-
-    <div class="content"> 
+    <div class="content">
         {% include notice.html %}
+
         <div class="ribbon gradient-turquoise">
             <div class="ribbonintro hasbackground isrounded-top">
                 <div class="spacer"></div>
             </div>
         </div>
 
-        <section id="hero" class="section-wide cardshadow cardshadow-left cardshadow-right">
-            <div class="heroframe isrounded hasbackground-light">
-                <div class="hero-content gs_reveal">
-                    <span class="hero-left">
-                        <div class="hero-left-center">
-                                <br>
-                                <div class="hero-pretext">Whoops</div>
-                                <h1 class="hero-text-small">404 – Not Found</h1>
-                                <p class="gs_reveal gs_reveal_nomove">
-                                    What you're looking for may have been moved or a link you've clicked has expired.
-                                </p>
-                                <br>
-                        </div>
-                    </span>
-                </div>
-                <img src="https://i.imgur.com/qhMbkGi.jpg" alt="travolta" width="30%">
+        <div id="heading-middle" class="gs_reveal section-normal center">
+            <div class="spacer"></div>
+            <div class="bubble hasbackground-light allcaps">
+                <div class="center-text smallcapslabel ">One on One</div>
             </div>
-        </section>
-        <div class="spacer"></div>
-        <section class="longform-container">
-            <div class="gs_reveal gs_reveal_nomove">
-                <span class="hero-link-option">The content you requested could not be found.</span><br>
-                <a class="isinteractive textdecoration-none" ref="javascript:history.back()">← go back</a>
-                <span class="hero-link-option"> or </span>
-                <a class="isinteractive textdecoration-none" href="/index.html">go home →</a><br>
+            <h1 class="section-heading">Coaching</h1>
+
+            <div class="headhing-subtext longform-container">
+                <p>Consult a second opinion and have someone impartial
+                    assess, review and advise on your goals
+                    discuss and challenge your expectations
+                    find clarify and be guided to grounded expectations</p>
             </div>
             <div class="spacer"></div>
-        </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
 
+        <section id="video" class="section-normal fullpadding">
+            <div data-tilt data-tilt-max="5" data-tilt-perspective="9000" data-tilt-glare data-tilt-max-glare="0.2" class="isrounded">
+                <div class="cardshadow gs_reveal cardshadow-left cardshadow-right">
+                    <video class="isrounded hasbackground-light" width="100%" height="auto" loop autoplay muted > <!-- loop controls preload="auto" poster="img/dog1.jpg"-->
+                        <source src="https://media.istockphoto.com/videos/abstract-background-loopable-video-id1288523103" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
     </div>
     
     {% include footer.html %}

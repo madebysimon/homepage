@@ -2495,3 +2495,7 @@ a.footnote:after {
 .breadcrumbs a {
     text-decoration: none;
 }
+
+.footnote {
+    scroll-padding-top: var(--nav-height);
+}
