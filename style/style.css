@@ -168,17 +168,25 @@ html {
     will-change: transform, opacity;
   }
 
-ul {
+
+body {
     margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-align: left;
-  }
+    background: var(--bkg-color);
+}
+
+/* List Styling */
+ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: left;
+}
 
 ul li {
     position: relative;
     margin-left: 1em;
   }
+
 
 ul li:before {
     position: absolute;
@@ -186,37 +194,21 @@ ul li:before {
     color: var(--text-color);
     content: "▪";
     font-family: monospace;
+    font-size: var(--font-size-small);
   }
 
-p ul ul li:before {
-    position: absolute;
-    left: -1em;
-    color: var(--text-color);
-    content: "□";
-    font-family: monospace;
-  }
-
-p ul ul ul li:before {
-    position: absolute;
-    left: -1em;
-    color: var(--text-color);
-    content: "•";
-    font-family: monospace;
-  }
-    
- 
-  p ul ul ul ul li:before {
-    position: absolute;
-    left: -1em;
-    color: var(--text-color);
-    content: "⚬";
-    font-family: monospace;
-  }
-
-body {
-    margin: 0;
-    background: var(--bkg-color);
+ul ul li:before {
+  content: "▫";
 }
+
+ul ul ul li:before {
+  content: "•";
+}
+
+ul ul ul ul li:before {
+  content: "⚬";
+}
+
 
 /* Text Selection */
 /*       ---      */
