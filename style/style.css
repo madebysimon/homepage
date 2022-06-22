@@ -2496,6 +2496,9 @@ a.footnote:after {
     text-decoration: none;
 }
 
-.articlecontent {
+
+/*-- Scrollpadding im Artikel für die Footnotes --*/
+
+/* .articlecontent {
     scroll-padding-top: var(--nav-height);
-}
+} */
