@@ -188,6 +188,31 @@ ul li:before {
     font-family: monospace;
   }
 
+p ul ul li:before {
+    position: absolute;
+    left: -1em;
+    color: var(--text-color);
+    content: "□";
+    font-family: monospace;
+  }
+
+p ul ul ul li:before {
+    position: absolute;
+    left: -1em;
+    color: var(--text-color);
+    content: "•";
+    font-family: monospace;
+  }
+    
+ 
+  p ul ul ul ul li:before {
+    position: absolute;
+    left: -1em;
+    color: var(--text-color);
+    content: "⚬";
+    font-family: monospace;
+  }
+
 body {
     margin: 0;
     background: var(--bkg-color);
@@ -230,8 +255,12 @@ p, h1, h2, h3, h4, h5, h6 {
     hyphens: auto;
   }
 
-  /* mark links as external */
-p a:not([href*='domain.com']):not([href^='#']):not([href^='/']):after {
+h2, h3, h4, h5, h6 {
+margin-bottom: 5px;
+}
+
+/* mark links as external */
+.content p a:not([href*='domain.com']):not([href^='#']):not([href^='/']):after {
     content: ' ↗';
     /* oder */
     /*
@@ -750,21 +779,23 @@ footer .badge a {
 }
 .content h3 {
     font-size: var(--H3-size-large);
-    margin-bottom: 5px;
     font-weight: var(--H3-weight);
 }
 
 .content h4 {
     font-size: var(--H4-size-large);
-    margin-bottom: 5px;
-    margin-top: 0px;
     font-weight: var(--text-weight);
 }
+
 .content h5 {
     font-size: var(--H4-size-large);
-    margin-bottom: 5px;
     font-weight: var(--text-weight);
     text-transform: uppercase;
+}
+
+.content h6 {
+    font-size: var(--H4-size-large);
+    font-weight: var(--text-weight);
 }
 
 .smallcapslabel {
