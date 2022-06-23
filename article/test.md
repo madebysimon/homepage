@@ -78,23 +78,27 @@ Right aligned columns
 
 
 ## Lists
-
-Unordered
+### Unordered
 
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
+    - Ac tristique libero volutpat at
+    - Facilisis in pretium nisl aliquet
+      - Facilisis in pretium nisl aliquet
+      - Facilisis in pretium nisl aliquet
+      - Facilisis in pretium nisl aliquet
+    - Facilisis in pretium nisl aliquet
+  - Nulla volutpat aliquam velit
 + Very easy!
 
-Ordered
+
+### Ordered
 
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
-
+4. Fourth Item
 
 ## Code
 
@@ -117,6 +121,8 @@ Sample text here...
 
 ## Links
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+This is a <a href="#" class="highlightlink">highlighted</a> link.
 
 ## Images
 

@@ -174,7 +174,7 @@ body {
     background: var(--bkg-color);
 }
 
-/* List Styling */
+/* Unordered List Styling */
 
 .content ul {
 margin: 0;
@@ -209,6 +209,41 @@ text-align: left;
 .content ul ul ul ul li:before {
   content: "⚬";
 }
+
+/* Ordered List Styling */
+
+ol {
+    list-style: none;
+    padding-left: 1rem;
+    counter-reset: circle-counter;
+}
+
+ol li {
+    counter-increment: circle-counter;
+    margin-bottom: 1rem*.25;
+    &:before {
+        content: counter(circle-counter);
+        background-color: var(--color-neutral);
+        width: var(--font-size-main)*1;
+        height: var(--font-size-main)*1;
+        border-radius: 30%;
+        display: inline-block;
+        font-size: var(--font-size-main)*.75;
+        line-height: var(--font-size-main)*1;
+        color: var(--text-color);
+        text-align: center;
+        margin-right: 1rem*.5;
+        position: relative;
+        top: -2px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    ol li {
+        margin-left: 1rem*.25;
+    }
+}
+
 
 
 /* Text Selection */
