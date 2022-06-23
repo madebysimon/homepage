@@ -212,7 +212,7 @@ text-align: left;
 
 /* Ordered List Styling */
 
-ol {
+/* ol {
     list-style: none;
     padding-left: 1rem;
     counter-reset: circle-counter;
@@ -242,7 +242,7 @@ ol li {
     ol li {
         margin-left: 1rem*.25;
     }
-}
+} */
 
 
 
