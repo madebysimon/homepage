@@ -9,6 +9,42 @@
 <script src="/script/animation.js"></script>
 <script src="/script/vanilla-tilt.js"></script>
 <script src="/script/notice.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+     var mySwiper = new Swiper ('.swiper-container', {
+		rewind: true,
+		loop: true,
+		
+		direction: 'horizontal',
+		// parallax: true,
+		preloadImages: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+		}, 
+
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			dynamicBullets: true,
+			dynamicMainBullets: 5,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.next',
+			prevEl: '.prev',
+		},
+		autoplay: {
+			delay: 5000,
+		},
+		speed: 300,
+	});
+</script>
 
 <!-- <script src="/script/barbaanimation.js"></script> -->
 
