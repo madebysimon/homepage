@@ -2674,7 +2674,7 @@ a.footnote:after {
   .flickity-page-dots {
     position: absolute;
     width: 100%;
-    bottom: -25px;
+    bottom: 10px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -2688,7 +2688,7 @@ a.footnote:after {
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 0 8px;
+    margin: 0 4px;
     background: #333;
     border-radius: 50%;
     opacity: 0.25;
@@ -2697,4 +2697,5 @@ a.footnote:after {
   
   .flickity-page-dots .dot.is-selected {
     opacity: 1;
+    background: #fff;
   }
