@@ -2547,7 +2547,7 @@ a.footnote:after {
 
 .swiper-container .next {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     right:20px;
     z-index:3;
