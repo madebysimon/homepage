@@ -2539,47 +2539,28 @@ a.footnote:after {
 } */
 
 
-/*-- Swiper --*/
-.swiper-container {
-    width:100%;
-    height:300px;
-}
-
-.swiper-container .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right:20px;
-    z-index:3;
-        cursor:pointer;
-}
-.swiper-container .prev {
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left:20px;
-    z-index:3;
-    cursor:pointer;
-}
-
-.swiper-container .bgimage {
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-}
-
-.swiper-slide{
--webkit-backface-visibility: hidden;
--webkit-transform: translate3d(0,0,0);
-}
-.swiper-wrapper{
--webkit-transform-style: preserve-3d;
-}
-.swiper-pagination-bullet {
-width: 8px;
-height: 8px;
-}
-.swiper-pagination-bullet-active {
-color: #fff;
-background: #fff;
-}
+/*-- Carousel --*/
+.carousel {
+    background: #FAFAFA;
+  }
+  
+  .carousel-cell {
+    width: 100%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  
+  

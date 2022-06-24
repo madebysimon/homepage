@@ -31,7 +31,8 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         </style>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     </head>
     <body data-barba="wrapper">
         <ul class="transition">
@@ -90,24 +91,6 @@
                         <div class="isrounded-top hasbackground smallpadding"></div>
                     </div>
                 </section>
-
-                <section id="slidertest" class="isrounded section-wide fullpadding">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide bgimage" style="background-image: url('https://images.unsplash.com/photo-1542838686-d4856db9ef1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');"></div>
-                            <div class="swiper-slide bgimage" style="background-image: url('https://images.unsplash.com/photo-1536141495324-a48c4f2abffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2175&q=80');"></div>
-                            <div class="swiper-slide bgimage" style="background-image: url('https://images.unsplash.com/photo-1549399541-54e16138e7ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');"></div>
-                            <div class="swiper-slide bgimage" style="background-image: url('https://images.unsplash.com/photo-1542838686-d4856db9ef1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');"></div>
-                            <div class="swiper-slide bgimage" style="background-image: url('https://images.unsplash.com/photo-1542838686-d4856db9ef1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');"></div>
-                            <div class="swiper-slide bgimage" style="background-image: url('https://images.unsplash.com/photo-1542838686-d4856db9ef1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80');"></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="prev">‹</div>
-                        <div class="next">›</div>
-                    </div>
-                </section>
-
                 <div id="heading-middle" class="section-wide gs_reveal center">
                     <div class="spacer"></div>
                     <div class="bubble hasbackground-light allcaps">
@@ -389,6 +372,15 @@
                     </div>
                 </section>
 
+                <section id="SwiperCarousel">
+                    <div class="carousel" data-flickity>
+                        <div class="carousel-cell"></div>
+                        <div class="carousel-cell"></div>
+                        <div class="carousel-cell"></div>
+                        <div class="carousel-cell"></div>
+                        <div class="carousel-cell"></div>
+                      </div>                      
+                </section>
                 <section id="FAQ" class="section-wide fullpadding">
                     <div class="isrounded gs_reveal hasbackground-light fullpadding wraphovertransform">
                         <div class="flexcontainer-row">
