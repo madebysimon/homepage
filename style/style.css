@@ -2721,7 +2721,7 @@ a.footnote:after {
 
   /*-- Projects Page --*/
 
-  /*-- Featured --*/
+  /*-- Featured 
 .project-container {
     position: relative;
 }
@@ -2758,3 +2758,4 @@ a.footnote:after {
     position: relative;
     margin-top: var(--padding-small-half);
 }
+--*/
