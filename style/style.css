@@ -2317,8 +2317,8 @@ h3.tabheadinglight {
 .footnote {
     color: var(--cta-color);
     text-decoration: none;
-    padding-top: var(--nav-height);
-    padding-top: calc(-1*var(--nav-height));
+    padding-top: calc(2*var(--nav-height));
+    padding-top: calc(-2*var(--nav-height));
 }
 
 a.footnote:before {   
@@ -2329,8 +2329,8 @@ a.footnote:after {
     content: "]";
 }
 .reversefootnote {
-    padding-top: var(--nav-height);
-    padding-top: calc(-1*var(--nav-height));
+    padding-top: calc(2*var(--nav-height));
+    padding-top: calc(-2*var(--nav-height));
 }
 
 .featureparent {
