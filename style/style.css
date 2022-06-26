@@ -693,7 +693,10 @@ footer .badge a {
     text-align: center;
     color: var(--text-color);
     font-weight: var(--text-weight);
+}
+#articlecontent {
     scroll-padding-top: var(--nav-height);
+    /* funktioniert in safari nicht? */
 }
 
 .linkarrow:hover:after {
@@ -2314,6 +2317,8 @@ h3.tabheadinglight {
 .footnote {
     color: var(--cta-color);
     text-decoration: none;
+    padding-top: var(--nav-height);
+    padding-top: calc(-1*var(--nav-height));
 }
 
 a.footnote:before {   
@@ -2322,6 +2327,10 @@ a.footnote:before {
    
 a.footnote:after {
     content: "]";
+}
+.reversefootnote {
+    padding-top: var(--nav-height);
+    padding-top: calc(-1*var(--nav-height));
 }
 
 .featureparent {
