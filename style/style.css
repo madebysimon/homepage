@@ -2638,8 +2638,8 @@ a.footnote:after {
   /* ---- previous/next buttons ---- */
   
   .flickity-prev-next-button {
-    height: var(--icon-size-badge);
-    width: var(--icon-size-badge);
+    height: 48px;
+    width: 48px;
     top: 50%;
     border-radius: 50%;
     /* vertically center */
@@ -2662,8 +2662,8 @@ a.footnote:after {
     position: absolute;
     left: 20%;
     top: 20%;
-    width: 60%;
-    height: 60%;
+    height: var(--icon-size-badge);
+    width: var(--icon-size-badge);
   }
   
   /* ---- page dots ---- */
