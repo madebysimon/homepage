@@ -2733,3 +2733,6 @@ a.footnote:after {
     max-height: 25vh;
     overflow: none;
 }
+.isrounded-inner {
+    var(--borderradius-small);
+}
