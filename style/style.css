@@ -2737,13 +2737,14 @@ a.footnote:after {
 .project-card-image {
     background-color: #0c4cc2;
     width: 33%;
+    height: 25vh;
     left: var(--padding-small);
     top: var(--padding-small);
     padding-bottom: var(--padding-small);
 }
 
 .project-card-image img {
-   
+   top:-200px;
 }
 
 .project-card-details {
