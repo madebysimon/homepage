@@ -74,8 +74,8 @@ body {
 
 /* Swatches for Dark Mode (OS Override)*/
 body.dark-theme {
-    --main-nav-color: rgb(32, 33, 36, .9);
-    --alt-nav-color: rgba(32, 33, 36, 1);
+    --main-nav-color: rgba(32, 33, 36, 0.9);
+    --alt-nav-color: #202124;
     --cta-color: rgb(0, 68, 194);
     --cta-color-dark: rgb(0, 75, 214);
     --cta-color-light: #0041b9;
