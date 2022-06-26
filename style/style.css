@@ -693,6 +693,7 @@ footer .badge a {
     text-align: center;
     color: var(--text-color);
     font-weight: var(--text-weight);
+    scroll-padding-top: var(--nav-height);
 }
 
 .linkarrow:hover:after {
@@ -2530,14 +2531,6 @@ a.footnote:after {
 .breadcrumbs a {
     text-decoration: none;
 }
-
-
-/*-- Scrollpadding im Artikel für die Footnotes --*/
-
-/* .articlecontent {
-    scroll-padding-top: var(--nav-height);
-} */
-
 
 /*-- Flickity --*/
 .carousel {
