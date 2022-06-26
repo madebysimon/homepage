@@ -2610,7 +2610,7 @@ a.footnote:after {
   }
   
   .flickity-button:hover {
-    background: white;
+    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
   }
   
@@ -2660,8 +2660,8 @@ a.footnote:after {
   
   .flickity-prev-next-button .flickity-button-icon {
     position: absolute;
-    left: 20%;
-    top: 20%;
+    left: 25%;
+    top: 25%;
     height: var(--icon-size-badge);
     width: var(--icon-size-badge);
   }
@@ -2686,13 +2686,13 @@ a.footnote:after {
     width: 10px;
     height: 10px;
     margin: 0 4px;
-    background: #333;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    opacity: 0.25;
     cursor: pointer;
   }
   
   .flickity-page-dots .dot.is-selected {
-    opacity: 1;
     background: #fff;
   }
