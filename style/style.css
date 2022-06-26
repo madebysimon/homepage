@@ -2740,7 +2740,6 @@ a.footnote:after {
     left: var(--padding-small);
     top: var(--padding-small);
     padding-bottom: var(--padding-small);
-    height: 25vh;
 }
 
 .project-card-image img {
