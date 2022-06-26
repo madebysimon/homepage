@@ -1142,6 +1142,10 @@ code::after {
     border-bottom-left-radius: var(--borderradius-mid);
 }
 
+.isrounded-inner {
+    border-radius: 3px;
+    }
+
 .isrounded-top {
     border-top-left-radius: var(--borderradius-mid);
     border-top-right-radius: var(--borderradius-mid);
@@ -2718,21 +2722,39 @@ a.footnote:after {
   /*-- Projects Page --*/
 
   /*-- Featured --*/
-.featured-project {
-    padding-left: var(--padding-small);
-    padding-right: var(--padding-small);
-    padding-top: var(--padding-small);
+.project-container {
+    position: relative;
 }
-.featured-project-details {
-    text-align: left;
-    padding-left: var(--padding-small);
-};
 
-.featured-project-image img {
-    width: 100%;
-    max-height: 25vh;
-    overflow: none;
+.project-card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: var(--padding-small);
+    margin: var(--padding-small);
 }
-.isrounded-inner {
-    var(--borderradius-small);
+
+.project-card-image {
+    background-color: #0c4cc2;
+    width: 33%;
+    left: var(--padding-small);
+    top: var(--padding-small);
+    padding-bottom: var(--padding-small);
+    height: 25vh;
+}
+
+.project-card-image img {
+   
+}
+
+.project-card-details {
+    text-align: left;
+}
+.project-card-details h2 {
+    position: relative;
+    margin-top: var(--padding-small-half);
+}
+.project-card-details p {
+    position: relative;
+    margin-top: var(--padding-small-half);
 }
