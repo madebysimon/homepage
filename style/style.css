@@ -2597,7 +2597,8 @@ a.footnote:after {
   .flickity-viewport {
     overflow: hidden;
     position: relative;
-    height: auto;
+    height: 100%;
+    touch-action: pan-y;
     transition: height var(--animation-speed-1);
   }
   
@@ -2606,7 +2607,7 @@ a.footnote:after {
     width: 100%;
     height: 100%;
   }
-  
+
   /* draggable */
   
   .flickity-enabled.is-draggable {
