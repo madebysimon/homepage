@@ -19,15 +19,19 @@ next-image: https://images.unsplash.com/photo-1644007497105-8d0ae9ec9754?ixlib=r
 ---
 
 ## Heading Two
-blabla
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
 ### Heading Three
-blabla
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
 #### Heading Four
-blabla
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
 ##### h5 Heading
-blabla
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
 ###### h6 Heading
-blabla
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ---
 
@@ -60,17 +64,19 @@ Right aligned columns
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
 
+
 ---
 
 ## Emphasis
 
 **This is bold text**
+
 *This is italic text*
+
 ~~Strikethrough~~
 
 
 ## Blockquotes
-
 
 > Blockquotes can also be nested...
 >> ...by using additional greater-than signs right next to each other...
@@ -80,8 +86,8 @@ Right aligned columns
 ## Lists
 ### Unordered
 
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
     - Ac tristique libero volutpat at
     - Facilisis in pretium nisl aliquet
@@ -90,7 +96,7 @@ Right aligned columns
       - Facilisis in pretium nisl aliquet
     - Facilisis in pretium nisl aliquet
   - Nulla volutpat aliquam velit
-+ Very easy!
+- Very easy!
 
 
 ### Ordered
@@ -114,14 +120,14 @@ Indented
 
 Block code "fences"
 
-```
-Sample text here...
-```
+```Sample text here
+and here
+and here```
 
 
 ## Links
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
+[external with title](http://nodeca.github.io/pica/demo/ "title text!")
+[internal  with title](/projects/ "go to projects")
 This is a <a href="#" class="highlightlink">highlighted</a> link.
 
 ## Images
@@ -154,24 +160,5 @@ Duplicated footnote reference[^second].
 
 [^second]: Footnote text.
 
-
-### Definition lists
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-### Abbreviations
-This is for HTML
-*[HTML]: Hyper Text Markup Language
 
 This is HTML
