@@ -154,11 +154,26 @@ body.dark-theme {
 
 /* Swatches Ende */
 
+*,
+*:before,
+*:after {
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
 html {
     font-family: var(--font-main); 
     font-size: var(--font-size-main);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bkg-color);
 }
 
 /* GSAP Element Reveal Animation */
@@ -168,11 +183,6 @@ html {
     will-change: transform, opacity;
   }
 
-
-body {
-    margin: 0;
-    background: var(--bkg-color);
-}
 
 /* Unordered List Styling */
 
