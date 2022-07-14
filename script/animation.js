@@ -117,6 +117,8 @@ function ScrollTriggerFooter() {
     scrub: true
   }); // uncover.restart();
 }
+ScrollTriggerFooter()
+
 function ScrollTriggerContentIntro() {
   gsap.set('#content-intro', {
     yPercent: 50
