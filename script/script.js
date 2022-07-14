@@ -41,6 +41,6 @@ function setMargins() {
 	if (position > paddingFull) {
 		root.style.setProperty('--WINDOW-X-SPACE', position + "px");
 	  } else {
-		root.style.setProperty('--WINDOW-X-SPACE', paddingFull + "px");
+		root.style.setProperty('--WINDOW-X-SPACE', paddingFull);
 	  }	
 }
