@@ -41,5 +41,5 @@ function setMargins() {
 		root.style.setProperty('--WINDOW-X-SPACE', position + "px");
 	  } else {
 		root.style.setProperty('--WINDOW-X-SPACE', 30 + "px");
-	  }	
-}
+	  }
+	};
