@@ -175,6 +175,12 @@ body {
     background: var(--bkg-color);
 }
 
+.full-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
 /* GSAP Element Reveal Animation */
 .gs_reveal {
     opacity: 0;
@@ -1303,6 +1309,7 @@ code::after {
     overflow-x: scroll;
     display: flex;
     gap: var(--padding-small);
+    -webkit-overflow-scrolling: touch;
     /*  -ms-overflow-style: none; */ /* for IE and Edge */
     /* scrollbar-width: none;  /* Firefox */
   }
@@ -2769,3 +2776,5 @@ a.footnote:after {
     margin-top: var(--padding-small-half);
 }
 --*/
+
+
