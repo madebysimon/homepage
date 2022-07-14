@@ -51,7 +51,7 @@
         {% include nav.html %}
 
         <main data-barba="container" data-barba-namespace="projects">
-            <div class="content">
+            <div class="content" onresize="setMargins()" onload="setMargins()>
                 {% include notice.html %}
                 
                 <div class="ribbon gradient-turquoise">
@@ -106,7 +106,7 @@
                 </section>
 
                 <section id="newSlider">
-                    <div class="overflowgallery" onresize="setMargins()" onload="setMargins()">
+                    <div class="overflowgallery"">
                         <div class="section-wide">
                             <div id="anchor"></div>
                         </div>

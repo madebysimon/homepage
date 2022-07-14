@@ -37,7 +37,7 @@
 
     --WINDOW-X-SPACE: 60px;
 	--CONTAINER-X-SPACE: 60px;
-	--safetypadding: 18px;
+	--safetypadding: -10px;
 }
 /* Main Colors (Light) */
 body {

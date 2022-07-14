@@ -29,3 +29,13 @@ var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
 }
 localStorage.setItem("theme", theme);
 });
+
+
+/*-- Padding für Gallerie -*/
+function setMargins() {
+	const element = document.getElementById("anchor");
+	let position = element.offsetLeft;
+	console.log(position)
+	let root = document.documentElement;
+	root.style.setProperty('--WINDOW-X-SPACE', position + "px");
+}
