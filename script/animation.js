@@ -118,7 +118,7 @@ function ScrollTriggerFooter() {
   }); // uncover.restart();
 }
 function ScrollTriggerContentIntro() {
-  gsap.set('content-intro', {
+  gsap.set('#content-intro', {
     yPercent: 50
   });
   const uncover = gsap.timeline({
