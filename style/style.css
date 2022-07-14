@@ -34,6 +34,10 @@
     --H3-size-small: var(--font-size-main);
     --H4-size-large: calc(var(--font-size-main)/18*14);
     --nav-height: 44px;
+
+    --WINDOW-X-SPACE: 60px;
+	--CONTAINER-X-SPACE: 60px;
+	--safetypadding: 18px;
 }
 /* Main Colors (Light) */
 body {
@@ -2777,4 +2781,76 @@ a.footnote:after {
 }
 --*/
 
+
+.overflowgallery  {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.overflowgallery .section-wide {
+    max-width: var(--breakpoint-wide);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+	background: red;
+	min-height: 100px;
+    }
+
+.overflowgallery .fullwidth {
+	margin: 0;
+	padding-left: calc(var(--WINDOW-X-SPACE) - var(--safetypadding));
+	padding-right: calc(var(--WINDOW-X-SPACE) - var(--safetypadding));
+	overflow-x: hidden;
+}
+
+.overflowgallery .fix-offset {
+	width: var(--WINDOW-X-SPACE);
+    flex-shrink: 0;
+}
+
+.overflowgallery .scroll-container-container {
+	padding: 0 var(--CONTAINER-X-SPACE);
+}
+
+.overflowgallery .scroll-container {
+	height: inherit;
+	margin: 0 calc(-1 * calc(var(--WINDOW-X-SPACE) + var(--CONTAINER-X-SPACE)));
+	padding: 0 var(--WINDOW-X-SPACE);
+	scroll-snap-type: x mandatory;
+	display: flex;
+	overflow: auto;
+}
+
+.overflowgallery .list-wrapper {
+	width: fit-content;
+	height: 100%;
+	display: flex;
+	gap: 10px;
+	margin: 0;
+	padding: 10px;
+	position: relative;
+}
+.overflowgallery .list-item {
+    scroll-snap-align: center;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 10px;
+	background: #eee;
+	flex-shrink: 0;
+    height: 50vh;
+    width: 37.5vh;
+    min-height: 200px;
+    min-width: 150px;
+    max-width: 80vw;
+    max-height: 50vh;
+    position: relative;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
