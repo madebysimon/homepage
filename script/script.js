@@ -37,10 +37,9 @@ function setMargins() {
 	let position = element.offsetLeft;
 	console.log(position)
 	let root = document.documentElement;
-	if (position > 10) {
+	if (position > 30) {
 		root.style.setProperty('--WINDOW-X-SPACE', position + "px");
 	  } else {
-		root.style.setProperty('--WINDOW-X-SPACE', 10 + "px");
-	  }
-	
+		root.style.setProperty('--WINDOW-X-SPACE', 30 + "px");
+	  }	
 }
