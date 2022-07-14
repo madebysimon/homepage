@@ -99,13 +99,13 @@ ease: "none"
 
 function initScrollTriggers() {
   gsap.set('footer', {
-    yPercent: -50
+    y: -50
   });
   const uncover = gsap.timeline({
     paused: true
   });
   uncover.to('footer', {
-    yPercent: 0,
+    y: 0,
     ease: 'none'
   });
   ScrollTrigger.create({
