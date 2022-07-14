@@ -97,7 +97,7 @@ ease: "none"
 
 /*-- --*/
 
-function initScrollTriggers() {
+function ScrollTriggerFooter() {
   gsap.set('footer', {
     y: -50
   });
@@ -117,7 +117,27 @@ function initScrollTriggers() {
     scrub: true
   }); // uncover.restart();
 }
-initScrollTriggers();
+function ScrollTriggerContentIntro() {
+  gsap.set('content-intro', {
+    yPercent: 50
+  });
+  const uncover = gsap.timeline({
+    paused: true
+  });
+  uncover.to('footer', {
+    yPercent: 0,
+    ease: 'none'
+  });
+  ScrollTrigger.create({
+    trigger: 'main',
+    // markers: true,
+    start: 'bottom bottom',
+    end: '+=95%',
+    animation: uncover,
+    scrub: true
+  }); // uncover.restart();
+}
+ScrollTriggerContentIntro();
 
 /* 
 barba.init({
