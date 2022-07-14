@@ -37,9 +37,10 @@ function setMargins() {
 	let position = element.offsetLeft;
 	console.log(position)
 	let root = document.documentElement;
-	if (position > 30) {
+	var paddingFull = root.style.getPropertyValue('--padding-full');
+	if (position > paddingFull) {
 		root.style.setProperty('--WINDOW-X-SPACE', position + "px");
 	  } else {
-		root.style.setProperty('--WINDOW-X-SPACE', 30 + "px");
+		root.style.setProperty('--WINDOW-X-SPACE', paddingFull + "px");
 	  }	
 }
