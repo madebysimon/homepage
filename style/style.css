@@ -1354,6 +1354,7 @@ code::after {
     background-size: cover;
     background-blend-mode: overlay;
     background-position: center;
+    padding-left: 0;
 }
 .lastnewscard {
     width: 18.75vh;
