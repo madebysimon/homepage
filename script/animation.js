@@ -114,7 +114,7 @@ ScrollTriggerContentIntro();
 
  */
 
-const showAnimMenu = gsap.from('.main-tool-bar', { 
+const showAnimMenu = gsap.from('nav', { 
   yPercent: -100,
   paused: true,
   duration: 0.2
