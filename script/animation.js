@@ -67,61 +67,10 @@ let parallax = gsap.timeline()
   }
 })
 
-/* gsap.utils.toArray(".parallaxcontainer .parallaximage").forEach((section, i) => {
-  const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
-
-gsap.fromTo(section,{ 
-y: -heightDiff
-}, {
-scrollTrigger: {
-  trigger: section.parentElement,
-  scrub: true,
-  invalidateOnRefresh: true
-},
-y: 0,
-ease: "none"
-});
-});
- */
-
-/*-- Rellax Parallax (retired by GSAP) --*/
-
-/* var rellax = new Rellax('.rellax', {
-  wrapper: null,
-  round: true,
-  vertical: true,
-  horizontal: false
-});
-
- */
-
-/*-- --*/
-
+/* 
 function ScrollTriggerFooter() {
   gsap.set('footer', {
-    y: -50
-  });
-  const uncover = gsap.timeline({
-    paused: true
-  });
-  uncover.to('footer', {
-    y: 0,
-    ease: 'none'
-  });
-  ScrollTrigger.create({
-    trigger: 'main',
-    // markers: true,
-    start: 'bottom bottom',
-    end: '+=95%',
-    animation: uncover,
-    scrub: true
-  }); // uncover.restart();
-}
-ScrollTriggerFooter()
-
-function ScrollTriggerContentIntro() {
-  gsap.set('#content-intro', {
-    yPercent: 50
+    yPercent: -50
   });
   const uncover = gsap.timeline({
     paused: true
@@ -139,7 +88,46 @@ function ScrollTriggerContentIntro() {
     scrub: true
   }); // uncover.restart();
 }
+ScrollTriggerFooter()
+
+function ScrollTriggerContentIntro() {
+  gsap.set('content-intro', {
+    yPercent: 100
+  });
+  const uncover = gsap.timeline({
+    paused: true
+  });
+  uncover.to('content-intro', {
+    yPercent: 0,
+    ease: 'none'
+  });
+  ScrollTrigger.create({
+    trigger: 'main',
+    // markers: true,
+    start: 'bottom bottom',
+    end: '+=95%',
+    animation: uncover,
+    scrub: true
+  }); // uncover.restart();
+}
 ScrollTriggerContentIntro();
+
+ */
+
+const showAnimMenu = gsap.from('.main-tool-bar', { 
+  yPercent: -100,
+  paused: true,
+  duration: 0.2
+}).progress(1);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: 99999,
+  onUpdate: (self) => {
+    self.direction === -1 ? showAnimMenu.play() : showAnimMenu.reverse()
+  }
+});
+
 
 /* 
 barba.init({
