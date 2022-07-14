@@ -37,7 +37,7 @@
 
     --WINDOW-X-SPACE: 60px;
 	--CONTAINER-X-SPACE: 60px;
-	--safetypadding: -10px;
+	--safetypadding: 10px;
 }
 /* Main Colors (Light) */
 body {
@@ -2798,8 +2798,8 @@ a.footnote:after {
 
 .overflowgallery .fullwidth {
 	margin: 0;
-	padding-left: calc(var(--WINDOW-X-SPACE) - var(--safetypadding));
-	padding-right: calc(var(--WINDOW-X-SPACE) - var(--safetypadding));
+	padding-left: calc(var(--WINDOW-X-SPACE));
+	padding-right: calc(var(--WINDOW-X-SPACE));
 	overflow-x: hidden;
 }
 
@@ -2827,7 +2827,8 @@ a.footnote:after {
 	display: flex;
 	gap: 10px;
 	margin: 0;
-	padding: 10px;
+	padding-top: var(--safetypadding);
+    padding-bottom: var(--safetypadding);
 	position: relative;
 }
 .overflowgallery .list-item {
@@ -2853,4 +2854,5 @@ a.footnote:after {
 	justify-content: center;
 	align-items: center;
 }
+
 
