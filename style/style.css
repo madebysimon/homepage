@@ -2787,15 +2787,6 @@ a.footnote:after {
 	margin: 0;
 }
 
-.overflowgallery .section-wide {
-    max-width: var(--breakpoint-wide);
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-	background: red;
-	min-height: 100px;
-    }
-
 .overflowgallery .fullwidth {
 	margin: 0;
 	padding-left: calc(var(--WINDOW-X-SPACE));
@@ -2810,6 +2801,7 @@ a.footnote:after {
 
 .overflowgallery .scroll-container-container {
 	padding: 0 var(--CONTAINER-X-SPACE);
+    overscroll-behavior: contain;
 }
 
 .overflowgallery .scroll-container {
@@ -2817,7 +2809,6 @@ a.footnote:after {
 	margin: 0 calc(-1 * calc(var(--WINDOW-X-SPACE) + var(--CONTAINER-X-SPACE)));
 	padding: 0 var(--WINDOW-X-SPACE);
 	scroll-snap-type: x mandatory;
-
     overscroll-behavior: contain;
 	display: flex;
 	overflow: auto;
