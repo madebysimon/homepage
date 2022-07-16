@@ -334,6 +334,7 @@ nav { /*-- Nav-Leiste --*/
 .nav-color {
     background: var(--main-nav-color);
 }
+
 .ribbon {
     height: calc((2*var(--nav-height)) + var(--padding-full));
     position: relative;
