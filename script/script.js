@@ -92,14 +92,13 @@ function setMargins() {
 	  }
 	  
 	  console.log(isWorkingHour(new Date()));
-	  
+	  var isOpenHrs = isWorkingHour(new Date());
 	  function setHoursDot() {
-		var isOpenHrs = isWorkingHour(new Date());
+		
 		if (isOpenHrs = true) {
 			const hrsDot = document.querySelector(".hours-indicator");
 			hrsDot.classList.toggle('active');
 		  } else {
 		  }
 	  };
-	  
-	 
+	  setHoursDot();
