@@ -2868,3 +2868,14 @@ a.footnote:after {
         0  
         env(safe-area-inset-left);
 }
+
+.hours-indicator {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.hours-indicator.active {
+  background-color: rgb(0, 155, 33);
+}
