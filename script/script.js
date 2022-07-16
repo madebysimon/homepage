@@ -2,7 +2,6 @@ const navIcon = document.querySelector(".nav-icon");
 const nav = document.querySelector("nav");
 
 navIcon.onclick = function () {
-    nav.classList.toggle('show');
 }
 
 /*-- Theme Switch auf Logo --*/
@@ -43,3 +42,64 @@ function setMargins() {
 		root.style.setProperty('--WINDOW-X-SPACE', 30 + "px");
 	  }
 	};
+
+/*-- Opening Hours -*/
+
+	var hrsConfig = {
+		0: {
+		  open: 1,
+		  close: 0
+		},
+		1: {
+		  open: 9,
+		  close: 17
+		},
+		2: {
+		  open: 9,
+		  close: 17
+		},
+		3: {
+		  open: 9,
+		  close: 17
+		},
+		4: {
+		  open: 9,
+		  close: 17
+		},
+		5: {
+		  open: 9,
+		  close: 17
+		},
+		6: {
+		  open: 1,
+		  close: 0
+		},
+		offset: -7
+	  };
+	
+	  Date.prototype.subHours = function (h) {    
+		 this.setTime(this.getTime() - (h * 60 * 60 * 1000));
+		 return this;   
+	  }
+	  
+	  function isWorkingHour (now) {
+		// Adjust remote user's time to match business time
+		now = now.subHours(hrsConfig.offset + (now.getTimezoneOffset() / 60));
+		var day = now.getDay();
+		var hours = now.getHours();
+		// console.log(day, hours, config[day].open, config[day].close, config.offset);
+		return hours >= hrsConfig[day].open && hours < hrsConfig[day].close;
+	  }
+	  
+	  console.log(isWorkingHour(new Date()));
+	  
+	  function setHoursDot() {
+		var isOpenHrs = isWorkingHour(new Date());
+		if (isOpenHrs = true) {
+			const hrsDot = document.querySelector(".hours-indicator");
+			hrsDot.classList.toggle('active');
+		  } else {
+		  }
+	  };
+	  
+	 
