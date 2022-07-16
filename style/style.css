@@ -2870,12 +2870,18 @@ a.footnote:after {
 }
 
 .hours-indicator {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-.hours-indicator.active {
-  background-color: rgb(0, 155, 33);
-}
+    margin-left: 10px;
+    height: 10px;
+    width: 10px;
+    background-color: #f55b00;
+    border-radius: 50%;
+    display: inline-block;
+    top: 50%;
+    title: 'currently closed';
+  }
+  .hours-indicator.active {
+    background-color: #2aff00;
+    title: "we're open";
+  }
+  
+  
