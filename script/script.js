@@ -90,14 +90,14 @@ function setMargins() {
 		// console.log(day, hours, config[day].open, config[day].close, config.offset);
 		return hours >= hrsConfig[day].open && hours < hrsConfig[day].close;
 	  }
-	  
-	  console.log(isWorkingHour(new Date()));
+
 	  var isOpenHrs = isWorkingHour(new Date());
+
 	  function setHoursDot() {
-		
 		if (isOpenHrs = true) {
 			const hrsDot = document.querySelector(".hours-indicator");
 			hrsDot.classList.toggle('active');
+			hrsDot.setAttribute('tooltip', 'open now');
 		  } else {
 		  }
 	  };
