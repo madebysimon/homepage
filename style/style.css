@@ -2856,3 +2856,15 @@ a.footnote:after {
 
 
 .content-intro {}
+
+.no-text-select {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.cover-fit-padding {
+    padding:  
+        env(safe-area-inset-top)
+        env(safe-area-inset-right)
+        0  
+        env(safe-area-inset-left);
+}
