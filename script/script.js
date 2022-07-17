@@ -74,7 +74,7 @@ function setMargins() {
 		  open: 1,
 		  close: 0
 		},
-		offset: -7
+		offset: +1
 	  };
 	
 	  Date.prototype.subHours = function (h) {    
